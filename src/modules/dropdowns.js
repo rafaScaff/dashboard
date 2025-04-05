@@ -1,11 +1,7 @@
 import { FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
 import { useState } from 'react';
 
-
-
-export default function Dropdown() {
-  const [macro, setMacro] = useState('');
-  const [micro, setMicro] = useState('');
+export default function Dropdown({ macro, setMacro, micro, setMicro }) {
   const [macroSearch, setMacroSearch] = useState('');
   const [microSearch, setMicroSearch] = useState('');
 

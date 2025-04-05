@@ -2,9 +2,11 @@ import './App.css';
 import Dropdown from './modules/dropdowns';
 import SendButton from './modules/sendButton';
 import Pista from './modules/pista';
+import { useState } from 'react';
 
 function App() {
-
+  const [macro, setMacro] = useState('');
+  const [micro, setMicro] = useState('');
 
   return (
     <div className="App">
@@ -15,11 +17,18 @@ function App() {
           type="string" 
           content="Conto duas historias de vingança que se entrelaçam. Todo perseguidor não encontra uma saída"
         />
-
         </div>
 
-      <Dropdown />
-      <SendButton />
+        <Dropdown 
+          macro={macro}
+          setMacro={setMacro}
+          micro={micro}
+          setMicro={setMicro}
+        />
+        <SendButton 
+          macro={macro}
+          micro={micro}
+        />
       </header>
     </div>
   );
