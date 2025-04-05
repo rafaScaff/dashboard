@@ -88,8 +88,26 @@ const SendButton = ({ macro, micro }) => {
       >
         {isLoading ? 'Enviando...' : 'Enviar'}
       </button>
-      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
-        <Alert onClose={handleSnackbarClose} severity={snackbarSeverity} sx={{ width: '100%' }}>
+      <Snackbar 
+        open={snackbarOpen} 
+        autoHideDuration={6000} 
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: 'center', horizontal: 'center' }}
+      >
+        <Alert 
+          onClose={handleSnackbarClose} 
+          severity={snackbarSeverity} 
+          sx={{ 
+            width: '400px',
+            fontSize: '1.2rem',
+            '& .MuiAlert-message': {
+              fontSize: '1.2rem',
+            },
+            '& .MuiAlert-icon': {
+              fontSize: '2rem'
+            }
+          }}
+        >
           {snackbarMessage}
         </Alert>
       </Snackbar>
