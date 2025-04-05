@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { Snackbar, Alert } from '@mui/material';
 
 const SendButton = ({ macro, micro }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarSeverity, setSnackbarSeverity] = useState('info');
 
   // Mock function to simulate API response
   const mockApiResponse = (macro, micro) => {
@@ -46,8 +50,9 @@ const SendButton = ({ macro, micro }) => {
       const data = await response.json();
       console.log('Resposta:', data);
       
-      // Mostra feedback para o usuário
-      alert(data.guess_is_right ? "Parabéns! Você acertou!" : "Tente novamente!");
+      setSnackbarOpen(true);
+      setSnackbarMessage(data.guess_is_right ? "Parabéns! Você acertou!" : "Tente novamente!");
+      setSnackbarSeverity(data.guess_is_right ? "success" : "error");
       
     } catch (error) {
       console.error('Erro:', error);
@@ -57,24 +62,38 @@ const SendButton = ({ macro, micro }) => {
     }
   };
 
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
+
   return (
-    <button 
-      onClick={handleSubmit}
-      disabled={isLoading}
-      style={{
-        backgroundColor: isLoading ? 'gray' : 'black',
-        color: 'white',
-        padding: '15px 30px',
-        border: 'none',
-        borderRadius: '5px',
-        fontSize: '1.4rem',
-        fontFamily: "'Winky Sans', Arial, sans-serif",
-        cursor: isLoading ? 'not-allowed' : 'pointer',
-        marginTop: '20px'
-      }}
-    >
-      {isLoading ? 'Enviando...' : 'Enviar'}
-    </button>
+    <>
+      <button 
+        onClick={handleSubmit}
+        disabled={isLoading}
+        style={{
+          backgroundColor: isLoading ? 'gray' : 'black',
+          color: 'white',
+          padding: '15px 30px',
+          border: 'none',
+          borderRadius: '5px',
+          fontSize: '1.4rem',
+          fontFamily: "'Winky Sans', Arial, sans-serif",
+          cursor: isLoading ? 'not-allowed' : 'pointer',
+          marginTop: '20px'
+        }}
+      >
+        {isLoading ? 'Enviando...' : 'Enviar'}
+      </button>
+      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
+        <Alert onClose={handleSnackbarClose} severity={snackbarSeverity} sx={{ width: '100%' }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
+    </>
   );
 };
 
