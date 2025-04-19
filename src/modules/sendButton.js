@@ -30,9 +30,13 @@ const SendButton = ({ macro, micro }) => {
       return;
     }
     try {
+      console.log(JSON.stringify({
+        macro,
+        micro
+      }))
       const response = process.env.NODE_ENV === 'development' 
         ? await mockApiResponse(macro, micro)
-        : await fetch('/caca_api/daily/guess', {
+        : await fetch('caca_api/daily_pista/guess', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
