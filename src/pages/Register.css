@@ -1,0 +1,101 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: yellow;
+}
+
+.register-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid black;
+}
+
+.register-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: black;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Winky Sans", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: black;
+  color: yellow;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-family: "Winky Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.login-section {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 2px solid black;
+  padding-top: 1rem;
+}
+
+.login-section p {
+  color: black;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.login-button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
+}
+
+.login-button:hover {
+  background-color: black;
+  color: yellow;
+}
+
+.error-message {
+  color: red;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+} 

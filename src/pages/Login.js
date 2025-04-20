@@ -29,14 +29,11 @@ function Login() {
         border: '2px solid black',
         borderRadius: '8px'
       }}>
-        <img 
-          src={require('../images/work-in-progress.png')}
-          alt="Work in Progress"
-          style={{ 
-            maxWidth: '150px',
-            height: 'auto'
-          }}
-        />
+        <span style={{ 
+            fontSize: '3rem',
+            display: 'block',
+            marginBottom: '15px'
+          }}>🏗️</span>
         <p style={{ 
           fontSize: '1.2rem',
           fontWeight: 'bold',
