@@ -7,22 +7,6 @@ const SendButton = ({ macro, micro }) => {
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarSeverity, setSnackbarSeverity] = useState('info');
 
-  // Mock function to simulate API response
-  const mockApiResponse = (macro, micro) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const isCorrect = macro.toLowerCase() === "bio" && micro.toLowerCase() === "barco da bio";
-        
-        resolve({
-          ok: true,
-          status: 200,
-          json: () => Promise.resolve({
-            guess_result: isCorrect
-          })
-        });
-      }, 500);
-    });
-  };
 
   const handleSubmit = async () => {
     if (!macro || !micro) {

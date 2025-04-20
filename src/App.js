@@ -10,20 +10,6 @@ function App() {
   const [micro, setMicro] = useState('');
   const [pistaContent, setPistaContent] = useState('');
 
-  // Mock function to simulate API response
-  const mockPistaResponse = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          ok: true,
-          status: 200,
-          json: () => Promise.resolve({
-            content: "Conto duas historias de vingança que se entrelaçam. Todo perseguidor não encontra uma saída"
-          })
-        });
-      }, 500);
-    });
-  };
 
   useEffect(() => {
     const fetchPista = async () => {
