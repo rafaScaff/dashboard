@@ -298,7 +298,8 @@ export default function Dropdown({ macro, setMacro, micro, setMicro }) {
         'Placa da Arvore Copaíba',
         'Moeda - ADM Velha',
         'Rainha das Saladas',
-        'Barco da Bio'
+        'Barco da Bio',
+        'ICB II - Elevador'
     ],
     "FFLCH": [
         'Jardim de inverno',

@@ -17,7 +17,7 @@ const SendButton = ({ macro, micro }) => {
           ok: true,
           status: 200,
           json: () => Promise.resolve({
-            guess_is_right: isCorrect
+            guess_result: isCorrect
           })
         });
       }, 500);
@@ -34,9 +34,7 @@ const SendButton = ({ macro, micro }) => {
         macro,
         micro
       }))
-      const response = process.env.NODE_ENV === 'development' 
-        ? await mockApiResponse(macro, micro)
-        : await fetch('caca_api/daily_pista/guess', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista/guess`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -55,8 +53,8 @@ const SendButton = ({ macro, micro }) => {
       console.log('Resposta:', data);
       
       setSnackbarOpen(true);
-      setSnackbarMessage(data.guess_is_right ? "Parabéns! Você acertou!" : "Tente novamente!");
-      setSnackbarSeverity(data.guess_is_right ? "success" : "error");
+      setSnackbarMessage(data.guess_result ? "Parabéns! Você acertou!" : "Tente novamente!");
+      setSnackbarSeverity(data.guess_result ? "success" : "error");
       
     } catch (error) {
       console.error('Erro:', error);

@@ -28,9 +28,7 @@ function App() {
   useEffect(() => {
     const fetchPista = async () => {
       try {
-        const response = process.env.NODE_ENV === 'development' 
-          ? await mockPistaResponse()
-          : await fetch('/caca_api/daily_pista');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista`);
         const data = await response.json();
         setPistaContent(data.content);
       } catch (error) {
