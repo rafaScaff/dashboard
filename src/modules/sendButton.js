@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 
 const SendButton = ({ macro, micro }) => {
@@ -6,7 +6,21 @@ const SendButton = ({ macro, micro }) => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarSeverity, setSnackbarSeverity] = useState('info');
+  const [timeoutActive, setTimeoutActive] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0);
+  const TIMEOUT_DURATION = 60;
 
+  useEffect(() => {
+    let timer;
+    if (timeoutActive && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft((prevTime) => prevTime - 1);
+      }, 1000);
+    } else if (timeLeft === 0) {
+      setTimeoutActive(false);
+    }
+    return () => clearInterval(timer);
+  }, [timeoutActive, timeLeft]);
 
   const handleSubmit = async () => {
     if (!macro || !micro) {
@@ -14,20 +28,21 @@ const SendButton = ({ macro, micro }) => {
       return;
     }
     try {
+      setIsLoading(true);
       console.log(JSON.stringify({
         macro,
         micro
       }))
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista/guess`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              macro,
-              micro
-            })
-          });
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista/guess`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          macro,
+          micro
+        })
+      });
 
       if (!response.ok) {
         throw new Error('Erro ao enviar resposta');
@@ -39,6 +54,11 @@ const SendButton = ({ macro, micro }) => {
       setSnackbarOpen(true);
       setSnackbarMessage(data.guess_result ? "Parabéns! Você acertou!" : "Tente novamente!");
       setSnackbarSeverity(data.guess_result ? "success" : "error");
+      
+      if (!data.guess_result) {
+        setTimeoutActive(true);
+        setTimeLeft(TIMEOUT_DURATION);
+      }
       
     } catch (error) {
       console.error('Erro:', error);
@@ -55,24 +75,26 @@ const SendButton = ({ macro, micro }) => {
     setSnackbarOpen(false);
   };
 
+  const isButtonDisabled = isLoading || timeoutActive;
+
   return (
     <>
       <button 
         onClick={handleSubmit}
-        disabled={isLoading}
+        disabled={isButtonDisabled}
         style={{
-          backgroundColor: isLoading ? 'gray' : 'black',
+          backgroundColor: isButtonDisabled ? 'gray' : 'black',
           color: 'white',
           padding: '15px 30px',
           border: 'none',
           borderRadius: '5px',
           fontSize: '1.4rem',
           fontFamily: "'Winky Sans', Arial, sans-serif",
-          cursor: isLoading ? 'not-allowed' : 'pointer',
+          cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
           marginTop: '20px'
         }}
       >
-        {isLoading ? 'Enviando...' : 'Enviar'}
+        {isLoading ? 'Enviando...' : timeoutActive ? `Tente novamente em ${timeLeft}s` : 'Enviar'}
       </button>
       <Snackbar 
         open={snackbarOpen} 
