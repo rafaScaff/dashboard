@@ -8,21 +8,54 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [showPopup, setShowPopup] = useState(true);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     setShowPopup(true);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+
     if (password !== confirmPassword) {
       setError('As senhas não coincidem');
       return;
     }
-    if (username && password) {
-      navigate('/login');
+
+    if (!username || !password) {
+      setError('Por favor, preencha todos os campos');
+      return;
     }
+
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.status === 409) {
+        setError('Este nome de usuário já está em uso');
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error('Erro ao registrar usuário');
+      }
+
+      setShowSuccessPopup(true);
+    } catch (err) {
+      setError(err.message || 'Ocorreu um erro ao tentar registrar');
+    }
+  };
+
+  const handleSuccessPopupClose = () => {
+    setShowSuccessPopup(false);
+    navigate('/login');
   };
 
   const handleLogin = () => {
@@ -73,6 +106,50 @@ function Register() {
           </button>
         </div>
       )}
+
+      {showSuccessPopup && (
+        <div style={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          backgroundColor: 'white',
+          padding: '20px',
+          borderRadius: '8px',
+          boxShadow: '0 0 10px rgba(0,0,0,0.5)',
+          zIndex: 1000,
+          maxWidth: '500px',
+          width: '90%',
+          textAlign: 'center'
+        }}>
+          <span style={{ 
+            fontSize: '3rem',
+            display: 'block',
+            marginBottom: '15px'
+          }}>✅</span>
+          <p style={{ 
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            margin: '0',
+            color: '#333'
+          }}>Usuário registrado com sucesso!</p>
+          <button 
+            onClick={handleSuccessPopupClose}
+            style={{
+              marginTop: '20px',
+              padding: '8px 16px',
+              backgroundColor: '#28a745',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Ir para Login
+          </button>
+        </div>
+      )}
+
       <div className="register-box" style={{ margin: '40px auto', maxWidth: '400px', width: '100%', boxSizing: 'border-box' }}>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
