@@ -290,7 +290,8 @@ export default function Dropdown({ macro, setMacro, micro, setMicro }) {
         'Portão 9',
         'Portão 8',
         'Portão 7',
-        'Portão 6'
+        'Portão 6',
+        'Praça Ayrton Senna'
     ],
     "BIO": [
         'Edificio "Sobre as Ondas"',
@@ -299,7 +300,8 @@ export default function Dropdown({ macro, setMacro, micro, setMicro }) {
         'Moeda - ADM Velha',
         'Rainha das Saladas',
         'Barco da Bio',
-        'ICB II - Elevador'
+        'ICB II - Elevador',
+        'Barco Utricularia'
     ],
     "FFLCH": [
         'Jardim de inverno',
@@ -313,7 +315,8 @@ export default function Dropdown({ macro, setMacro, micro, setMicro }) {
         'Placa da turma 2002',
         '10t',
         'CAVC',
-        'Ponto de ônibus'
+        'Ponto de ônibus',
+        'Bacon'
     ]
 } 
 
