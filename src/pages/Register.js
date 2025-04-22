@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
+import LoadingSpinner from '../utils/LoadingSpinner';
 
 function Register() {
   const [username, setUsername] = useState('');
@@ -9,6 +10,7 @@ function Register() {
   const [error, setError] = useState('');
   const [showPopup, setShowPopup] = useState(true);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,14 +20,17 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     if (password !== confirmPassword) {
       setError('As senhas não coincidem');
+      setIsLoading(false);
       return;
     }
 
     if (!username || !password) {
       setError('Por favor, preencha todos os campos');
+      setIsLoading(false);
       return;
     }
 
@@ -50,6 +55,8 @@ function Register() {
       setShowSuccessPopup(true);
     } catch (err) {
       setError(err.message || 'Ocorreu um erro ao tentar registrar');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -160,6 +167,7 @@ function Register() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
+              disabled={isLoading}
             />
           </div>
           <div className="form-group">
@@ -170,6 +178,7 @@ function Register() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              disabled={isLoading}
             />
           </div>
           <div className="form-group">
@@ -180,14 +189,27 @@ function Register() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
+              disabled={isLoading}
             />
           </div>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit">Register</button>
+          <button type="submit" disabled={isLoading} style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            gap: '10px',
+            minWidth: '120px'
+          }}>
+            {isLoading ? (
+              <LoadingSpinner size={20} color="white" />
+            ) : (
+              'Register'
+            )}
+          </button>
         </form>
         <div className="login-section">
           <p>Já tem uma conta?</p>
-          <button onClick={handleLogin} className="login-button">
+          <button onClick={handleLogin} className="login-button" disabled={isLoading}>
             Login
           </button>
         </div>

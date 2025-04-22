@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import LoadingSpinner from '../utils/LoadingSpinner';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     if (!username || !password) {
       setError('Por favor, preencha todos os campos');
+      setIsLoading(false);
       return;
     }
 
@@ -52,6 +56,8 @@ function Login() {
       navigate('/play');
     } catch (err) {
       setError(err.message || 'Ocorreu um erro ao tentar fazer login');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -71,6 +77,7 @@ function Login() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
+              disabled={isLoading}
             />
           </div>
           <div className="form-group">
@@ -81,14 +88,27 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              disabled={isLoading}
             />
           </div>
           {error && <p className="error-message" style={{ color: 'red', marginBottom: '10px' }}>{error}</p>}
-          <button type="submit">Login</button>
+          <button type="submit" disabled={isLoading} style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            gap: '10px',
+            minWidth: '120px'
+          }}>
+            {isLoading ? (
+              <LoadingSpinner size={20} color="white" />
+            ) : (
+              'Login'
+            )}
+          </button>
         </form>
         <div className="register-section">
           <p>Não tem uma conta?</p>
-          <button onClick={handleRegister} className="register-button">
+          <button onClick={handleRegister} className="register-button" disabled={isLoading}>
             Registrar
           </button>
         </div>

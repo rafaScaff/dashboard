@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Snackbar, Alert } from '@mui/material';
+import LoadingSpinner from '../utils/LoadingSpinner';
 
 const SendButton = ({ macro, micro }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -91,10 +92,21 @@ const SendButton = ({ macro, micro }) => {
           fontSize: '1.4rem',
           fontFamily: "'Winky Sans', Arial, sans-serif",
           cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
-          marginTop: '20px'
+          marginTop: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+          minWidth: '120px'
         }}
       >
-        {isLoading ? 'Enviando...' : timeoutActive ? `Tente novamente em ${timeLeft}s` : 'Enviar'}
+        {isLoading ? (
+          <LoadingSpinner size={20} color="white" />
+        ) : timeoutActive ? (
+          `Tente novamente em ${timeLeft}s`
+        ) : (
+          'Enviar'
+        )}
       </button>
       <Snackbar 
         open={snackbarOpen} 

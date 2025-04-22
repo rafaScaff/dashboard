@@ -8,20 +8,25 @@ import treasureChest from './images/treasure-chest.png';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ProtectedRoute from './components/ProtectedRoute';
+import LoadingSpinner from './utils/LoadingSpinner';
 
 function PlayPage() {
   const [macro, setMacro] = useState('');
   const [micro, setMicro] = useState('');
   const [pistaContent, setPistaContent] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchPista = async () => {
       try {
+        setIsLoading(true);
         const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista`);
         const data = await response.json();
         setPistaContent(data.content);
       } catch (error) {
         console.error('Error fetching pista:', error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -40,10 +45,14 @@ function PlayPage() {
         </div>
         <div>
           <h1 style={{color: 'black', fontFamily: "Winky Sans", fontSize: '3rem'}}>CAÇA DIÁRIO</h1>
-          <Pista 
-            type="string" 
-            content={pistaContent}
-          />
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <Pista 
+              type="string" 
+              content={pistaContent}
+            />
+          )}
         </div>
 
         <Dropdown 
