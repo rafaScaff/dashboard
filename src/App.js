@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Dropdown from './modules/dropdowns';
 import SendButton from './modules/sendButton';
 import Pista from './modules/pista';
@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import LoadingSpinner from './utils/LoadingSpinner';
 
 function PlayPage() {
+  const navigate = useNavigate();
   const [macro, setMacro] = useState('');
   const [micro, setMicro] = useState('');
   const [pistaContent, setPistaContent] = useState('');
@@ -20,7 +21,18 @@ function PlayPage() {
     const fetchPista = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista`, {
+          headers: {
+            'Authorization': `${localStorage.getItem('token')}`
+          }
+        });
+
+        if (response.status === 403) {
+          localStorage.clear();
+          navigate('/login');
+          return;
+        }
+
         const data = await response.json();
         setPistaContent(data.content);
       } catch (error) {
@@ -31,7 +43,7 @@ function PlayPage() {
     };
 
     fetchPista();
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="App">

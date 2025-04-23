@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 import LoadingSpinner from '../utils/LoadingSpinner';
+import { useNavigate } from 'react-router-dom';
 
 const SendButton = ({ macro, micro }) => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -38,12 +40,19 @@ const SendButton = ({ macro, micro }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `${localStorage.getItem('token')}`
         },
         body: JSON.stringify({
           macro,
           micro
         })
       });
+
+      if (response.status === 403) {
+        localStorage.clear();
+        navigate('/login');
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Erro ao enviar resposta');
