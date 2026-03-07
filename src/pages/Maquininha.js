@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { useNavigate } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { 
@@ -22,7 +23,10 @@ import {
 import SearchIcon from '@mui/icons-material/Search.js';
 import CloseIcon from '@mui/icons-material/Close';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import BlockIcon from '@mui/icons-material/Block';
 import portas from '../data/portas.json';
+import { getValidatedJWT } from '../utils/jwtValidator';
+import CryptoJS from 'crypto-js';
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -78,8 +82,55 @@ const LocationMarker = ({ position }) => {
   ) : null;
 };
 
+// Configurações do S3
+const S3_BUCKET_NAME = 'maquininha-bucket';
+const S3_REGION = 'us-east-1';
+
+// Função para gerar image_key a partir de imageUrl (MD5 hash)
+const generateImageKey = (imageUrl) => {
+  return CryptoJS.MD5(imageUrl).toString();
+};
+
+// Função para obter image_key de um ponto (gera se não existir)
+const getImageKey = (point) => {
+  if (point.image_key) {
+    return point.image_key;
+  }
+  if (point.imageUrl) {
+    return generateImageKey(point.imageUrl);
+  }
+  return null;
+};
+
+// Função para construir URL do S3 a partir do image_key
+const getS3ImageUrl = (imageKey, extension = 'jpg') => {
+  if (!imageKey) return null;
+  // Constrói URL do S3 com a extensão fornecida (padrão: .jpg)
+  return `https://${S3_BUCKET_NAME}.s3.${S3_REGION}.amazonaws.com/${imageKey}.${extension}`;
+};
+
+// Função para obter URL da imagem (S3 ou fallback para imageUrl)
+const getImageUrl = (point) => {
+  const imageKey = getImageKey(point);
+  if (imageKey) {
+    // Tenta determinar extensão a partir do imageUrl original se disponível
+    let extension = 'jpg'; // padrão
+    if (point.imageUrl) {
+      const urlMatch = point.imageUrl.match(/\.(jpg|jpeg|png|gif|webp)(\?|$)/i);
+      if (urlMatch) {
+        extension = urlMatch[1].toLowerCase();
+        if (extension === 'jpeg') extension = 'jpg'; // normaliza jpeg para jpg
+      }
+    }
+    return getS3ImageUrl(imageKey, extension);
+  }
+  // Fallback para imageUrl original se não houver image_key
+  return point.imageUrl || null;
+};
+
 const Maquininha = () => {
     const position = [-23.5614, -46.7305]; // Cidade Universitária USP Butantã
+    const navigate = useNavigate();
     const [userLocation, setUserLocation] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -88,10 +139,29 @@ const Maquininha = () => {
     const [imageData, setImageData] = useState(null);
     const [imageLoading, setImageLoading] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const [isValidating, setIsValidating] = useState(true);
+    const [showAccessDeniedDialog, setShowAccessDeniedDialog] = useState(false);
+
+    // Verificar JWT ao carregar
+    useEffect(() => {
+        const checkJWT = async () => {
+            setIsValidating(true);
+            const result = await getValidatedJWT();
+            
+            if (!result.valid) {
+                // JWT inválido ou não encontrado, mostra popup
+                setShowAccessDeniedDialog(true);
+            } else {
+                setIsValidating(false);
+            }
+        };
+
+        checkJWT();
+    }, []);
 
     // Solicitar localização automaticamente ao carregar
     useEffect(() => {
-        if ("geolocation" in navigator) {
+        if (!isValidating && "geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     setUserLocation([position.coords.latitude, position.coords.longitude]);
@@ -102,22 +172,16 @@ const Maquininha = () => {
                 }
             );
         }
-    }, []);
-
-    // Filtrar pontos válidos do portas.json
-    const validPoints = portas.filter(item => 
-        item.lat != null && item.long != null && 
-        !isNaN(item.lat) && !isNaN(item.long)
-    );
+    }, [isValidating]);
 
     // Determinar quais pontos exibir no mapa
-    // Se houver resultados de busca, mostrar apenas eles. Caso contrário, mostrar todos os pontos válidos
+    // Só mostrar pontos quando houver uma busca ativa (resultados de busca)
     const pointsToDisplay = searchResults.length > 0 
         ? searchResults.filter(item => 
             item.lat != null && item.long != null && 
             !isNaN(item.lat) && !isNaN(item.long)
           )
-        : validPoints;
+        : []; // Não renderizar nenhum ponto inicialmente
 
     // Search function - busca tanto por nome quanto por descrição
     const handleSearch = () => {
@@ -195,13 +259,12 @@ const Maquininha = () => {
         throw new Error('Todos os proxies falharam');
     };
 
-    // Carregar imagem quando o dialog abrir e houver imageUrl
+    // Carregar imagem quando o dialog abrir e houver imageUrl ou image_key
     useEffect(() => {
-        if (openDialog && selectedLocation?.imageUrl) {
+        const imageUrl = selectedLocation ? getImageUrl(selectedLocation) : null;
+        if (openDialog && imageUrl) {
             setImageLoading(true);
             setImageError(false);
-            
-            const imageUrl = selectedLocation.imageUrl;
             
             // Para URLs do Google My Maps, usar diretamente (funciona melhor sem crossOrigin)
             const isGoogleMapsUrl = imageUrl.includes('mymaps.usercontent.google.com') || 
@@ -289,6 +352,25 @@ const Maquininha = () => {
             }
         };
     }, [imageData]);
+
+    // Mostra loading enquanto valida JWT
+    if (isValidating) {
+        return (
+            <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                height: '100vh',
+                flexDirection: 'column',
+                gap: '20px'
+            }}>
+                <CircularProgress size={50} />
+                <Typography variant="body1" color="text.secondary">
+                    Validando autenticação...
+                </Typography>
+            </div>
+        );
+    }
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
@@ -396,9 +478,9 @@ const Maquininha = () => {
                                 <div>
                                     {point.name && <h3>{point.name}</h3>}
                                     {point.description && <p>{point.description}</p>}
-                                    {point.imageUrl && (
+                                    {getImageUrl(point) && (
                                         <img 
-                                            src={point.imageUrl} 
+                                            src={getImageUrl(point)} 
                                             alt={point.name || 'Imagem'} 
                                             style={{ maxWidth: '300px', height: 'auto', marginTop: '10px' }}
                                         />
@@ -489,7 +571,7 @@ const Maquininha = () => {
                             )}
                             
                             {/* Imagem */}
-                            {selectedLocation.imageUrl && (
+                            {getImageUrl(selectedLocation) && (
                                 <Box>
                                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                                         Imagem
@@ -512,8 +594,9 @@ const Maquininha = () => {
                                                 console.log('Erro ao renderizar imagem, tentando URL original...');
                                                 setImageError(true);
                                                 // Fallback para URL original
-                                                if (imageData !== selectedLocation.imageUrl) {
-                                                    setImageData(selectedLocation.imageUrl);
+                                                const fallbackUrl = getImageUrl(selectedLocation);
+                                                if (imageData !== fallbackUrl && fallbackUrl) {
+                                                    setImageData(fallbackUrl);
                                                 }
                                             }}
                                             sx={{
@@ -530,7 +613,7 @@ const Maquininha = () => {
                             {/* Informação caso não tenha dados */}
                             {!selectedLocation.name && 
                              !selectedLocation.description && 
-                             !selectedLocation.imageUrl && (
+                             !getImageUrl(selectedLocation) && (
                                 <Typography variant="body2" color="text.secondary">
                                     Nenhuma informação adicional disponível para esta localização.
                                 </Typography>
@@ -540,6 +623,46 @@ const Maquininha = () => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseDialog}>Fechar</Button>
+                </DialogActions>
+            </Dialog>
+
+            {/* Dialog de acesso negado */}
+            <Dialog
+                open={showAccessDeniedDialog}
+                onClose={() => {
+                    setShowAccessDeniedDialog(false);
+                    navigate('/login');
+                }}
+                maxWidth="sm"
+                fullWidth
+            >
+                <DialogTitle>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <BlockIcon sx={{ color: 'error.main', fontSize: 28 }} />
+                        <Typography variant="h6" component="div" sx={{ color: 'error.main' }}>
+                            Acesso Negado
+                        </Typography>
+                    </Box>
+                </DialogTitle>
+                <DialogContent>
+                    <Typography variant="body1" sx={{ marginTop: 2, fontSize: '18px', fontWeight: 'bold' }}>
+                        Não aceitamos gente da AEQ!
+                    </Typography>
+                    <Typography variant="body2" sx={{ marginTop: 2, color: 'text.secondary' }}>
+                        Esta página requer autenticação via JWT válido. Por favor, faça login para acessar.
+                    </Typography>
+                </DialogContent>
+                <DialogActions>
+                    <Button 
+                        onClick={() => {
+                            setShowAccessDeniedDialog(false);
+                            navigate('/login');
+                        }}
+                        variant="contained"
+                        color="primary"
+                    >
+                        Ir para Login
+                    </Button>
                 </DialogActions>
             </Dialog>
         </div>

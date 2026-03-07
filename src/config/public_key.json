@@ -1,0 +1,5 @@
+{
+  "key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2YZDWjQLtWMrLwnVq9cY\nzlo9jsCvLXosb8hp8X4G6ITwKaES4jneRmB+IV5hX+zsK75X/PSSWkQluAjPyJvq\nWGXICOm5iLuVtc2oWv6sd8cYw40HermvCHa654WbkqN4QM7TgZMB0RibPtX6vmfG\nnFL6eA9buCfLVBojIyDjVuahemkgTnIKXgq3+ypQ0H90HeUwo6C1C05q0isqJlu2\nSOAcQuSeLy8eMYUzD6VPKwlcu4K1knaBa39oz4r6pIZqIaYqoOHu8O1ne8qLoff/\nGf4rMR6b3hpY1OuzNDxpfdL6Ayw/SkCXB6DA1OX70EGXW0xkzaWFxVVY+WqOPDWj\nhwIDAQAB\n-----END PUBLIC KEY-----\n",
+  "format": "pem",
+  "type": "spki"
+}
