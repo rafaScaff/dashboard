@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import treasureChest from './images/treasure-chest.png';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Maquininha from './pages/Maquininha';
 import ProtectedRoute from './components/ProtectedRoute';
 import LoadingSpinner from './utils/LoadingSpinner';
 
@@ -97,6 +98,7 @@ function App() {
             </ProtectedRoute>
           } 
         />
+        <Route path="/maquininha" element={<Maquininha />} />
       </Routes>
     </Router>
   );

@@ -20,7 +20,6 @@ function Login() {
       setIsLoading(false);
       return;
     }
-
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/login`, {
         method: 'POST',
