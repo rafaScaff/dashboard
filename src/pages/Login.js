@@ -96,7 +96,6 @@ function Login() {
       <div className="login-container" style={{ padding: '10px 20px' }}>
         <div className="login-box" style={{ margin: '40px auto', maxWidth: '400px', width: '100%', boxSizing: 'border-box', textAlign: 'center' }}>
           <LoadingSpinner size={40} color="#1976d2" />
-          <p style={{ marginTop: '20px' }}>Validando token JWT...</p>
         </div>
       </div>
     );
@@ -105,22 +104,12 @@ function Login() {
   return (
     <div className="login-container" style={{ padding: '10px 20px' }}>
       <div className="login-box" style={{ margin: '40px auto', maxWidth: '500px', width: '100%', boxSizing: 'border-box' }}>
-        <div style={{ marginBottom: '20px', textAlign: 'center' }}>
-          <h2 style={{ marginBottom: '10px' }}>Autenticação JWT</h2>
-          <p style={{ fontSize: '14px', color: '#666' }}>
-            Cole seu token JWT abaixo para fazer login. O token será salvo nos cookies automaticamente.
-          </p>
-        </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label htmlFor="jwt-token" style={{ display: 'block', marginBottom: '5px', fontWeight: '500' }}>
-              Token JWT
-            </label>
             <textarea
               id="jwt-token"
               value={jwtToken}
               onChange={(e) => setJwtToken(e.target.value)}
-              placeholder="Cole seu token JWT aqui..."
               required
               disabled={isLoading}
               style={{
@@ -182,31 +171,10 @@ function Login() {
               cursor: isLoading || !jwtToken.trim() ? 'not-allowed' : 'pointer'
             }}
           >
-            {isLoading ? (
-              <>
-                <LoadingSpinner size={20} color="white" />
-                Validando...
-              </>
-            ) : (
-              'Validar e Salvar Token'
-            )}
+            {isLoading && <LoadingSpinner size={20} color="white" />}
+            ENTRAR
           </button>
         </form>
-        <div className="register-section" style={{ marginTop: '20px', textAlign: 'center', paddingTop: '20px', borderTop: '1px solid #eee' }}>
-          <p style={{ fontSize: '12px', color: '#666', marginBottom: '10px' }}>
-            Não tem um token JWT? Gere um usando o script:
-          </p>
-          <code style={{ 
-            fontSize: '11px', 
-            background: '#f5f5f5', 
-            padding: '8px 12px', 
-            borderRadius: '4px',
-            display: 'inline-block',
-            fontFamily: 'monospace'
-          }}>
-            node keys/generate_token.js &lt;username&gt;
-          </code>
-        </div>
       </div>
     </div>
   );

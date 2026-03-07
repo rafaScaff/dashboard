@@ -24,7 +24,7 @@ import SearchIcon from '@mui/icons-material/Search.js';
 import CloseIcon from '@mui/icons-material/Close';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import BlockIcon from '@mui/icons-material/Block';
-import portas from '../data/portas.json';
+import consolidado from '../data/consolidado.json';
 import { getValidatedJWT } from '../utils/jwtValidator';
 import CryptoJS from 'crypto-js';
 
@@ -190,7 +190,7 @@ const Maquininha = () => {
             return;
         }
         const searchStr = searchQuery.toLowerCase().trim();
-        const results = portas.filter(item => {
+        const results = consolidado.filter(item => {
             // Buscar no nome (se existir)
             const nameMatch = item.name 
                 ? item.name.toLowerCase().includes(searchStr)
@@ -449,7 +449,6 @@ const Maquininha = () => {
                                         <LocationOnIcon sx={{ mr: 1, color: 'primary.main' }} />
                                         <ListItemText
                                             primary={result.name || 'Sem nome'}
-                                            secondary={result.description || 'Sem descrição'}
                                         />
                                     </ListItem>
                                     {index < searchResults.length - 1 && <Divider />}
