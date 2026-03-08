@@ -613,7 +613,7 @@ const Maquininha = () => {
                     borderBottom: '3px solid black',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 2.5,
+                    gap: 0.5,
                     overflow: 'hidden',
                     width: '100%',
                     maxWidth: '100%',
@@ -1005,7 +1005,8 @@ const Maquininha = () => {
                     });
                     
                     return (
-                        <Collapse in={showResultsList}>
+                        <Box sx={{ marginBottom: '-16px' }}>
+                            <Collapse in={showResultsList}>
                                 <Paper
                                     elevation={0}
                                     sx={{
@@ -1081,6 +1082,7 @@ const Maquininha = () => {
                                     </List>
                                 </Paper>
                             </Collapse>
+                        </Box>
                     );
                 })()}
             </Box>
