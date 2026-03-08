@@ -46,7 +46,7 @@ L.Icon.Default.mergeOptions({
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-// Criar ícone customizado para localização do usuário (estilo Google Maps)
+// Criar ícone customizado para localização do usuário
 const createUserLocationIcon = () => {
     return L.divIcon({
         className: 'user-location-icon',
@@ -433,132 +433,83 @@ const Maquininha = () => {
     };
 
     const handleResultClick = (location) => {
-        setSelectedLocation(location);
-        setOpenDialog(true);
-        // Resetar estados da imagem
+        // Primeiro resetar estados da imagem
         setImageData(null);
         setImageError(false);
         setImageLoading(false);
+        // Depois atualizar localização e abrir dialog
+        setSelectedLocation(location);
+        setOpenDialog(true);
     };
 
     const handleCloseDialog = () => {
         setOpenDialog(false);
         setSelectedLocation(null);
-        setImageData(null);
-        setImageError(false);
-        setImageLoading(false);
-    };
-
-    // Função para tentar carregar imagem usando proxy CORS
-    const loadImageWithProxy = async (imageUrl) => {
-        // Lista de proxies CORS públicos que podemos tentar
-        const corsProxies = [
-            `https://api.allorigins.win/raw?url=${encodeURIComponent(imageUrl)}`,
-            `https://cors-anywhere.herokuapp.com/${imageUrl}`,
-            `https://corsproxy.io/?${encodeURIComponent(imageUrl)}`,
-        ];
-
-        for (const proxyUrl of corsProxies) {
-            try {
-                const response = await fetch(proxyUrl, {
-                    method: 'GET',
-                    mode: 'cors',
-                });
-                if (response.ok) {
-                    const blob = await response.blob();
-                    return URL.createObjectURL(blob);
-                }
-            } catch (error) {
-                console.log(`Proxy falhou: ${proxyUrl}`, error);
-                continue;
-            }
-        }
-        throw new Error('Todos os proxies falharam');
+        // Limpar estados da imagem após um pequeno delay para evitar race conditions
+        setTimeout(() => {
+            setImageData(null);
+            setImageError(false);
+            setImageLoading(false);
+        }, 100);
     };
 
     // Carregar imagem quando o dialog abrir e houver imageUrl ou image_key
     useEffect(() => {
-        const imageUrl = selectedLocation ? getImageUrl(selectedLocation) : null;
-        if (openDialog && imageUrl) {
-            setImageLoading(true);
-            setImageError(false);
-            
-            // Para URLs do Google My Maps, usar diretamente (funciona melhor sem crossOrigin)
-            const isGoogleMapsUrl = imageUrl.includes('mymaps.usercontent.google.com') || 
-                                   imageUrl.includes('googleusercontent.com');
-            
-            if (isGoogleMapsUrl) {
-                // Para Google Maps, usar URL diretamente - geralmente funciona para exibição
-                const testImage = new Image();
-                
-                testImage.onload = () => {
-                    setImageData(imageUrl);
-                    setImageLoading(false);
-                };
-                
-                testImage.onerror = () => {
-                    // Se falhar, tentar com proxy
-                    loadImageWithProxy(imageUrl)
-                        .then(proxyUrl => {
-                            setImageData(proxyUrl);
-                            setImageLoading(false);
-                        })
-                        .catch(() => {
-                            // Fallback: usar URL original mesmo com erro
-                            setImageData(imageUrl);
-                            setImageLoading(false);
-                            setImageError(true);
-                        });
-                };
-                
-                testImage.src = imageUrl;
-            } else {
-                // Para outras URLs, tentar estratégias mais complexas
-                const testImage = new Image();
-                testImage.crossOrigin = 'anonymous';
-                
-                testImage.onload = () => {
-                    setImageData(imageUrl);
-                    setImageLoading(false);
-                };
-                
-                testImage.onerror = async () => {
-                    try {
-                        // Tentar fetch com mode 'no-cors'
-                        const response = await fetch(imageUrl, {
-                            method: 'GET',
-                            mode: 'no-cors',
-                        });
-                        
-                        if (response.type === 'opaque') {
-                            setImageData(imageUrl);
-                            setImageLoading(false);
-                            return;
-                        }
-                        
-                        const blob = await response.blob();
-                        const objectUrl = URL.createObjectURL(blob);
-                        setImageData(objectUrl);
-                        setImageLoading(false);
-                    } catch (fetchError) {
-                        console.log('Fetch direto falhou, tentando proxy...', fetchError);
-                        
-                        try {
-                            const proxyUrl = await loadImageWithProxy(imageUrl);
-                            setImageData(proxyUrl);
-                            setImageLoading(false);
-                        } catch (proxyError) {
-                            console.error('Todos os métodos falharam:', proxyError);
-                            setImageError(true);
-                            setImageLoading(false);
-                            setImageData(imageUrl); // Fallback final
-                        }
-                    }
-                };
-                
-                testImage.src = imageUrl;
-            }
+        if (!openDialog || !selectedLocation) {
+            return;
         }
+
+        const imageUrl = getImageUrl(selectedLocation);
+        if (!imageUrl) {
+            setImageData(null);
+            setImageLoading(false);
+            setImageError(false);
+            return;
+        }
+
+        // Resetar estados imediatamente
+        setImageLoading(true);
+        setImageError(false);
+        setImageData(null);
+
+        let isMounted = true;
+        let testImage = new Image();
+        testImage.crossOrigin = 'anonymous';
+        
+        // Adiciona timestamp para forçar recarregamento e evitar cache
+        const urlWithCacheBust = imageUrl + (imageUrl.includes('?') ? '&' : '?') + '_t=' + Date.now();
+        
+        testImage.onload = () => {
+            if (isMounted) {
+                // Usa a URL com cache-busting para garantir que carregue
+                setImageData(urlWithCacheBust);
+                setImageLoading(false);
+                setImageError(false);
+            }
+        };
+        
+        testImage.onerror = () => {
+            if (isMounted) {
+                // Se falhar com cache-busting, tenta sem
+                setImageError(true);
+                setImageLoading(false);
+                setImageData(imageUrl);
+            }
+        };
+        
+        // Inicia o carregamento
+        testImage.src = urlWithCacheBust;
+        
+        // Cleanup function
+        return () => {
+            isMounted = false;
+            if (testImage) {
+                testImage.onload = null;
+                testImage.onerror = null;
+                testImage.src = '';
+                testImage = null;
+            }
+        };
     }, [openDialog, selectedLocation]);
 
     // Limpar URL do objeto quando o componente desmontar ou dialog fechar
@@ -919,16 +870,20 @@ const Maquininha = () => {
                                         <Box sx={{ position: 'relative' }}>
                                             <Box
                                                 component="img"
+                                                key={imageData} // Force re-render quando imageData mudar
                                                 src={imageData}
                                                 alt={selectedLocation.name || 'Imagem da localização'}
-                                                crossOrigin={imageData.includes('mymaps.usercontent.google.com') || imageData.includes('googleusercontent.com') ? undefined : 'anonymous'}
+                                                crossOrigin="anonymous"
+                                                onLoad={() => {
+                                                    setImageError(false);
+                                                }}
                                                 onError={() => {
-                                                    console.log('Erro ao renderizar imagem, tentando URL original...');
+                                                    console.log('Erro ao renderizar imagem no popup');
                                                     setImageError(true);
-                                                    // Fallback para URL original
-                                                    const fallbackUrl = getImageUrl(selectedLocation);
-                                                    if (imageData !== fallbackUrl && fallbackUrl) {
-                                                        setImageData(fallbackUrl);
+                                                    // Se falhar, tenta URL original sem cache-busting
+                                                    const originalUrl = getImageUrl(selectedLocation);
+                                                    if (imageData !== originalUrl && originalUrl) {
+                                                        setImageData(originalUrl);
                                                     }
                                                 }}
                                                 sx={{
@@ -1044,7 +999,7 @@ const Maquininha = () => {
                             component="img"
                             src={imageData}
                             alt={selectedLocation?.name || 'Imagem da localização'}
-                            crossOrigin={imageData.includes('mymaps.usercontent.google.com') || imageData.includes('googleusercontent.com') ? undefined : 'anonymous'}
+                            crossOrigin="anonymous"
                             sx={{
                                 width: '100%',
                                 height: 'auto',
