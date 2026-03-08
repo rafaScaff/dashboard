@@ -591,10 +591,11 @@ const Maquininha = () => {
                 alignItems: 'center', 
                 height: '100vh',
                 flexDirection: 'column',
-                gap: '20px'
+                gap: '20px',
+                backgroundColor: 'yellow'
             }}>
-                <CircularProgress size={50} />
-                <Typography variant="body1" color="text.secondary">
+                <CircularProgress size={50} sx={{ color: 'black' }} />
+                <Typography variant="body1" sx={{ color: 'black', fontWeight: 600 }}>
                     Validando autenticação...
                 </Typography>
             </div>
@@ -602,54 +603,85 @@ const Maquininha = () => {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'yellow' }}>
             <Box
                 sx={{
-                    padding: '20px',
+                    padding: '24px',
                     backgroundColor: 'white',
-                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    borderBottom: '3px solid black',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 2
+                    gap: 2.5
                 }}
             >
                 <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
                     <Paper
-                        elevation={3}
+                        elevation={0}
                         sx={{
                             flex: 1,
                             minWidth: '300px',
                             display: 'flex',
                             alignItems: 'center',
-                            padding: '0 10px',
-                            backgroundColor: 'white'
+                            padding: '0 16px',
+                            backgroundColor: 'white',
+                            border: '2px solid black',
+                            borderRadius: '8px',
+                            transition: 'all 0.3s ease',
+                            '&:focus-within': {
+                                boxShadow: '0 0 0 3px rgba(255, 235, 59, 0.3)',
+                                borderColor: 'black'
+                            }
                         }}
                     >
-                        <SearchIcon sx={{ color: 'action.active', mr: 1 }} />
+                        <SearchIcon sx={{ color: 'black', mr: 1.5, fontSize: '28px' }} />
                         <TextField
                             fullWidth
                             variant="standard"
-                            placeholder="Search locations..."
+                            placeholder="Buscar localizações..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             onKeyDown={handleKeyDown}
                             InputProps={{
                                 disableUnderline: true,
+                                sx: {
+                                    fontSize: '16px',
+                                    color: 'black',
+                                    '&::placeholder': {
+                                        color: '#666',
+                                        opacity: 1
+                                    }
+                                }
                             }}
                         />
                         <Button
                             variant="contained"
                             onClick={handleSearch}
                             sx={{
-                                ml: 1,
-                                minWidth: '100px',
-                                backgroundColor: '#1976d2',
+                                ml: 1.5,
+                                minWidth: '120px',
+                                height: '40px',
+                                backgroundColor: 'black',
+                                color: 'yellow',
+                                fontWeight: 700,
+                                fontSize: '14px',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px',
+                                border: '2px solid black',
+                                borderRadius: '6px',
+                                transition: 'all 0.2s ease',
                                 '&:hover': {
-                                    backgroundColor: '#1565c0'
+                                    backgroundColor: 'yellow',
+                                    color: 'black',
+                                    transform: 'translateY(-2px)',
+                                    boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                                },
+                                '&:active': {
+                                    transform: 'translateY(0)'
                                 }
                             }}
                         >
-                            Search
+                            Buscar
                         </Button>
                     </Paper>
                     <Button
@@ -658,9 +690,32 @@ const Maquininha = () => {
                         onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                         sx={{
                             minWidth: '150px',
-                            borderColor: '#1976d2',
-                            color: '#1976d2',
-                            flexShrink: 0
+                            height: '40px',
+                            borderColor: 'black',
+                            borderWidth: '2px',
+                            color: 'black',
+                            backgroundColor: showAdvancedFilters ? 'black' : 'white',
+                            fontWeight: 600,
+                            fontSize: '14px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            borderRadius: '6px',
+                            flexShrink: 0,
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                backgroundColor: 'yellow',
+                                borderColor: 'black',
+                                color: 'black',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                            },
+                            '& .MuiButton-startIcon': {
+                                color: showAdvancedFilters ? 'yellow' : 'black',
+                                transition: 'color 0.2s ease'
+                            },
+                            '&:hover .MuiButton-startIcon': {
+                                color: 'black'
+                            }
                         }}
                     >
                         <FilterListIcon sx={{ mr: 1 }} />
@@ -670,21 +725,39 @@ const Maquininha = () => {
                 {/* Filtros avançados */}
                 <Collapse in={showAdvancedFilters}>
                     <Paper
-                        elevation={2}
+                        elevation={0}
                         sx={{
-                            padding: '15px',
+                            padding: '20px',
                             maxWidth: '600px',
-                            backgroundColor: '#f5f5f5'
+                            backgroundColor: 'white',
+                            border: '2px solid black',
+                            borderRadius: '8px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         }}
                     >
                         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
                             <FormControl sx={{ minWidth: 200 }}>
-                                <InputLabel>Macro</InputLabel>
+                                <InputLabel sx={{ color: 'black', fontWeight: 600 }}>Macro</InputLabel>
                                 <Select
                                     value={selectedMacro}
                                     label="Macro"
                                     onChange={(e) => setSelectedMacro(e.target.value)}
-                                    sx={{ backgroundColor: 'white' }}
+                                    sx={{ 
+                                        backgroundColor: 'white',
+                                        border: '2px solid black',
+                                        borderRadius: '6px',
+                                        '& .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black',
+                                            borderWidth: '2px'
+                                        },
+                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black'
+                                        },
+                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black',
+                                            borderWidth: '2px'
+                                        }
+                                    }}
                                 >
                                     <MenuItem value="">Todas</MenuItem>
                                     {macros.map((macro, index) => (
@@ -696,12 +769,27 @@ const Maquininha = () => {
                             </FormControl>
                             
                             <FormControl sx={{ minWidth: 200 }}>
-                                <InputLabel>Sub Macro</InputLabel>
+                                <InputLabel sx={{ color: 'black', fontWeight: 600 }}>Sub Macro</InputLabel>
                                 <Select
                                     value={selectedSubMacro}
                                     label="Sub Macro"
                                     onChange={(e) => setSelectedSubMacro(e.target.value)}
-                                    sx={{ backgroundColor: 'white' }}
+                                    sx={{ 
+                                        backgroundColor: 'white',
+                                        border: '2px solid black',
+                                        borderRadius: '6px',
+                                        '& .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black',
+                                            borderWidth: '2px'
+                                        },
+                                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black'
+                                        },
+                                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                            borderColor: 'black',
+                                            borderWidth: '2px'
+                                        }
+                                    }}
                                 >
                                     <MenuItem value="">Todas</MenuItem>
                                     {subMacros.map((subMacro, index) => (
@@ -717,10 +805,21 @@ const Maquininha = () => {
                                     <Switch
                                         checked={hasImageFilter}
                                         onChange={(e) => setHasImageFilter(e.target.checked)}
-                                        color="primary"
+                                        sx={{
+                                            '& .MuiSwitch-switchBase.Mui-checked': {
+                                                color: 'black',
+                                            },
+                                            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                                                backgroundColor: 'yellow',
+                                            },
+                                            '& .MuiSwitch-track': {
+                                                backgroundColor: '#ccc',
+                                                border: '1px solid black'
+                                            }
+                                        }}
                                     />
                                 }
-                                label="Possui imagem"
+                                label={<span style={{ color: 'black', fontWeight: 600 }}>Possui imagem</span>}
                             />
                             
                             <FormControlLabel
@@ -728,10 +827,21 @@ const Maquininha = () => {
                                     <Switch
                                         checked={hasNameFilter}
                                         onChange={(e) => setHasNameFilter(e.target.checked)}
-                                        color="primary"
+                                        sx={{
+                                            '& .MuiSwitch-switchBase.Mui-checked': {
+                                                color: 'black',
+                                            },
+                                            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                                                backgroundColor: 'yellow',
+                                            },
+                                            '& .MuiSwitch-track': {
+                                                backgroundColor: '#ccc',
+                                                border: '1px solid black'
+                                            }
+                                        }}
                                     />
                                 }
-                                label="Apenas com nome"
+                                label={<span style={{ color: 'black', fontWeight: 600 }}>Apenas com nome</span>}
                             />
                             
                             {(selectedMacro || selectedSubMacro || hasImageFilter || hasNameFilter) && (
@@ -744,7 +854,18 @@ const Maquininha = () => {
                                         setHasImageFilter(false);
                                         setHasNameFilter(false);
                                     }}
-                                    sx={{ ml: 'auto' }}
+                                    sx={{ 
+                                        ml: 'auto',
+                                        color: 'black',
+                                        fontWeight: 600,
+                                        textTransform: 'uppercase',
+                                        fontSize: '12px',
+                                        letterSpacing: '0.5px',
+                                        '&:hover': {
+                                            backgroundColor: 'yellow',
+                                            color: 'black'
+                                        }
+                                    }}
                                 >
                                     Limpar filtros
                                 </Button>
@@ -786,11 +907,28 @@ const Maquininha = () => {
                     
                     return (
                     <Paper
-                        elevation={2}
+                        elevation={0}
                         sx={{
-                            maxHeight: '200px',
+                            maxHeight: '250px',
                             overflowY: 'auto',
-                            maxWidth: '600px'
+                            maxWidth: '600px',
+                            border: '2px solid black',
+                            borderRadius: '8px',
+                            backgroundColor: 'white',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            '&::-webkit-scrollbar': {
+                                width: '8px',
+                            },
+                            '&::-webkit-scrollbar-track': {
+                                backgroundColor: 'yellow',
+                            },
+                            '&::-webkit-scrollbar-thumb': {
+                                backgroundColor: 'black',
+                                borderRadius: '4px',
+                                '&:hover': {
+                                    backgroundColor: '#333'
+                                }
+                            }
                         }}
                     >
                         <List dense>
@@ -800,31 +938,33 @@ const Maquininha = () => {
                                         button
                                         onClick={() => handleResultClick(result)}
                                         sx={{
+                                            transition: 'all 0.2s ease',
                                             '&:hover': {
-                                                backgroundColor: 'action.hover'
+                                                backgroundColor: 'yellow',
+                                                transform: 'translateX(4px)'
                                             }
                                         }}
                                     >
-                                        <LocationOnIcon sx={{ mr: 1, color: result.image_key ? 'yellow' : 'blue' }} />
+                                        <LocationOnIcon sx={{ mr: 1.5, color: result.image_key ? 'yellow' : 'blue', fontSize: '24px' }} />
                                         <ListItemText
                                             primary={
                                                 result.name 
-                                                    ? result.name 
+                                                    ? <span style={{ color: 'black', fontWeight: 600 }}>{result.name}</span>
                                                     : (() => {
                                                         if (!result.description || !searchQuery.trim()) {
-                                                            return 'Sem nome';
+                                                            return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
                                                         }
                                                         
                                                         const context = getDescriptionContext(result.description, searchQuery.trim());
                                                         
                                                         if (!context || !context.match) {
-                                                            return 'Sem nome';
+                                                            return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
                                                         }
                                                         
                                                         return (
-                                                            <span>
+                                                            <span style={{ }}>
                                                                 Sem nome - {context.before}
-                                                                <strong>{context.match}</strong>
+                                                                <strong style={{ color: 'black', padding: '0 2px' }}>{context.match}</strong>
                                                                 {context.after}
                                                             </span>
                                                         );
@@ -832,7 +972,7 @@ const Maquininha = () => {
                                             }
                                         />
                                     </ListItem>
-                                    {index < sortedResults.length - 1 && <Divider />}
+                                    {index < sortedResults.length - 1 && <Divider sx={{ borderColor: 'black', opacity: 0.2 }} />}
                                 </React.Fragment>
                             ))}
                         </List>
@@ -881,44 +1021,75 @@ const Maquininha = () => {
                 maxWidth="md"
                 fullWidth
             >
-                <DialogTitle>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Typography variant="h6" component="div">
+                <DialogTitle sx={{ backgroundColor: 'black', color: 'yellow', borderBottom: '3px solid yellow' }}>
+                <Box 
+                    sx={{ 
+                        display: 'flex', 
+                        justifyContent: 'space-between', 
+                        alignItems: 'flex-start', 
+                        width: '100%',
+                        // Remove cores de fundo indesejadas e garante que a box não estique
+                        backgroundColor: 'transparent', 
+                        padding: '16px', // Espaçamento interno padrão
+                        boxSizing: 'border-box'
+                    }}
+                >
+                    {/* Container do Texto - ocupa todo o espaço exceto o do botão */}
+                    <Box sx={{ flex: 1, minWidth: 0, pr: 2 }}>
+                        <Typography 
+                            variant="h6" 
+                            sx={{ 
+                                fontWeight: 700, 
+                                textTransform: 'uppercase', 
+                                letterSpacing: '0.5px',
+                                wordBreak: 'break-word', // Força a quebra de palavras longas
+                                lineHeight: 1.2,
+                                display: 'block' 
+                            }}
+                        >
                             {selectedLocation?.name || 'Detalhes da Localização'}
                         </Typography>
+                    </Box>
+
+                    {/* Container do Botão - tamanho fixo para não ser espremido */}
+                    <Box sx={{ flexShrink: 0 }}>
                         <IconButton
                             aria-label="close"
                             onClick={handleCloseDialog}
                             sx={{
-                                color: (theme) => theme.palette.grey[500],
+                                color: 'yellow',
+                                padding: '4px',
+                                '&:hover': {
+                                    backgroundColor: 'yellow',
+                                    color: 'black'
+                                }
                             }}
                         >
                             <CloseIcon />
                         </IconButton>
                     </Box>
+                </Box>
                 </DialogTitle>
-                <DialogContent dividers>
+                <DialogContent dividers sx={{ backgroundColor: 'white', '& .MuiDivider-root': { borderColor: 'black', opacity: 0.2 } }}>
                     {selectedLocation && (
-                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                            {/* Nome */}
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                             {selectedLocation.name && (
                                 <Box>
-                                    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                    <Typography variant="subtitle2" sx={{ color: 'black', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', fontSize: '12px', mb: 1 }}>
                                         Nome
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body1" sx={{ color: 'black', fontSize: '16px', fontWeight: 500 }}>
                                         {selectedLocation.name}
                                     </Typography>
                                 </Box>
                             )}
                             
-                            {/* Descrição */}
                             {selectedLocation.description && (
                                 <Box>
-                                    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                    <Typography variant="subtitle2" sx={{ color: 'black', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', fontSize: '12px', mb: 1 }}>
                                         Descrição
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body1" sx={{ color: 'black', fontSize: '16px', lineHeight: 1.6 }}>
                                         {selectedLocation.description}
                                     </Typography>
                                 </Box>
@@ -927,14 +1098,11 @@ const Maquininha = () => {
                             {/* Coordenadas */}
                             {(selectedLocation.lat != null && selectedLocation.long != null) && (
                                 <Box>
-                                    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                    <Typography variant="subtitle2" sx={{ color: 'black', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', fontSize: '12px', mb: 1 }}>
                                         Coordenadas
                                     </Typography>
-                                    <Typography variant="body2">
-                                        Latitude: {selectedLocation.lat}
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        Longitude: {selectedLocation.long}
+                                    <Typography variant="body2" sx={{ color: 'black', fontFamily: 'monospace', padding: '8px', borderRadius: '4px', display: 'inline-block' }}>
+                                        Lat: {selectedLocation.lat} | Long: {selectedLocation.long}
                                     </Typography>
                                 </Box>
                             )}
@@ -942,10 +1110,10 @@ const Maquininha = () => {
                             {/* Style URL */}
                             {selectedLocation.styleUrl && (
                                 <Box>
-                                    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                    <Typography variant="subtitle2" sx={{ color: 'black', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', fontSize: '12px', mb: 1 }}>
                                         Style URL
                                     </Typography>
-                                    <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>
+                                    <Typography variant="body2" sx={{ wordBreak: 'break-all', color: 'black', fontFamily: 'monospace', fontSize: '12px', backgroundColor: '#f5f5f5', padding: '8px', borderRadius: '4px' }}>
                                         {selectedLocation.styleUrl}
                                     </Typography>
                                 </Box>
@@ -954,12 +1122,12 @@ const Maquininha = () => {
                             {/* Imagem */}
                             {getImageUrl(selectedLocation) && (
                                 <Box>
-                                    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                    <Typography variant="subtitle2" sx={{ color: 'black', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', fontSize: '12px', mb: 1 }}>
                                         Imagem
                                     </Typography>
                                     {imageLoading && !imageData ? (
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
-                                            <CircularProgress />
+                                            <CircularProgress sx={{ color: 'black' }} />
                                         </Box>
                                     ) : imageData ? (
                                         <Box sx={{ position: 'relative' }}>
@@ -990,23 +1158,40 @@ const Maquininha = () => {
                                                 }}
                                             />
                                             <IconButton
-                                                onClick={() => setShowImageDialog(true)}
-                                                sx={{
-                                                    position: 'absolute',
-                                                    top: 8,
-                                                    right: 8,
-                                                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                                                    '&:hover': {
-                                                        backgroundColor: 'rgba(255, 255, 255, 1)'
-                                                    }
-                                                }}
-                                                size="small"
-                                            >
-                                                <ZoomInIcon />
-                                            </IconButton>
+    onClick={() => setShowImageDialog(true)}
+    sx={{
+        position: 'absolute',
+        top: 12, // Um pouco mais afastado da borda para não sufocar
+        right: 12,
+        // Trava o tamanho para garantir simetria total
+        width: 32, 
+        height: 32,
+        padding: 0, 
+        
+        backgroundColor: 'black',
+        color: 'yellow',
+        border: '2px solid yellow',
+        
+        // Garante que o ícone interno seja pequeno o suficiente
+        '& .MuiSvgIcon-root': {
+            fontSize: '1.2rem' 
+        },
+        
+        '&:hover': {
+            backgroundColor: 'yellow',
+            color: 'black',
+            transform: 'scale(1.1)',
+            borderColor: 'black' // Opcional: muda a borda no hover para contraste
+        },
+        transition: 'all 0.2s ease',
+        zIndex: 10 // Garante que ele fique acima da imagem
+    }}
+>
+    <ZoomInIcon />
+</IconButton>
                                         </Box>
                                     ) : (
-                                        <Typography variant="body2" color="text.secondary">
+                                        <Typography variant="body2" sx={{ color: '#666', fontStyle: 'italic' }}>
                                             Carregando imagem...
                                         </Typography>
                                     )}
@@ -1017,15 +1202,36 @@ const Maquininha = () => {
                             {!selectedLocation.name && 
                              !selectedLocation.description && 
                              !getImageUrl(selectedLocation) && (
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography variant="body2" sx={{ color: '#666', fontStyle: 'italic', textAlign: 'center', padding: '20px' }}>
                                     Nenhuma informação adicional disponível para esta localização.
                                 </Typography>
                             )}
                         </Box>
                     )}
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleCloseDialog}>Fechar</Button>
+                <DialogActions sx={{ backgroundColor: 'white', borderTop: '2px solid black', padding: '16px 24px' }}>
+                    <Button 
+                        onClick={handleCloseDialog}
+                        sx={{
+                            backgroundColor: 'black',
+                            color: 'yellow',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            padding: '10px 24px',
+                            border: '2px solid black',
+                            borderRadius: '6px',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                backgroundColor: 'yellow',
+                                color: 'black',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                            }
+                        }}
+                    >
+                        Fechar
+                    </Button>
                 </DialogActions>
             </Dialog>
 
@@ -1039,30 +1245,45 @@ const Maquininha = () => {
                 maxWidth="sm"
                 fullWidth
             >
-                <DialogTitle>
+                <DialogTitle sx={{ backgroundColor: 'black', color: 'red', borderBottom: '3px solid yellow' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <BlockIcon sx={{ color: 'error.main', fontSize: 28 }} />
-                        <Typography variant="h6" component="div" sx={{ color: 'error.main' }}>
+                        <BlockIcon sx={{ color: 'yellow', fontSize: 28 }} />
+                        <Typography variant="h6" component="div" sx={{ color: 'yellow', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                             Acesso Negado
                         </Typography>
                     </Box>
                 </DialogTitle>
-                <DialogContent>
-                    <Typography variant="body1" sx={{ marginTop: 2, fontSize: '18px', fontWeight: 'bold' }}>
+                <DialogContent sx={{ backgroundColor: 'white', padding: '24px' }}>
+                    <Typography variant="body1" sx={{ marginTop: 2, fontSize: '18px', fontWeight: 700, color: 'black' }}>
                         Não aceitamos gente da AEQ!
                     </Typography>
-                    <Typography variant="body2" sx={{ marginTop: 2, color: 'text.secondary' }}>
+                    <Typography variant="body2" sx={{ marginTop: 2, color: '#666', lineHeight: 1.6 }}>
                         Esta página requer autenticação via JWT válido. Por favor, faça login para acessar.
                     </Typography>
                 </DialogContent>
-                <DialogActions>
+                <DialogActions sx={{ backgroundColor: 'white', borderTop: '2px solid black', padding: '16px 24px' }}>
                     <Button 
                         onClick={() => {
                             setShowAccessDeniedDialog(false);
                             navigate('/login');
                         }}
-                        variant="contained"
-                        color="primary"
+                        sx={{
+                            backgroundColor: 'black',
+                            color: 'yellow',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            padding: '10px 24px',
+                            border: '2px solid black',
+                            borderRadius: '6px',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                backgroundColor: 'yellow',
+                                color: 'black',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                            }
+                        }}
                     >
                         Ir para Login
                     </Button>
@@ -1076,23 +1297,41 @@ const Maquininha = () => {
                 maxWidth="lg"
                 fullWidth
             >
-                <DialogTitle>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Typography variant="h6" component="div">
+                <DialogTitle sx={{ backgroundColor: 'black', color: 'yellow', borderBottom: '3px solid yellow' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                        <Typography 
+                            variant="h6" 
+                            component="div" 
+                            sx={{ 
+                                fontWeight: 700, 
+                                textTransform: 'uppercase', 
+                                letterSpacing: '0.5px',
+                                flex: 1,
+                                minWidth: 0,
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                whiteSpace: 'nowrap'
+                            }}
+                        >
                             {selectedLocation?.name || 'Imagem'}
                         </Typography>
                         <IconButton
                             aria-label="close"
                             onClick={() => setShowImageDialog(false)}
                             sx={{
-                                color: (theme) => theme.palette.grey[500],
+                                color: 'yellow',
+                                flexShrink: 0,
+                                '&:hover': {
+                                    backgroundColor: 'yellow',
+                                    color: 'black'
+                                } 
                             }}
                         >
                             <CloseIcon />
                         </IconButton>
                     </Box>
                 </DialogTitle>
-                <DialogContent dividers>
+                <DialogContent dividers sx={{ backgroundColor: 'black', '& .MuiDivider-root': { borderColor: 'yellow', opacity: 0.3 }, padding: '20px' }}>
                     {imageData && (
                         <Box
                             component="img"
@@ -1105,13 +1344,37 @@ const Maquininha = () => {
                                 maxHeight: '80vh',
                                 objectFit: 'contain',
                                 display: 'block',
-                                margin: '0 auto'
+                                margin: '0 auto',
+                                border: '2px solid yellow',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 12px rgba(255, 235, 59, 0.3)'
                             }}
                         />
                     )}
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={() => setShowImageDialog(false)}>Fechar</Button>
+                <DialogActions sx={{ backgroundColor: 'black', borderTop: '2px solid yellow', padding: '16px 24px' }}>
+                    <Button 
+                        onClick={() => setShowImageDialog(false)}
+                        sx={{
+                            backgroundColor: 'yellow',
+                            color: 'black',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            padding: '10px 24px',
+                            border: '2px solid yellow',
+                            borderRadius: '6px',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                backgroundColor: 'black',
+                                color: 'yellow',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 8px rgba(255, 235, 59, 0.3)'
+                            }
+                        }}
+                    >
+                        Fechar
+                    </Button>
                 </DialogActions>
             </Dialog>
         </div>
