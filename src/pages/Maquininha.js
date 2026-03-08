@@ -205,6 +205,7 @@ const Maquininha = () => {
     const [hasNameFilter, setHasNameFilter] = useState(false);
     const [macros, setMacros] = useState([]);
     const [subMacros, setSubMacros] = useState([]);
+    const [showResultsList, setShowResultsList] = useState(true);
 
     // Verificar JWT ao carregar
     useEffect(() => {
@@ -654,11 +655,23 @@ const Maquininha = () => {
                                 }
                             }}
                         />
+                    </Paper>
+                    <Paper
+                        elevation={0}
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            padding: '0',
+                            backgroundColor: 'white',
+                            border: '2px solid black',
+                            borderRadius: '8px',
+                            flexShrink: 0
+                        }}
+                    >
                         <Button
                             variant="contained"
                             onClick={handleSearch}
                             sx={{
-                                ml: 1.5,
                                 minWidth: '120px',
                                 height: '40px',
                                 backgroundColor: 'black',
@@ -906,77 +919,116 @@ const Maquininha = () => {
                     });
                     
                     return (
-                    <Paper
-                        elevation={0}
-                        sx={{
-                            maxHeight: '250px',
-                            overflowY: 'auto',
-                            maxWidth: '600px',
-                            border: '2px solid black',
-                            borderRadius: '8px',
-                            backgroundColor: 'white',
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                            '&::-webkit-scrollbar': {
-                                width: '8px',
-                            },
-                            '&::-webkit-scrollbar-track': {
-                                backgroundColor: 'yellow',
-                            },
-                            '&::-webkit-scrollbar-thumb': {
-                                backgroundColor: 'black',
-                                borderRadius: '4px',
-                                '&:hover': {
-                                    backgroundColor: '#333'
-                                }
-                            }
-                        }}
-                    >
-                        <List dense>
-                            {sortedResults.map((result, index) => (
-                                <React.Fragment key={`result-${index}`}>
-                                    <ListItem
-                                        button
-                                        onClick={() => handleResultClick(result)}
-                                        sx={{
-                                            transition: 'all 0.2s ease',
+                        <Box sx={{ maxWidth: '600px' }}>
+                            <Button
+                                variant="outlined"
+                                startIcon={showResultsList ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                                onClick={() => setShowResultsList(!showResultsList)}
+                                sx={{
+                                    width: '100%',
+                                    height: '40px',
+                                    borderColor: 'black',
+                                    borderWidth: '2px',
+                                    color: 'black',
+                                    backgroundColor: showResultsList ? 'black' : 'white',
+                                    fontWeight: 600,
+                                    fontSize: '14px',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px',
+                                    borderRadius: '8px',
+                                    marginBottom: showResultsList ? 1 : 0,
+                                    transition: 'all 0.2s ease',
+                                    '&:hover': {
+                                        backgroundColor: 'yellow',
+                                        borderColor: 'black',
+                                        color: 'black',
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                                    },
+                                    '& .MuiButton-startIcon': {
+                                        color: showResultsList ? 'yellow' : 'black',
+                                        transition: 'color 0.2s ease'
+                                    },
+                                    '&:hover .MuiButton-startIcon': {
+                                        color: 'black'
+                                    }
+                                }}
+                            >
+                                Resultados ({sortedResults.length})
+                            </Button>
+                            <Collapse in={showResultsList}>
+                                <Paper
+                                    elevation={0}
+                                    sx={{
+                                        maxHeight: '250px',
+                                        overflowY: 'auto',
+                                        border: '2px solid black',
+                                        borderRadius: '8px',
+                                        backgroundColor: 'white',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                        '&::-webkit-scrollbar': {
+                                            width: '8px',
+                                        },
+                                        '&::-webkit-scrollbar-track': {
+                                            backgroundColor: 'yellow',
+                                        },
+                                        '&::-webkit-scrollbar-thumb': {
+                                            backgroundColor: 'black',
+                                            borderRadius: '4px',
                                             '&:hover': {
-                                                backgroundColor: 'yellow',
-                                                transform: 'translateX(4px)'
+                                                backgroundColor: '#333'
                                             }
-                                        }}
-                                    >
-                                        <LocationOnIcon sx={{ mr: 1.5, color: result.image_key ? 'yellow' : 'blue', fontSize: '24px' }} />
-                                        <ListItemText
-                                            primary={
-                                                result.name 
-                                                    ? <span style={{ color: 'black', fontWeight: 600 }}>{result.name}</span>
-                                                    : (() => {
-                                                        if (!result.description || !searchQuery.trim()) {
-                                                            return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
+                                        }
+                                    }}
+                                >
+                                    <List dense>
+                                        {sortedResults.map((result, index) => (
+                                            <React.Fragment key={`result-${index}`}>
+                                                <ListItem
+                                                    button
+                                                    onClick={() => handleResultClick(result)}
+                                                    sx={{
+                                                        transition: 'all 0.2s ease',
+                                                        '&:hover': {
+                                                            backgroundColor: 'yellow',
+                                                            transform: 'translateX(4px)'
                                                         }
-                                                        
-                                                        const context = getDescriptionContext(result.description, searchQuery.trim());
-                                                        
-                                                        if (!context || !context.match) {
-                                                            return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
+                                                    }}
+                                                >
+                                                    <LocationOnIcon sx={{ mr: 1.5, color: result.image_key ? 'yellow' : 'blue', fontSize: '24px' }} />
+                                                    <ListItemText
+                                                        primary={
+                                                            result.name 
+                                                                ? <span style={{ color: 'black', fontWeight: 600 }}>{result.name}</span>
+                                                                : (() => {
+                                                                    if (!result.description || !searchQuery.trim()) {
+                                                                        return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
+                                                                    }
+                                                                    
+                                                                    const context = getDescriptionContext(result.description, searchQuery.trim());
+                                                                    
+                                                                    if (!context || !context.match) {
+                                                                        return <span style={{ color: '#666', fontStyle: 'italic' }}>Sem nome</span>;
+                                                                    }
+                                                                    
+                                                                    return (
+                                                                        <span style={{ }}>
+                                                                            Sem nome - {context.before}
+                                                                            <strong style={{ color: 'black', padding: '0 2px' }}>{context.match}</strong>
+                                                                            {context.after}
+                                                                        </span>
+                                                                    );
+                                                                })()
                                                         }
-                                                        
-                                                        return (
-                                                            <span style={{ }}>
-                                                                Sem nome - {context.before}
-                                                                <strong style={{ color: 'black', padding: '0 2px' }}>{context.match}</strong>
-                                                                {context.after}
-                                                            </span>
-                                                        );
-                                                    })()
-                                            }
-                                        />
-                                    </ListItem>
-                                    {index < sortedResults.length - 1 && <Divider sx={{ borderColor: 'black', opacity: 0.2 }} />}
-                                </React.Fragment>
-                            ))}
-                        </List>
-                    </Paper>
+                                                    />
+                                                </ListItem>
+                                                {index < sortedResults.length - 1 && <Divider sx={{ borderColor: 'black', opacity: 0.2 }} />}
+                                            </React.Fragment>
+                                        ))}
+                                    </List>
+                                </Paper>
+                            </Collapse>
+                        </Box>
                     );
                 })()}
             </Box>
