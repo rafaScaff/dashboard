@@ -768,6 +768,55 @@ const Maquininha = () => {
                         <FilterListIcon sx={{ mr: 1 }} />
                         Filtros
                     </Button>
+                    {(() => {
+                        // Aplica filtros avançados aos resultados (dropdown não exige coordenadas)
+                        const filteredResults = applyAdvancedFilters(searchResults, false);
+                        
+                        // Aplica limite de 100 resultados DEPOIS dos filtros
+                        const LIMIT = 100;
+                        const limitedResults = filteredResults.slice(0, LIMIT);
+                        
+                        if (limitedResults.length === 0) return null;
+                        
+                        return (
+                            <Button
+                                variant="outlined"
+                                startIcon={showResultsList ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                                onClick={() => setShowResultsList(!showResultsList)}
+                                sx={{
+                                    minWidth: '150px',
+                                    height: '40px',
+                                    borderColor: 'black',
+                                    borderWidth: '2px',
+                                    color: 'black',
+                                    backgroundColor: showResultsList ? 'black' : 'white',
+                                    fontWeight: 600,
+                                    fontSize: '14px',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px',
+                                    borderRadius: '6px',
+                                    flexShrink: 0,
+                                    transition: 'all 0.2s ease',
+                                    '&:hover': {
+                                        backgroundColor: 'yellow',
+                                        borderColor: 'black',
+                                        color: 'black',
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+                                    },
+                                    '& .MuiButton-startIcon': {
+                                        color: showResultsList ? 'yellow' : 'black',
+                                        transition: 'color 0.2s ease'
+                                    },
+                                    '&:hover .MuiButton-startIcon': {
+                                        color: 'black'
+                                    }
+                                }}
+                            >
+                                Resultados ({limitedResults.length})
+                            </Button>
+                        );
+                    })()}
                 </Box>
                 {/* Filtros avançados */}
                 <Collapse in={showAdvancedFilters}>
@@ -956,44 +1005,7 @@ const Maquininha = () => {
                     });
                     
                     return (
-                        <Box sx={{ maxWidth: '100%', width: '100%', overflow: 'hidden', boxSizing: 'border-box' }}>
-                            <Button
-                                variant="outlined"
-                                startIcon={showResultsList ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                                onClick={() => setShowResultsList(!showResultsList)}
-                                sx={{
-                                    width: '100%',
-                                    height: '40px',
-                                    borderColor: 'black',
-                                    borderWidth: '2px',
-                                    color: 'black',
-                                    backgroundColor: showResultsList ? 'black' : 'white',
-                                    fontWeight: 600,
-                                    fontSize: '14px',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px',
-                                    borderRadius: '8px',
-                                    marginBottom: showResultsList ? 1 : 0,
-                                    transition: 'all 0.2s ease',
-                                    '&:hover': {
-                                        backgroundColor: 'yellow',
-                                        borderColor: 'black',
-                                        color: 'black',
-                                        transform: 'translateY(-2px)',
-                                        boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
-                                    },
-                                    '& .MuiButton-startIcon': {
-                                        color: showResultsList ? 'yellow' : 'black',
-                                        transition: 'color 0.2s ease'
-                                    },
-                                    '&:hover .MuiButton-startIcon': {
-                                        color: 'black'
-                                    }
-                                }}
-                            >
-                                Resultados ({sortedResults.length})
-                            </Button>
-                            <Collapse in={showResultsList}>
+                        <Collapse in={showResultsList}>
                                 <Paper
                                     elevation={0}
                                     sx={{
@@ -1069,7 +1081,6 @@ const Maquininha = () => {
                                     </List>
                                 </Paper>
                             </Collapse>
-                        </Box>
                     );
                 })()}
             </Box>
