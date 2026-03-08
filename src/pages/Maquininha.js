@@ -203,6 +203,7 @@ const Maquininha = () => {
     const [selectedSubMacro, setSelectedSubMacro] = useState('');
     const [hasImageFilter, setHasImageFilter] = useState(false);
     const [hasNameFilter, setHasNameFilter] = useState(false);
+    const [hasStreetViewFilter, setHasStreetViewFilter] = useState(true);
     const [macros, setMacros] = useState([]);
     const [subMacros, setSubMacros] = useState([]);
     const [showResultsList, setShowResultsList] = useState(false);
@@ -431,6 +432,13 @@ const Maquininha = () => {
             // Filtro de possui nome
             if (hasNameFilter) {
                 if (!item.name || item.name.trim() === '') {
+                    return false;
+                }
+            }
+            
+            // Filtro para remover streetview-google
+            if (hasStreetViewFilter) {
+                if (item.origin === 'streetview-google') {
                     return false;
                 }
             }
@@ -943,7 +951,29 @@ const Maquininha = () => {
                                 label={<span style={{ color: 'black', fontWeight: 600 }}>Apenas com nome</span>}
                             />
                             
-                            {(selectedMacro || selectedSubMacro || hasImageFilter || hasNameFilter) && (
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={hasStreetViewFilter}
+                                        onChange={(e) => setHasStreetViewFilter(e.target.checked)}
+                                        sx={{
+                                            '& .MuiSwitch-switchBase.Mui-checked': {
+                                                color: 'black',
+                                            },
+                                            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                                                backgroundColor: 'yellow',
+                                            },
+                                            '& .MuiSwitch-track': {
+                                                backgroundColor: '#ccc',
+                                                border: '1px solid black'
+                                            }
+                                        }}
+                                    />
+                                }
+                                label={<span style={{ color: 'black', fontWeight: 600 }}>Remover Street View Google</span>}
+                            />
+                            
+                            {(selectedMacro || selectedSubMacro || hasImageFilter || hasNameFilter || hasStreetViewFilter) && (
                                 <Button
                                     variant="text"
                                     size="small"
@@ -952,6 +982,7 @@ const Maquininha = () => {
                                         setSelectedSubMacro('');
                                         setHasImageFilter(false);
                                         setHasNameFilter(false);
+                                        setHasStreetViewFilter(false);
                                     }}
                                     sx={{ 
                                         ml: 'auto',
