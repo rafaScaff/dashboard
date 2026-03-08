@@ -538,72 +538,41 @@ const Maquininha = () => {
 
     // Carregar imagem quando o dialog abrir e houver imageUrl ou image_key
     useEffect(() => {
-        if (!openDialog || !selectedLocation) {
-            return;
-        }
-
+        if (!openDialog || !selectedLocation) return;
+    
         const imageUrl = getImageUrl(selectedLocation);
         if (!imageUrl) {
             setImageData(null);
             setImageLoading(false);
             return;
         }
-
-        // Resetar estados imediatamente
+    
         setImageLoading(true);
-        setImageData(null);
-
-        let isMounted = true;
-        let testImage = new Image();
-        testImage.crossOrigin = 'anonymous';
         
-        // Adiciona timestamp para forçar recarregamento e evitar cache
-        const urlWithCacheBust = imageUrl + (imageUrl.includes('?') ? '&' : '?') + '_t=' + Date.now();
+        // Em produção, evite o cache-bust se não for estritamente necessário,
+        // pois ele pode quebrar assinaturas de URL se o bucket for privado.
+        const finalUrl = imageUrl; 
+    
+        const img = new Image();
+        // Importante: Só use anonymous se o CORS no S3 estiver configurado!
+        img.crossOrigin = "anonymous"; 
         
-        testImage.onload = () => {
-            if (isMounted) {
-                // Usa a URL com cache-busting para garantir que carregue
-                setImageData(urlWithCacheBust);
-                setImageLoading(false);
-            }
+        img.onload = () => {
+            setImageData(finalUrl);
+            setImageLoading(false);
         };
         
-        testImage.onerror = () => {
-            if (isMounted) {
-                // Se falhar com cache-busting, tenta sem
-                setImageLoading(false);
-                // Tenta usar a URL original diretamente
-                setImageData(imageUrl);
-            }
+        img.onerror = () => {
+            console.error("Erro ao carregar imagem do S3:", finalUrl);
+            setImageLoading(false);
+            setImageData(null); // Ou uma imagem de fallback
         };
-        
-        // Inicia o carregamento imediatamente
-        // Usar um pequeno delay apenas para garantir que o dialog esteja renderizado
-        const startLoading = () => {
-            if (isMounted) {
-                testImage.src = urlWithCacheBust;
-            }
-        };
-        
-        // Em produção, pode haver um pequeno delay no rendering do dialog
-        // Usar requestAnimationFrame para garantir que o DOM esteja pronto
-        if (process.env.NODE_ENV === 'production') {
-            requestAnimationFrame(() => {
-                requestAnimationFrame(startLoading);
-            });
-        } else {
-            startLoading();
-        }
-        
-        // Cleanup function
+    
+        img.src = finalUrl;
+    
         return () => {
-            isMounted = false;
-            if (testImage) {
-                testImage.onload = null;
-                testImage.onerror = null;
-                testImage.src = '';
-                testImage = null;
-            }
+            img.onload = null;
+            img.onerror = null;
         };
     }, [openDialog, selectedLocation]);
 
