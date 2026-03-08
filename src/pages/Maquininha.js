@@ -425,7 +425,29 @@ const Maquininha = () => {
                     </Paper>
                 </Box>
                 {/* Lista de resultados da busca */}
-                {searchResults.length > 0 && (
+                {searchResults.length > 0 && (() => {
+                    // Ordena os resultados: alfabético por nome, "Sem nome" no final
+                    const sortedResults = [...searchResults].sort((a, b) => {
+                        const nameA = a.name || 'Sem nome';
+                        const nameB = b.name || 'Sem nome';
+                        
+                        // Se ambos são "Sem nome", mantém ordem original
+                        if (nameA === 'Sem nome' && nameB === 'Sem nome') {
+                            return 0;
+                        }
+                        // Se A é "Sem nome", vai para o final
+                        if (nameA === 'Sem nome') {
+                            return 1;
+                        }
+                        // Se B é "Sem nome", vai para o final
+                        if (nameB === 'Sem nome') {
+                            return -1;
+                        }
+                        // Ordena alfabeticamente
+                        return nameA.localeCompare(nameB, 'pt-BR', { sensitivity: 'base' });
+                    });
+                    
+                    return (
                     <Paper
                         elevation={2}
                         sx={{
@@ -435,7 +457,7 @@ const Maquininha = () => {
                         }}
                     >
                         <List dense>
-                            {searchResults.map((result, index) => (
+                            {sortedResults.map((result, index) => (
                                 <React.Fragment key={`result-${index}`}>
                                     <ListItem
                                         button
@@ -446,17 +468,18 @@ const Maquininha = () => {
                                             }
                                         }}
                                     >
-                                        <LocationOnIcon sx={{ mr: 1, color: 'primary.main' }} />
+                                        <LocationOnIcon sx={{ mr: 1, color: result.image_key ? 'yellow' : 'blue' }} />
                                         <ListItemText
                                             primary={result.name || 'Sem nome'}
                                         />
                                     </ListItem>
-                                    {index < searchResults.length - 1 && <Divider />}
+                                    {index < sortedResults.length - 1 && <Divider />}
                                 </React.Fragment>
                             ))}
                         </List>
                     </Paper>
-                )}
+                    );
+                })()}
             </Box>
             <div style={{ flex: 1, position: 'relative' }}>
                 <MapContainer center={position} zoom={30} style={{ height: '100%', width: '100%' }}>
