@@ -205,7 +205,7 @@ const Maquininha = () => {
     const [hasNameFilter, setHasNameFilter] = useState(false);
     const [macros, setMacros] = useState([]);
     const [subMacros, setSubMacros] = useState([]);
-    const [showResultsList, setShowResultsList] = useState(true);
+    const [showResultsList, setShowResultsList] = useState(false);
 
     // Verificar JWT ao carregar
     useEffect(() => {
@@ -613,15 +613,27 @@ const Maquininha = () => {
                     borderBottom: '3px solid black',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 2.5
+                    gap: 2.5,
+                    overflow: 'hidden',
+                    width: '100%',
+                    maxWidth: '100%',
+                    boxSizing: 'border-box'
                 }}
             >
-                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
+                <Box sx={{ 
+                    display: 'flex', 
+                    gap: 2, 
+                    alignItems: 'center', 
+                    flexWrap: 'nowrap', 
+                    width: '100%', 
+                    maxWidth: '100%',
+                    minWidth: 0,
+                    boxSizing: 'border-box'
+                }}>
                     <Paper
                         elevation={0}
                         sx={{
                             flex: 1,
-                            minWidth: '300px',
                             display: 'flex',
                             alignItems: 'center',
                             padding: '0 16px',
@@ -629,13 +641,17 @@ const Maquininha = () => {
                             border: '2px solid black',
                             borderRadius: '8px',
                             transition: 'all 0.3s ease',
+                            minWidth: 0,
+                            maxWidth: '100%',
+                            overflow: 'hidden',
+                            boxSizing: 'border-box',
                             '&:focus-within': {
                                 boxShadow: '0 0 0 3px rgba(255, 235, 59, 0.3)',
                                 borderColor: 'black'
                             }
                         }}
                     >
-                        <SearchIcon sx={{ color: 'black', mr: 1.5, fontSize: '28px' }} />
+                        <SearchIcon sx={{ color: 'black', mr: 1.5, fontSize: '28px', flexShrink: 0 }} />
                         <TextField
                             fullWidth
                             variant="standard"
@@ -654,6 +670,13 @@ const Maquininha = () => {
                                     }
                                 }
                             }}
+                            sx={{ 
+                                minWidth: 0,
+                                maxWidth: '100%',
+                                '& .MuiInputBase-root': {
+                                    maxWidth: '100%'
+                                }
+                            }}
                         />
                     </Paper>
                     <Paper
@@ -665,7 +688,8 @@ const Maquininha = () => {
                             backgroundColor: 'white',
                             border: '2px solid black',
                             borderRadius: '8px',
-                            flexShrink: 0
+                            flexShrink: 0,
+                            boxSizing: 'border-box'
                         }}
                     >
                         <Button
@@ -697,6 +721,16 @@ const Maquininha = () => {
                             Buscar
                         </Button>
                     </Paper>
+                </Box>
+                <Box sx={{ 
+                    display: 'flex', 
+                    gap: 2, 
+                    alignItems: 'center', 
+                    flexWrap: 'wrap', 
+                    width: '100%',
+                    maxWidth: '100%',
+                    boxSizing: 'border-box'
+                }}>
                     <Button
                         variant="outlined"
                         startIcon={showAdvancedFilters ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -741,14 +775,17 @@ const Maquininha = () => {
                         elevation={0}
                         sx={{
                             padding: '20px',
-                            maxWidth: '600px',
+                            maxWidth: '100%',
+                            width: '100%',
                             backgroundColor: 'white',
                             border: '2px solid black',
                             borderRadius: '8px',
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            overflow: 'hidden',
+                            boxSizing: 'border-box'
                         }}
                     >
-                        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center', width: '100%' }}>
                             <FormControl sx={{ minWidth: 200 }}>
                                 <InputLabel sx={{ color: 'black', fontWeight: 600 }}>Macro</InputLabel>
                                 <Select
@@ -919,7 +956,7 @@ const Maquininha = () => {
                     });
                     
                     return (
-                        <Box sx={{ maxWidth: '600px' }}>
+                        <Box sx={{ maxWidth: '100%', width: '100%', overflow: 'hidden', boxSizing: 'border-box' }}>
                             <Button
                                 variant="outlined"
                                 startIcon={showResultsList ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -962,10 +999,14 @@ const Maquininha = () => {
                                     sx={{
                                         maxHeight: '250px',
                                         overflowY: 'auto',
+                                        overflowX: 'hidden',
+                                        width: '100%',
+                                        maxWidth: '100%',
                                         border: '2px solid black',
                                         borderRadius: '8px',
                                         backgroundColor: 'white',
                                         boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                        boxSizing: 'border-box',
                                         '&::-webkit-scrollbar': {
                                             width: '8px',
                                         },
