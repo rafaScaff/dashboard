@@ -193,7 +193,6 @@ const Maquininha = () => {
     const [openDialog, setOpenDialog] = useState(false);
     const [imageData, setImageData] = useState(null);
     const [imageLoading, setImageLoading] = useState(false);
-    const [imageError, setImageError] = useState(false);
     const [isValidating, setIsValidating] = useState(true);
     const [showAccessDeniedDialog, setShowAccessDeniedDialog] = useState(false);
     const [showImageDialog, setShowImageDialog] = useState(false);
@@ -483,7 +482,6 @@ const Maquininha = () => {
     const handleResultClick = (location) => {
         // Primeiro resetar estados da imagem
         setImageData(null);
-        setImageError(false);
         setImageLoading(false);
         // Depois atualizar localização e abrir dialog
         setSelectedLocation(location);
@@ -496,7 +494,6 @@ const Maquininha = () => {
         // Limpar estados da imagem após um pequeno delay para evitar race conditions
         setTimeout(() => {
             setImageData(null);
-            setImageError(false);
             setImageLoading(false);
         }, 100);
     };
@@ -511,13 +508,11 @@ const Maquininha = () => {
         if (!imageUrl) {
             setImageData(null);
             setImageLoading(false);
-            setImageError(false);
             return;
         }
 
         // Resetar estados imediatamente
         setImageLoading(true);
-        setImageError(false);
         setImageData(null);
 
         let isMounted = true;
@@ -532,21 +527,35 @@ const Maquininha = () => {
                 // Usa a URL com cache-busting para garantir que carregue
                 setImageData(urlWithCacheBust);
                 setImageLoading(false);
-                setImageError(false);
             }
         };
         
         testImage.onerror = () => {
             if (isMounted) {
                 // Se falhar com cache-busting, tenta sem
-                setImageError(true);
                 setImageLoading(false);
+                // Tenta usar a URL original diretamente
                 setImageData(imageUrl);
             }
         };
         
-        // Inicia o carregamento
-        testImage.src = urlWithCacheBust;
+        // Inicia o carregamento imediatamente
+        // Usar um pequeno delay apenas para garantir que o dialog esteja renderizado
+        const startLoading = () => {
+            if (isMounted) {
+                testImage.src = urlWithCacheBust;
+            }
+        };
+        
+        // Em produção, pode haver um pequeno delay no rendering do dialog
+        // Usar requestAnimationFrame para garantir que o DOM esteja pronto
+        if (process.env.NODE_ENV === 'production') {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(startLoading);
+            });
+        } else {
+            startLoading();
+        }
         
         // Cleanup function
         return () => {
@@ -906,28 +915,24 @@ const Maquininha = () => {
                                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                                         Imagem
                                     </Typography>
-                                    {imageLoading ? (
+                                    {imageLoading && !imageData ? (
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
                                             <CircularProgress />
                                         </Box>
-                                    ) : imageError && !imageData ? (
-                                        <Typography variant="body2" color="error">
-                                            Erro ao carregar a imagem. Tentando exibir diretamente...
-                                        </Typography>
                                     ) : imageData ? (
                                         <Box sx={{ position: 'relative' }}>
                                             <Box
                                                 component="img"
-                                                key={imageData} // Force re-render quando imageData mudar
+                                                key={`img-${selectedLocation.name || 'default'}-${imageData}`} // Force re-render quando imageData ou location mudar
                                                 src={imageData}
                                                 alt={selectedLocation.name || 'Imagem da localização'}
                                                 crossOrigin="anonymous"
                                                 onLoad={() => {
-                                                    setImageError(false);
+                                                    setImageLoading(false);
                                                 }}
                                                 onError={() => {
                                                     console.log('Erro ao renderizar imagem no popup');
-                                                    setImageError(true);
+                                                    setImageLoading(false);
                                                     // Se falhar, tenta URL original sem cache-busting
                                                     const originalUrl = getImageUrl(selectedLocation);
                                                     if (imageData !== originalUrl && originalUrl) {
@@ -958,7 +963,11 @@ const Maquininha = () => {
                                                 <ZoomInIcon />
                                             </IconButton>
                                         </Box>
-                                    ) : null}
+                                    ) : (
+                                        <Typography variant="body2" color="text.secondary">
+                                            Carregando imagem...
+                                        </Typography>
+                                    )}
                                 </Box>
                             )}
                             
