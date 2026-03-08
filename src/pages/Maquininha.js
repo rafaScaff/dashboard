@@ -18,12 +18,23 @@ import {
     ListItemText,
     IconButton,
     Divider,
-    CircularProgress
+    CircularProgress,
+    FormControl,
+    InputLabel,
+    Select,
+    MenuItem,
+    Switch,
+    FormControlLabel,
+    Collapse
 } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search.js';
+import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import BlockIcon from '@mui/icons-material/Block';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import consolidado from '../data/consolidado.json';
 import { getValidatedJWT } from '../utils/jwtValidator';
 import CryptoJS from 'crypto-js';
@@ -128,6 +139,50 @@ const getImageUrl = (point) => {
   return point.imageUrl || null;
 };
 
+// Função para parsear WKT POLYGON e extrair coordenadas
+const parseWKTPolygon = (wkt) => {
+  if (!wkt || !wkt.includes('POLYGON')) return null;
+  
+  try {
+    // Extrai as coordenadas do POLYGON
+    const match = wkt.match(/POLYGON\s*\(\(([^)]+)\)\)/);
+    if (!match) return null;
+    
+    const coordsStr = match[1];
+    const points = coordsStr.split(',').map(coord => {
+      const parts = coord.trim().split(/\s+/);
+      if (parts.length >= 2) {
+        return [parseFloat(parts[0]), parseFloat(parts[1])]; // [long, lat]
+      }
+      return null;
+    }).filter(p => p !== null);
+    
+    return points.length > 0 ? points : null;
+  } catch (e) {
+    console.error('Erro ao parsear WKT:', e);
+    return null;
+  }
+};
+
+// Função para verificar se um ponto está dentro de um polígono (ray casting algorithm)
+const pointInPolygon = (point, polygon) => {
+  if (!polygon || polygon.length < 3) return false;
+  
+  const [long, lat] = point;
+  let inside = false;
+  
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    const [xi, yi] = polygon[i];
+    const [xj, yj] = polygon[j];
+    
+    const intersect = ((yi > lat) !== (yj > lat)) && 
+                     (long < (xj - xi) * (lat - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  
+  return inside;
+};
+
 const Maquininha = () => {
     const position = [-23.5614, -46.7305]; // Cidade Universitária USP Butantã
     const navigate = useNavigate();
@@ -141,6 +196,15 @@ const Maquininha = () => {
     const [imageError, setImageError] = useState(false);
     const [isValidating, setIsValidating] = useState(true);
     const [showAccessDeniedDialog, setShowAccessDeniedDialog] = useState(false);
+    const [showImageDialog, setShowImageDialog] = useState(false);
+    
+    // Estados para filtros avançados
+    const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+    const [selectedMacro, setSelectedMacro] = useState('');
+    const [selectedSubMacro, setSelectedSubMacro] = useState('');
+    const [hasImageFilter, setHasImageFilter] = useState(false);
+    const [macros, setMacros] = useState([]);
+    const [subMacros, setSubMacros] = useState([]);
 
     // Verificar JWT ao carregar
     useEffect(() => {
@@ -159,6 +223,112 @@ const Maquininha = () => {
         checkJWT();
     }, []);
 
+    // Carregar macros e submacros dos CSVs
+    useEffect(() => {
+        const parseCSV = (csvText) => {
+            const lines = csvText.split('\n').slice(1); // Pula header
+            const data = [];
+            
+            for (const line of lines) {
+                if (!line.trim()) continue;
+                
+                // Parse CSV considerando que WKT pode conter vírgulas
+                // Formato: "WKT",name,description
+                let wkt = '';
+                let name = '';
+                let description = '';
+                
+                if (line.startsWith('"')) {
+                    // Encontra o fim do WKT (próximo " seguido de vírgula)
+                    const wktEnd = line.indexOf('",');
+                    if (wktEnd > 0) {
+                        wkt = line.substring(1, wktEnd);
+                        const rest = line.substring(wktEnd + 2);
+                        const parts = rest.split(',');
+                        name = parts[0] || '';
+                        description = parts.slice(1).join(',').trim();
+                    }
+                } else {
+                    // Linha sem WKT (vazia)
+                    continue;
+                }
+                
+                const polygon = parseWKTPolygon(wkt);
+                if (polygon && name) {
+                    data.push({ 
+                        name: name.trim(), 
+                        description: description.trim(), 
+                        polygon 
+                    });
+                }
+            }
+            
+            return data;
+        };
+        
+        const loadGeoshapes = async () => {
+            try {
+                // Carregar map_macro.csv - tenta diferentes caminhos
+                const macroPaths = [
+                    `${process.env.PUBLIC_URL || ''}/data/map_macro.csv`,
+                    '/data/map_macro.csv',
+                    './data/map_macro.csv'
+                ];
+                
+                let macroText = null;
+                for (const path of macroPaths) {
+                    try {
+                        const response = await fetch(path);
+                        if (response.ok) {
+                            macroText = await response.text();
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                if (macroText) {
+                    const macroData = parseCSV(macroText);
+                    setMacros(macroData);
+                } else {
+                    console.warn('Não foi possível carregar map_macro.csv');
+                }
+                
+                // Carregar map_submacro.csv
+                const subMacroPaths = [
+                    `${process.env.PUBLIC_URL || ''}/data/map_submacro.csv`,
+                    '/data/map_submacro.csv',
+                    './data/map_submacro.csv'
+                ];
+                
+                let subMacroText = null;
+                for (const path of subMacroPaths) {
+                    try {
+                        const response = await fetch(path);
+                        if (response.ok) {
+                            subMacroText = await response.text();
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                if (subMacroText) {
+                    const subMacroData = parseCSV(subMacroText);
+                    setSubMacros(subMacroData);
+                } else {
+                    console.warn('Não foi possível carregar map_submacro.csv');
+                }
+            } catch (error) {
+                console.error('Erro ao carregar geoshapes:', error);
+            }
+        };
+        
+        loadGeoshapes();
+    }, []);
+
     // Solicitar localização automaticamente ao carregar
     useEffect(() => {
         if (!isValidating && "geolocation" in navigator) {
@@ -174,13 +344,60 @@ const Maquininha = () => {
         }
     }, [isValidating]);
 
+    // Aplicar filtros avançados aos resultados (para dropdown - não exige coordenadas)
+    const applyAdvancedFilters = (results, requireCoordinates = false) => {
+        return results.filter(item => {
+            // Filtro de coordenadas válidas (apenas se necessário)
+            if (requireCoordinates) {
+                if (item.lat == null || item.long == null || isNaN(item.lat) || isNaN(item.long)) {
+                    return false;
+                }
+            }
+            
+            // Filtro de macro (só aplica se tiver coordenadas)
+            if (selectedMacro) {
+                if (item.lat == null || item.long == null || isNaN(item.lat) || isNaN(item.long)) {
+                    return false; // Precisa de coordenadas para verificar geoshape
+                }
+                const macro = macros.find(m => m.name === selectedMacro);
+                if (macro && macro.polygon) {
+                    const point = [item.long, item.lat]; // [long, lat]
+                    if (!pointInPolygon(point, macro.polygon)) {
+                        return false;
+                    }
+                }
+            }
+            
+            // Filtro de submacro (só aplica se tiver coordenadas)
+            if (selectedSubMacro) {
+                if (item.lat == null || item.long == null || isNaN(item.lat) || isNaN(item.long)) {
+                    return false; // Precisa de coordenadas para verificar geoshape
+                }
+                const subMacro = subMacros.find(sm => sm.name === selectedSubMacro);
+                if (subMacro && subMacro.polygon) {
+                    const point = [item.long, item.lat]; // [long, lat]
+                    if (!pointInPolygon(point, subMacro.polygon)) {
+                        return false;
+                    }
+                }
+            }
+            
+            // Filtro de possui imagem
+            if (hasImageFilter) {
+                const imageKey = getImageKey(item);
+                if (!imageKey) {
+                    return false;
+                }
+            }
+            
+            return true;
+        });
+    };
+
     // Determinar quais pontos exibir no mapa
     // Só mostrar pontos quando houver uma busca ativa (resultados de busca)
     const pointsToDisplay = searchResults.length > 0 
-        ? searchResults.filter(item => 
-            item.lat != null && item.long != null && 
-            !isNaN(item.lat) && !isNaN(item.long)
-          )
+        ? applyAdvancedFilters(searchResults, true) // Requer coordenadas para o mapa
         : []; // Não renderizar nenhum ponto inicialmente
 
     // Search function - busca tanto por nome quanto por descrição
@@ -384,16 +601,16 @@ const Maquininha = () => {
                     gap: 2
                 }}
             >
-                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
                     <Paper
                         elevation={3}
                         sx={{
                             flex: 1,
+                            minWidth: '300px',
                             display: 'flex',
                             alignItems: 'center',
                             padding: '0 10px',
-                            backgroundColor: 'white',
-                            maxWidth: '600px'
+                            backgroundColor: 'white'
                         }}
                     >
                         <SearchIcon sx={{ color: 'action.active', mr: 1 }} />
@@ -423,11 +640,103 @@ const Maquininha = () => {
                             Search
                         </Button>
                     </Paper>
+                    <Button
+                        variant="outlined"
+                        startIcon={showAdvancedFilters ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                        onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
+                        sx={{
+                            minWidth: '150px',
+                            borderColor: '#1976d2',
+                            color: '#1976d2',
+                            flexShrink: 0
+                        }}
+                    >
+                        <FilterListIcon sx={{ mr: 1 }} />
+                        Filtros
+                    </Button>
                 </Box>
+                {/* Filtros avançados */}
+                <Collapse in={showAdvancedFilters}>
+                    <Paper
+                        elevation={2}
+                        sx={{
+                            padding: '15px',
+                            maxWidth: '600px',
+                            backgroundColor: '#f5f5f5'
+                        }}
+                    >
+                        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+                            <FormControl sx={{ minWidth: 200 }}>
+                                <InputLabel>Macro</InputLabel>
+                                <Select
+                                    value={selectedMacro}
+                                    label="Macro"
+                                    onChange={(e) => setSelectedMacro(e.target.value)}
+                                    sx={{ backgroundColor: 'white' }}
+                                >
+                                    <MenuItem value="">Todas</MenuItem>
+                                    {macros.map((macro, index) => (
+                                        <MenuItem key={`macro-${index}`} value={macro.name}>
+                                            {macro.name}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                            
+                            <FormControl sx={{ minWidth: 200 }}>
+                                <InputLabel>Sub Macro</InputLabel>
+                                <Select
+                                    value={selectedSubMacro}
+                                    label="Sub Macro"
+                                    onChange={(e) => setSelectedSubMacro(e.target.value)}
+                                    sx={{ backgroundColor: 'white' }}
+                                >
+                                    <MenuItem value="">Todas</MenuItem>
+                                    {subMacros.map((subMacro, index) => (
+                                        <MenuItem key={`submacro-${index}`} value={subMacro.name}>
+                                            {subMacro.name}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                            
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={hasImageFilter}
+                                        onChange={(e) => setHasImageFilter(e.target.checked)}
+                                        color="primary"
+                                    />
+                                }
+                                label="Possui imagem"
+                            />
+                            
+                            {(selectedMacro || selectedSubMacro || hasImageFilter) && (
+                                <Button
+                                    variant="text"
+                                    size="small"
+                                    onClick={() => {
+                                        setSelectedMacro('');
+                                        setSelectedSubMacro('');
+                                        setHasImageFilter(false);
+                                    }}
+                                    sx={{ ml: 'auto' }}
+                                >
+                                    Limpar filtros
+                                </Button>
+                            )}
+                        </Box>
+                    </Paper>
+                </Collapse>
                 {/* Lista de resultados da busca */}
-                {searchResults.length > 0 && (() => {
+                {(() => {
+                    // Aplica filtros avançados aos resultados (dropdown não exige coordenadas)
+                    const filteredResults = applyAdvancedFilters(searchResults, false);
+                    
+                    if (filteredResults.length === 0) return null;
+                    
                     // Ordena os resultados: alfabético por nome, "Sem nome" no final
-                    const sortedResults = [...searchResults].sort((a, b) => {
+                    const sortedResults = [...filteredResults].sort((a, b) => {
                         const nameA = a.name || 'Sem nome';
                         const nameB = b.name || 'Sem nome';
                         
@@ -607,27 +916,45 @@ const Maquininha = () => {
                                             Erro ao carregar a imagem. Tentando exibir diretamente...
                                         </Typography>
                                     ) : imageData ? (
-                                        <Box
-                                            component="img"
-                                            src={imageData}
-                                            alt={selectedLocation.name || 'Imagem da localização'}
-                                            crossOrigin={imageData.includes('mymaps.usercontent.google.com') || imageData.includes('googleusercontent.com') ? undefined : 'anonymous'}
-                                            onError={() => {
-                                                console.log('Erro ao renderizar imagem, tentando URL original...');
-                                                setImageError(true);
-                                                // Fallback para URL original
-                                                const fallbackUrl = getImageUrl(selectedLocation);
-                                                if (imageData !== fallbackUrl && fallbackUrl) {
-                                                    setImageData(fallbackUrl);
-                                                }
-                                            }}
-                                            sx={{
-                                                maxWidth: '100%',
-                                                height: 'auto',
-                                                borderRadius: 1,
-                                                boxShadow: 2
-                                            }}
-                                        />
+                                        <Box sx={{ position: 'relative' }}>
+                                            <Box
+                                                component="img"
+                                                src={imageData}
+                                                alt={selectedLocation.name || 'Imagem da localização'}
+                                                crossOrigin={imageData.includes('mymaps.usercontent.google.com') || imageData.includes('googleusercontent.com') ? undefined : 'anonymous'}
+                                                onError={() => {
+                                                    console.log('Erro ao renderizar imagem, tentando URL original...');
+                                                    setImageError(true);
+                                                    // Fallback para URL original
+                                                    const fallbackUrl = getImageUrl(selectedLocation);
+                                                    if (imageData !== fallbackUrl && fallbackUrl) {
+                                                        setImageData(fallbackUrl);
+                                                    }
+                                                }}
+                                                sx={{
+                                                    maxWidth: '100%',
+                                                    height: 'auto',
+                                                    borderRadius: 1,
+                                                    boxShadow: 2,
+                                                    display: 'block'
+                                                }}
+                                            />
+                                            <IconButton
+                                                onClick={() => setShowImageDialog(true)}
+                                                sx={{
+                                                    position: 'absolute',
+                                                    top: 8,
+                                                    right: 8,
+                                                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                                                    '&:hover': {
+                                                        backgroundColor: 'rgba(255, 255, 255, 1)'
+                                                    }
+                                                }}
+                                                size="small"
+                                            >
+                                                <ZoomInIcon />
+                                            </IconButton>
+                                        </Box>
                                     ) : null}
                                 </Box>
                             )}
@@ -685,6 +1012,52 @@ const Maquininha = () => {
                     >
                         Ir para Login
                     </Button>
+                </DialogActions>
+            </Dialog>
+
+            {/* Dialog para imagem maximizada */}
+            <Dialog
+                open={showImageDialog}
+                onClose={() => setShowImageDialog(false)}
+                maxWidth="lg"
+                fullWidth
+            >
+                <DialogTitle>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Typography variant="h6" component="div">
+                            {selectedLocation?.name || 'Imagem'}
+                        </Typography>
+                        <IconButton
+                            aria-label="close"
+                            onClick={() => setShowImageDialog(false)}
+                            sx={{
+                                color: (theme) => theme.palette.grey[500],
+                            }}
+                        >
+                            <CloseIcon />
+                        </IconButton>
+                    </Box>
+                </DialogTitle>
+                <DialogContent dividers>
+                    {imageData && (
+                        <Box
+                            component="img"
+                            src={imageData}
+                            alt={selectedLocation?.name || 'Imagem da localização'}
+                            crossOrigin={imageData.includes('mymaps.usercontent.google.com') || imageData.includes('googleusercontent.com') ? undefined : 'anonymous'}
+                            sx={{
+                                width: '100%',
+                                height: 'auto',
+                                maxHeight: '80vh',
+                                objectFit: 'contain',
+                                display: 'block',
+                                margin: '0 auto'
+                            }}
+                        />
+                    )}
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => setShowImageDialog(false)}>Fechar</Button>
                 </DialogActions>
             </Dialog>
         </div>
