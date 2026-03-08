@@ -16,6 +16,10 @@
       "dest": "/static/$1"
     },
     {
+      "src": "/data/(.*)",
+      "dest": "/data/$1"
+    },
+    {
       "src": "/favicon.ico",
       "dest": "/favicon.ico"
     },

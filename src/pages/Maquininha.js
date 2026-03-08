@@ -268,58 +268,99 @@ const Maquininha = () => {
         
         const loadGeoshapes = async () => {
             try {
+                // Determinar o caminho base - em produção, usar caminho absoluto
+                const basePath = process.env.PUBLIC_URL || '';
+                const isProduction = process.env.NODE_ENV === 'production';
+                
                 // Carregar map_macro.csv - tenta diferentes caminhos
-                const macroPaths = [
-                    `${process.env.PUBLIC_URL || ''}/data/map_macro.csv`,
-                    '/data/map_macro.csv',
-                    './data/map_macro.csv'
-                ];
+                // Em produção, priorizar caminho absoluto
+                const macroPaths = isProduction 
+                    ? [
+                        '/data/map_macro.csv',
+                        `${basePath}/data/map_macro.csv`,
+                        './data/map_macro.csv'
+                    ]
+                    : [
+                        `${basePath}/data/map_macro.csv`,
+                        '/data/map_macro.csv',
+                        './data/map_macro.csv'
+                    ];
                 
                 let macroText = null;
+                let macroPathUsed = null;
                 for (const path of macroPaths) {
                     try {
                         const response = await fetch(path);
-                        if (response.ok) {
-                            macroText = await response.text();
-                            break;
+                        if (response.ok && response.status === 200) {
+                            const text = await response.text();
+                            if (text && text.trim().length > 0) {
+                                macroText = text;
+                                macroPathUsed = path;
+                                console.log('map_macro.csv carregado de:', path);
+                                break;
+                            }
                         }
                     } catch (e) {
+                        console.warn(`Erro ao tentar carregar map_macro.csv de ${path}:`, e);
                         continue;
                     }
                 }
                 
                 if (macroText) {
                     const macroData = parseCSV(macroText);
-                    setMacros(macroData);
+                    if (macroData && macroData.length > 0) {
+                        setMacros(macroData);
+                        console.log(`Carregadas ${macroData.length} macros`);
+                    } else {
+                        console.warn('map_macro.csv carregado mas sem dados válidos');
+                    }
                 } else {
-                    console.warn('Não foi possível carregar map_macro.csv');
+                    console.error('Não foi possível carregar map_macro.csv de nenhum caminho tentado:', macroPaths);
                 }
                 
                 // Carregar map_submacro.csv
-                const subMacroPaths = [
-                    `${process.env.PUBLIC_URL || ''}/data/map_submacro.csv`,
-                    '/data/map_submacro.csv',
-                    './data/map_submacro.csv'
-                ];
+                const subMacroPaths = isProduction
+                    ? [
+                        '/data/map_submacro.csv',
+                        `${basePath}/data/map_submacro.csv`,
+                        './data/map_submacro.csv'
+                    ]
+                    : [
+                        `${basePath}/data/map_submacro.csv`,
+                        '/data/map_submacro.csv',
+                        './data/map_submacro.csv'
+                    ];
                 
                 let subMacroText = null;
+                let subMacroPathUsed = null;
                 for (const path of subMacroPaths) {
                     try {
                         const response = await fetch(path);
-                        if (response.ok) {
-                            subMacroText = await response.text();
-                            break;
+                        if (response.ok && response.status === 200) {
+                            const text = await response.text();
+                            if (text && text.trim().length > 0) {
+                                subMacroText = text;
+                                subMacroPathUsed = path;
+                                console.log('map_submacro.csv carregado de:', path);
+                                break;
+                            }
                         }
                     } catch (e) {
+                        console.warn(`Erro ao tentar carregar map_submacro.csv de ${path}:`, e);
                         continue;
                     }
                 }
                 
                 if (subMacroText) {
                     const subMacroData = parseCSV(subMacroText);
-                    setSubMacros(subMacroData);
+                    if (subMacroData && subMacroData.length > 0) {
+                        setSubMacros(subMacroData);
+                        console.log(`Carregadas ${subMacroData.length} submacros`);
+                    } else {
+                        console.warn('map_submacro.csv carregado mas sem dados válidos');
+                    }
                 } else {
-                    console.warn('Não foi possível carregar map_submacro.csv');
+                    console.error('Não foi possível carregar map_submacro.csv de nenhum caminho tentado:', subMacroPaths);
                 }
             } catch (error) {
                 console.error('Erro ao carregar geoshapes:', error);
