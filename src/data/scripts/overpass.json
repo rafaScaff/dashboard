@@ -1,0 +1,2948 @@
+[
+    {
+        "nome": "Sem Nome",
+        "latitude": -23.5608468,
+        "longitude": -46.7232089,
+        "tags": "{\"restriction\": \"no_left_turn\", \"type\": \"restriction\"}"
+    },
+    {
+        "nome": "Museu de Geociências",
+        "latitude": -23.5620094,
+        "longitude": -46.7274438,
+        "tags": "{\"name\": \"Museu de Geoci\\u00eancias\", \"tourism\": \"museum\", \"wikidata\": \"Q10333831\", \"wikimedia_commons\": \"Category:Museu de Geoci\\u00eancias (USP)\", \"wikipedia\": \"pt:Museu de Geoci\\u00eancias do Instituto de Geoci\\u00eancias da USP\"}"
+    },
+    {
+        "nome": "Museu de Oceanografia",
+        "latitude": -23.5610812,
+        "longitude": -46.7314694,
+        "tags": "{\"name\": \"Museu de Oceanografia\", \"tourism\": \"museum\", \"wikidata\": \"Q30937692\", \"wikimedia_commons\": \"Category:Museu Oceanogr\\u00e1fico da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Museu Oceanogr\\u00e1fico do Instituto Oceanogr\\u00e1fico da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Terminal de Ônibus",
+        "latitude": -23.5525888,
+        "longitude": -46.7318582,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"check_date:shelter\": \"2022-09-23\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Terminal de \\u00d4nibus\", \"name\": \"Terminal de \\u00d4nibus\", \"public_transport\": \"platform\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Museu de Anatomia",
+        "latitude": -23.5656807,
+        "longitude": -46.7395947,
+        "tags": "{\"name\": \"Museu de Anatomia\", \"tourism\": \"museum\"}"
+    },
+    {
+        "nome": "Museu de Arqueologia e Etnologia",
+        "latitude": -23.559711,
+        "longitude": -46.742161,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Ref.: Av Professor Ernesto de Morais Leme/ Pc Da Prefeitura\", \"gtfs_id\": \"120010345\", \"highway\": \"bus_stop\", \"local_ref\": \"Museu de Arqueologia e Etnologia\", \"name\": \"Museu de Arqueologia e Etnologia\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"shelter\": \"yes\", \"short_name\": \"MAE\"}"
+    },
+    {
+        "nome": "Centro Acadêmico Mecânica",
+        "latitude": -23.55293,
+        "longitude": -46.7291189,
+        "tags": "{\"addr:housename\": \"Pr\\u00e9dio da Mec\\u00e2nica\", \"addr:housenumber\": \"2231\", \"addr:street\": \"Avenida Professor Melo Moraes\", \"name\": \"Centro Acad\\u00eamico Mec\\u00e2nica\", \"shop\": \"alcohol\", \"short_name\": \"CAM\", \"website\": \"http://cam.poli.usp.br/\"}"
+    },
+    {
+        "nome": "Prefeitura / Física",
+        "latitude": -23.559479,
+        "longitude": -46.737677,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Rua Do Mat\\u00e3o Ref.: Pc Da Prefeitura/ R V\", \"gtfs_id\": \"120010348\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"name\": \"Prefeitura / F\\u00edsica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"8012-10\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Avenida Professor Lineu Prestes, 1374",
+        "latitude": -23.568607,
+        "longitude": -46.731683,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"check_date:bin\": \"2023-06-06\", \"description\": \"Ref.: R Francisco Dos Santos/ R Do Matao\", \"gtfs_id\": \"120010342\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Acesso Vila Indiana\", \"name\": \"Avenida Professor Lineu Prestes, 1374\", \"network\": \"SPTRANS\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 1 e Circular 2\"}"
+    },
+    {
+        "nome": "Prefeitura e Física",
+        "latitude": -23.558941,
+        "longitude": -46.737726,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor Almeida Prado Ref.: Pc Da Prefeitura\", \"gtfs_id\": \"120010359\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Prefeitura e F\\u00edsica\", \"name\": \"Prefeitura e F\\u00edsica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "HU I",
+        "latitude": -23.563786,
+        "longitude": -46.741416,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Avenida Professor Lineu Prestes, 2565 Ref.: R Clemente Pontes/ Av Professor Ernesto de Morais Leme\", \"gtfs_id\": \"120010339\", \"highway\": \"bus_stop\", \"local_ref\": \"Hospital Universit\\u00e1rio\", \"name\": \"HU I\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Odontologia",
+        "latitude": -23.5670983,
+        "longitude": -46.737739,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"name\": \"Odontologia\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"258\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Rua Professor Orlando Marques de Paiva",
+        "latitude": -23.5669429,
+        "longitude": -46.7398263,
+        "tags": "{\"access\": \"private\", \"highway\": \"service\", \"name\": \"Rua Professor Orlando Marques de Paiva\", \"note\": \"There is a slight spelling difference between IBGE data (Avenida) and OSM data (Rua)\"}"
+    },
+    {
+        "nome": "Parada Poli/ Biênio",
+        "latitude": -23.557818,
+        "longitude": -46.732322,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Luciano Gualberto Ref.: R V/ Pc Ramos de Azevedo\", \"gtfs_id\": \"120010357\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Poli/ Bi\\u00eanio\", \"name\": \"Parada Poli/ Bi\\u00eanio\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7181-10;7411-10;7725-10;8012-10;8032-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Parada Poli-Eletrotécnica",
+        "latitude": -23.557971,
+        "longitude": -46.732678,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Luciano Gualberto Ref.: R V/ Pc Ramos de Azevedo\", \"gtfs_id\": \"120010358\", \"highway\": \"bus_stop\", \"lit\": \"no\", \"local_ref\": \"Poli-Eletrot\\u00e9cnica\", \"name\": \"Parada Poli-Eletrot\\u00e9cnica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7181-10;7411-10;7725-10;8022-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Faculdade de Economia Administração e Contabilidade",
+        "latitude": -23.5584928,
+        "longitude": -46.7294998,
+        "tags": "{\"alt_name\": \"Faculdade de Economia, Administra\\u00e7\\u00e3o e Contabilidade\", \"amenity\": \"college\", \"name\": \"Faculdade de Economia Administra\\u00e7\\u00e3o e Contabilidade\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"FEA\", \"wikidata\": \"Q7432430\", \"wikimedia_commons\": \"Category:Faculdade de Economia, Administra\\u00e7\\u00e3o e Contabilidade da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Economia, Administra\\u00e7\\u00e3o e Contabilidade da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Parada Faculdade de Arquitetura e Urbanismo II",
+        "latitude": -23.559319,
+        "longitude": -46.729933,
+        "tags": "{\"alt_name\": \"Parada FAU II\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Luciano Gualberto\", \"gtfs_id\": \"120010351\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"FAU II\", \"name\": \"Parada Faculdade de Arquitetura e Urbanismo II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7181-10;7411-10;7725-10;8022-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Parada Reitoria e Bancos",
+        "latitude": -23.560157,
+        "longitude": -46.727336,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"600\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Ref.: Avenida Professor Lucio Martins Rodrigues/ Rua do Anfiteatro\", \"gtfs_id\": \"120010355\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Pra\\u00e7a dos Bancos\", \"name\": \"Parada Reitoria e Bancos\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7181-10;7411-10;8012-10;8032-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Cirular 1\"}"
+    },
+    {
+        "nome": "Praça do Relógio Solar",
+        "latitude": -23.5619137,
+        "longitude": -46.7206746,
+        "tags": "{\"busway:right\": \"yes\", \"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"junction\": \"roundabout\", \"maxspeed\": \"40\", \"name\": \"Pra\\u00e7a do Rel\\u00f3gio Solar\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"sidewalk\": \"no\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Parada Geociências",
+        "latitude": -23.560651,
+        "longitude": -46.727222,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Luciano Gualberto Ref.: Av Professor Lucio Martins Rodrigues/ R do Anfiteatro\", \"gtfs_id\": \"120010352\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"IGC\", \"name\": \"Parada Geoci\\u00eancias\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7181-10;7411-10;8022-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Parada Letras",
+        "latitude": -23.562058,
+        "longitude": -46.724361,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Ref.: Av Professor Lucio Martins Rodrigues/ R Do Anfiteatro\", \"gtfs_id\": \"120010353\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"FFLCH\", \"name\": \"Parada Letras\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7181-10;7411-10;8022-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Biblioteca Brasiliana",
+        "latitude": -23.5625149,
+        "longitude": -46.7228256,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"capacity\": \"27\", \"name\": \"Biblioteca Brasiliana\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"248\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Portaria 2",
+        "latitude": -23.5519673,
+        "longitude": -46.729984,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Portaria 2\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Poli-Mecânica",
+        "latitude": -23.552854,
+        "longitude": -46.728708,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Rua Professor Mello Moraes Ref.: Av Professor Almeida Prado/ Av Professor Lucio Martins Rodrigues\", \"gtfs_id\": \"120010368\", \"highway\": \"bus_stop\", \"local_ref\": \"Poli-Mec\\u00e2nica\", \"name\": \"Poli-Mec\\u00e2nica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10;8032-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Psicologia 2",
+        "latitude": -23.55446,
+        "longitude": -46.724769,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Rua Professor Mello Moraes Ref.: R Do Anfiteatro\", \"gtfs_id\": \"120010370\", \"highway\": \"bus_stop\", \"local_ref\": \"Psicologia 2\", \"name\": \"Psicologia 2\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Praça do Relógio",
+        "latitude": -23.5552799,
+        "longitude": -46.7240159,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Pra\\u00e7a do Rel\\u00f3gio\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Raia Olímpica",
+        "latitude": -23.5568504,
+        "longitude": -46.7203479,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Raia Ol\\u00edmpica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "CRUSP II",
+        "latitude": -23.5573439,
+        "longitude": -46.7199626,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Ref.: Travessa 8\", \"gtfs_id\": \"1211398\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"CRUSP\", \"name\": \"CRUSP II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"8012-10;8032-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Acesso CPTM 2",
+        "latitude": -23.5603947,
+        "longitude": -46.7131316,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"gtfs_id\": \"1211397\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Acesso CPTM 2\", \"name\": \"Acesso CPTM 2\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"network:wikipedia\": \"pt:S\\u00e3o Paulo Transporte\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Acesso CPTM 1",
+        "latitude": -23.5606958,
+        "longitude": -46.713416,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"gtfs_id\": \"1211396\", \"highway\": \"bus_stop\", \"local_ref\": \"Acesso CPTM 1\", \"name\": \"Acesso CPTM 1\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"8012-10;8032-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Rua Professor Mello Moraes",
+        "latitude": -23.563621,
+        "longitude": -46.712721,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Ref.: Pc Professor Reinaldo Porchart/ R Do Anfiteatro\", \"gtfs_id\": \"120010378\", \"highway\": \"bus_stop\", \"local_ref\": \"Educa\\u00e7\\u00e3o F\\u00edsica II\", \"name\": \"Rua Professor Mello Moraes\", \"network\": \"SPTRANS\", \"public_transport\": \"platform\", \"route_ref\": \"8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Educação Física I",
+        "latitude": -23.5642276,
+        "longitude": -46.7130483,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"bench\": \"yes\", \"bus\": \"yes\", \"description\": \"Ref.: Avenida Da Universidade\", \"gtfs_id\": \"1211395\", \"highway\": \"bus_stop\", \"local_ref\": \"Educa\\u00e7\\u00e3o F\\u00edsica I\", \"name\": \"Educa\\u00e7\\u00e3o F\\u00edsica I\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"8012-10;8032-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Poli-Metalurgia",
+        "latitude": -23.552765,
+        "longitude": -46.731832,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor Almeida Prado Ref.: Av Professor Mello de Morais/ Pc Ramos de Azevedo\", \"gtfs_id\": \"120010362\", \"highway\": \"bus_stop\", \"local_ref\": \"Poli-Metalurgia\", \"name\": \"Poli-Metalurgia\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7181-10;7411-10;8012-10;8032-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Poli-Civil",
+        "latitude": -23.555743,
+        "longitude": -46.733507,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor Almeida Prado Ref.: Av Professor Mello de Morais/ Pc Ramos de Azevedo\", \"gtfs_id\": \"120010361\", \"highway\": \"bus_stop\", \"lit\": \"no\", \"local_ref\": \"Poli-Civil\", \"name\": \"Poli-Civil\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7181-10;7411-10;8012-10;8032-10;809U-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Instituto de Pesquisas Tecnologicas",
+        "latitude": -23.5560446,
+        "longitude": -46.7337747,
+        "tags": "{\"alt_name\": \"IPT\", \"name\": \"Instituto de Pesquisas Tecnologicas\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Educação",
+        "latitude": -23.5632873,
+        "longitude": -46.7161709,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Educa\\u00e7\\u00e3o\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Instituto Butantan",
+        "latitude": -23.5670401,
+        "longitude": -46.7213441,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"1500\", \"addr:street\": \"Avenida Vital Brasil\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"research_institute\", \"name\": \"Instituto Butantan\", \"website\": \"http://www.butantan.gov.br/\", \"wikidata\": \"Q971299\", \"wikimedia_commons\": \"Category:Instituto Butantan\", \"wikipedia\": \"pt:Instituto Butantan\"}"
+    },
+    {
+        "nome": "IAG",
+        "latitude": -23.5596875,
+        "longitude": -46.7344082,
+        "tags": "{\"bus\": \"yes\", \"name\": \"IAG\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Fisica",
+        "latitude": -23.5596849,
+        "longitude": -46.7348343,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Rua Do Mat\\u00e3o Ref.: Pc Da Prefeitura/ R V\", \"gtfs_id\": \"120010349\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"F\\u00edsica\", \"name\": \"Fisica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Faculdade de Arquitetura e Urbanismo I",
+        "latitude": -23.5606699,
+        "longitude": -46.7309195,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Faculdade de Arquitetura e Urbanismo I\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"short_name\": \"FAU I\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Oceanográfico",
+        "latitude": -23.5608461,
+        "longitude": -46.7307339,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Oceanogr\\u00e1fico\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Instituto de Biociências",
+        "latitude": -23.565507,
+        "longitude": -46.730395,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Instituto de Bioci\\u00eancias\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"IB\", \"wikidata\": \"Q10302762\", \"wikimedia_commons\": \"Category:Instituto de Bioci\\u00eancias da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Instituto de Bioci\\u00eancias da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Rua do Lago",
+        "latitude": -23.5614483,
+        "longitude": -46.7288229,
+        "tags": "{\"bicycle\": \"designated\", \"cycleway:left\": \"opposite_lane\", \"cycleway:right\": \"shared_lane\", \"highway\": \"residential\", \"lanes\": \"1\", \"maxspeed\": \"40\", \"name\": \"Rua do Lago\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:left\": \"no\", \"parking:right\": \"street_side\", \"parking:right:orientation\": \"parallel\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Avenida Professor Almeida Prado, 1466",
+        "latitude": -23.5598734,
+        "longitude": -46.7418583,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Ref.: Av Professor Ernesto de Morais Leme/ Pc Da Prefeitura\", \"gtfs_id\": \"120010346\", \"highway\": \"bus_stop\", \"local_ref\": \"Acesso a Rio Pequeno\", \"name\": \"Avenida Professor Almeida Prado, 1466\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\", \"short_name\": \"MAE\"}"
+    },
+    {
+        "nome": "Farmácia e Química I",
+        "latitude": -23.565346,
+        "longitude": -46.72486,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Lineu Prestes, 748 Ref.: Pra\\u00e7a Professor Jorge Americano/ Rua do Lago\", \"gtfs_id\": \"120010333\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Farm\\u00e1cia e Qu\\u00edmica\", \"name\": \"Farm\\u00e1cia e Qu\\u00edmica I\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Instituto de Pesquisas Energéticas e Nucleares",
+        "latitude": -23.5639493,
+        "longitude": -46.7377028,
+        "tags": "{\"access\": \"private\", \"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"2242\", \"addr:postcode\": \"05508-000\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"research_institute\", \"name\": \"Instituto de Pesquisas Energ\\u00e9ticas e Nucleares\", \"operator\": \"Comiss\\u00e3o Nacional de Energia Nuclear\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q2328722\", \"type\": \"multipolygon\", \"website\": \"https://www.ipen.br\", \"wikidata\": \"Q10302914\", \"wikipedia\": \"pt:Instituto de Pesquisas Energ\\u00e9ticas e Nucleares\"}"
+    },
+    {
+        "nome": "Biomédicas",
+        "latitude": -23.564737,
+        "longitude": -46.739707,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Avenida Professor Lineu Prestes, 2415 Ref.: Rua Clemente Pontes/ Avenida Professor Ernesto de Morais Leme\", \"gtfs_id\": \"120010340\", \"highway\": \"bus_stop\", \"local_ref\": \"Biom\\u00e9dicas\", \"name\": \"Biom\\u00e9dicas\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Farmácia e Química II",
+        "latitude": -23.5659045,
+        "longitude": -46.7253679,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor Lineu Prestes, 913 Ref.: Pc Professor Jorge Americano/ R Do Lago\", \"gtfs_id\": \"120010343\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"CEPAM\", \"name\": \"Farm\\u00e1cia e Qu\\u00edmica II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Parada História e Geografia II",
+        "latitude": -23.564197,
+        "longitude": -46.722204,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Lineu Prestes, 338 Ref.: Pra\\u00e7a Professor Jorge Americano/ Rua do Lago\", \"gtfs_id\": \"120010344\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Instituto Butantan\", \"name\": \"Parada Hist\\u00f3ria e Geografia II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Cultura Japonesa",
+        "latitude": -23.5628168,
+        "longitude": -46.7195911,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor Lineu Prestes, 159 Ref.: Avenida Da Universidade\", \"gtfs_id\": \"1207032\", \"highway\": \"bus_stop\", \"lit\": \"no\", \"local_ref\": \"Casa de Cultura Japonesa\", \"name\": \"Cultura Japonesa\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7181-10;7411-10;7725-10;8022-10;809U-10\", \"shelter\": \"yes\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "História e Geografia I",
+        "latitude": -23.564087,
+        "longitude": -46.722581,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Ref.: Pra\\u00e7a Professor Jorge Americano/ Rua do Lago\", \"gtfs_id\": \"120010332\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"FFLCH\", \"name\": \"Hist\\u00f3ria e Geografia I\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"SPTrans\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Biblioteca Farmácia e Química",
+        "latitude": -23.566488,
+        "longitude": -46.727019,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Lineu Prestes, 950 Ref.: Pc Professor Jorge Americano/ R Do Lago\", \"gtfs_id\": \"120010334\", \"highway\": \"bus_stop\", \"lit\": \"yes\", \"local_ref\": \"Biblioteca da Farm\\u00e1cia e Qu\\u00edmica\", \"name\": \"Biblioteca Farm\\u00e1cia e Qu\\u00edmica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "HU II",
+        "latitude": -23.563891,
+        "longitude": -46.740723,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Avenida Professor Lineu Prestes, 2468 Ref.: R Clemente Pontes/ Av Professor Ernesto de Morais Leme\", \"gtfs_id\": \"120010338\", \"highway\": \"bus_stop\", \"local_ref\": \"Hospital Universit\\u00e1rio\", \"name\": \"HU II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"short_name\": \"HU\", \"source\": \"Circular 2\"}"
+    },
+    {
+        "nome": "Escola de Comunicações e Artes",
+        "latitude": -23.5579028,
+        "longitude": -46.7255363,
+        "tags": "{\"addr:housenumber\": \"443\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"amenity\": \"college\", \"name\": \"Escola de Comunica\\u00e7\\u00f5es e Artes\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"ECA\", \"website\": \"https://www.eca.usp.br/\", \"wikidata\": \"Q10274592\", \"wikimedia_commons\": \"Category:Escola de Comunica\\u00e7\\u00f5es e Artes da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Escola de Comunica\\u00e7\\u00f5es e Artes da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Poli-Hidráulica",
+        "latitude": -23.556162,
+        "longitude": -46.726306,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor L\\u00facio Martins Rodrigues Ref.: Av Professor Luciano Gualberto/ Av Professor Mello de Morais\", \"gtfs_id\": \"120010372\", \"highway\": \"bus_stop\", \"local_ref\": \"Poli-Hidr\\u00e1ulica\", \"name\": \"Poli-Hidr\\u00e1ulica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"shelter\": \"yes\", \"source\": \"Circular 1\"}"
+    },
+    {
+        "nome": "Centro de Difusão Internacional",
+        "latitude": -23.5566299,
+        "longitude": -46.7272835,
+        "tags": "{\"building\": \"university\", \"name\": \"Centro de Difus\\u00e3o Internacional\"}"
+    },
+    {
+        "nome": "Curso de Ciências Moleculares",
+        "latitude": -23.5586424,
+        "longitude": -46.7206694,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"370\", \"addr:place\": \"Inova USP\", \"addr:postcode\": \"05508-020\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"amenity\": \"college\", \"contact:phone\": \"+55 11 3091-3187:_55 11 3091-3187\", \"contact:website\": \"http://www.cecm.usp.br\", \"internet_access\": \"wlan\", \"internet_access:fee\": \"customers\", \"name\": \"Curso de Ci\\u00eancias Moleculares\", \"short_name\": \"CCM\", \"website\": \"http://www.cecm.usp.br/\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Monumento a Armando de Sales Oliveira",
+        "latitude": -23.5649592,
+        "longitude": -46.7130702,
+        "tags": "{\"addr:city\": \"sao paulo\", \"addr:street\": \"Pra\\u00e7a Professor Reinaldo Porchat de Assis\", \"artist_name\": \"Bruno Giorgi\", \"artwork_type\": \"statue\", \"name\": \"Monumento a Armando de Sales Oliveira\", \"tourism\": \"artwork\"}"
+    },
+    {
+        "nome": "Lanchonete da Física",
+        "latitude": -23.5606941,
+        "longitude": -46.7353664,
+        "tags": "{\"amenity\": \"restaurant\", \"check_date\": \"2023-11-06\", \"name\": \"Lanchonete da F\\u00edsica\"}"
+    },
+    {
+        "nome": "Cantina da FAU",
+        "latitude": -23.559903,
+        "longitude": -46.7299929,
+        "tags": "{\"amenity\": \"restaurant\", \"check_date\": \"2024-08-09\", \"cuisine\": \"regional\", \"name\": \"Cantina da FAU\"}"
+    },
+    {
+        "nome": "Lanchonete do Biênio",
+        "latitude": -23.5565773,
+        "longitude": -46.7329393,
+        "tags": "{\"amenity\": \"cafe\", \"check_date\": \"2024-04-09\", \"name\": \"Lanchonete do Bi\\u00eanio\", \"phone\": \"+55 11 3091-5696\"}"
+    },
+    {
+        "nome": "Praça dos Bancos",
+        "latitude": -23.5601774,
+        "longitude": -46.7273505,
+        "tags": "{\"name\": \"Pra\\u00e7a dos Bancos\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Cocesp II",
+        "latitude": -23.5598475,
+        "longitude": -46.7393806,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"description\": \"Avenida Professor Almeida Prado Ref.: Av Professor Ernesto de Morais Leme\", \"gtfs_id\": \"120010347\", \"highway\": \"bus_stop\", \"local_ref\": \"Prefeitura do Campus da Capital\", \"name\": \"Cocesp II\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8022-10\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "400 m",
+        "latitude": -23.5605124,
+        "longitude": -46.7374686,
+        "tags": "{\"description\": \"Marco de 400 metros\", \"information\": \"guidepost\", \"name\": \"400 m\", \"tourism\": \"information\"}"
+    },
+    {
+        "nome": "500 m",
+        "latitude": -23.5597934,
+        "longitude": -46.7376832,
+        "tags": "{\"description\": \"Marco de 500 metros\", \"information\": \"guidepost\", \"name\": \"500 m\", \"tourism\": \"information\"}"
+    },
+    {
+        "nome": "800 m",
+        "latitude": -23.5618016,
+        "longitude": -46.7368388,
+        "tags": "{\"description\": \"Marco de 800 metros\", \"information\": \"guidepost\", \"name\": \"800 m\", \"tourism\": \"information\"}"
+    },
+    {
+        "nome": "USP - Portaria 2",
+        "latitude": -23.5511636,
+        "longitude": -46.7320573,
+        "tags": "{\"entrance\": \"yes\", \"name\": \"USP - Portaria 2\", \"opening_hours:url\": \"http://www.puspc.usp.br/?page_id=143\"}"
+    },
+    {
+        "nome": "Sem título 2008",
+        "latitude": -23.5589589,
+        "longitude": -46.7293739,
+        "tags": "{\"artist_name\": \"Tomie Ohtake\", \"material\": \"A\\u00e7o carbono\", \"name\": \"Sem t\\u00edtulo 2008\", \"tourism\": \"artwork\", \"website\": \"https://www.fea.usp.br/fea/noticias/fea-x-fea-arte-de-tomie-ohtake-homenagem-ao-passado-e-celebracao-do-futuro-da-fea\"}"
+    },
+    {
+        "nome": "Banco Santander",
+        "latitude": -23.5602044,
+        "longitude": -46.7265469,
+        "tags": "{\"addr:housenumber\": \"594\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"amenity\": \"bank\", \"branch\": \"Ag\\u00eancia Select\", \"brand\": \"Banco Santander\", \"brand:wikidata\": \"Q6496310\", \"building\": \"yes\", \"building:levels\": \"2\", \"height\": \"5.7\", \"name\": \"Banco Santander\", \"official_name\": \"Santander Group\", \"opening_hours\": \"Mo-Fr 10:00-16:00\", \"operator\": \"Santander\"}"
+    },
+    {
+        "nome": "Restaurante e Lanchonete Theodora USP",
+        "latitude": -23.5619875,
+        "longitude": -46.7162721,
+        "tags": "{\"amenity\": \"restaurant\", \"name\": \"Restaurante e Lanchonete Theodora USP\", \"outdoor_seating\": \"yes\", \"smoking\": \"no\"}"
+    },
+    {
+        "nome": "Monumento à amizade entre Brasil e Japão",
+        "latitude": -23.5628724,
+        "longitude": -46.7207978,
+        "tags": "{\"artist_name\": \"Tomie Ohtake\", \"name\": \"Monumento \\u00e0 amizade entre Brasil e Jap\\u00e3o\", \"tourism\": \"artwork\", \"wikidata\": \"Q45262475\", \"wikimedia_commons\": \"Category:Monumento \\u00e0 Amizade entre Brasil e Jap\\u00e3o (Tomie Ohtake)\"}"
+    },
+    {
+        "nome": "Psicologia I",
+        "latitude": -23.5561248,
+        "longitude": -46.7258836,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"description\": \"Avenida Professor L\\u00facio Martins Rodrigues Ref.: Av Professor Luciano Gualberto\", \"gtfs_id\": \"120010375\", \"highway\": \"bus_stop\", \"name\": \"Psicologia I\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"701U-10;702U-10;7725-10;8012-10\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Ultramarinho",
+        "latitude": -23.5602307,
+        "longitude": -46.7223527,
+        "tags": "{\"artist_name\": \"Tomie Ohtake\", \"name\": \"Ultramarinho\", \"tourism\": \"artwork\", \"wikidata\": \"Q51727082\", \"wikimedia_commons\": \"Category:Ultramarinho\"}"
+    },
+    {
+        "nome": "Incubadora Tecnológica de Cooperativas Populares",
+        "latitude": -23.5551663,
+        "longitude": -46.7286017,
+        "tags": "{\"name\": \"Incubadora Tecnol\\u00f3gica de Cooperativas Populares\", \"office\": \"educational_institution\", \"website\": \"http://itcp.usp.br\"}"
+    },
+    {
+        "nome": "Núcleo de Extensão e Cultura em Artes Afro-Brasileiras",
+        "latitude": -23.5552622,
+        "longitude": -46.728389,
+        "tags": "{\"name\": \"N\\u00facleo de Extens\\u00e3o e Cultura em Artes Afro-Brasileiras\", \"office\": \"educational_institution\"}"
+    },
+    {
+        "nome": "Biblioteca Florestan Fernandes",
+        "latitude": -23.562412,
+        "longitude": -46.7257462,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"350\", \"addr:postcode\": \"05508-000\", \"addr:street\": \"Travessa 12\", \"amenity\": \"library\", \"contact:email\": \"saufflch@usp.br\", \"contact:phone\": \"+55 11 3091-4377\", \"contact:website\": \"http://biblioteca.fflch.usp.br/\", \"name\": \"Biblioteca Florestan Fernandes\", \"operator\": \"Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\", \"wikidata\": \"Q18500426\", \"wikimedia_commons\": \"Category:Biblioteca Florestan Fernandes\"}"
+    },
+    {
+        "nome": "Biblioteca IME-USP",
+        "latitude": -23.5595142,
+        "longitude": -46.7314202,
+        "tags": "{\"amenity\": \"library\", \"name\": \"Biblioteca IME-USP\", \"official_name\": \"Biblioteca Carlos Benjamin de Lyra\", \"opening_hours\": \"Mo-Fr 08:00-21:30; SH Mo-Fr 08:00-20:00\", \"opening_hours:url\": \"https://www.ime.usp.br/bib/servicos/como-funciona/horario-de-funcionamento/\", \"source:opening_hours\": \"website\", \"wikidata\": \"Q9656458\", \"wikimedia_commons\": \"Category:Biblioteca do Instituto de Matem\\u00e1tica e Estat\\u00edstica da USP\"}"
+    },
+    {
+        "nome": "Biblioteca IB-USP",
+        "latitude": -23.5647312,
+        "longitude": -46.7303742,
+        "tags": "{\"amenity\": \"library\", \"name\": \"Biblioteca IB-USP\", \"website\": \"https://ib.usp.br/biblioteca/\"}"
+    },
+    {
+        "nome": "Seção de Alunos",
+        "latitude": -23.5634578,
+        "longitude": -46.7299156,
+        "tags": "{\"name\": \"Se\\u00e7\\u00e3o de Alunos\"}"
+    },
+    {
+        "nome": "Seade",
+        "latitude": -23.567091,
+        "longitude": -46.7274949,
+        "tags": "{\"bench\": \"no\", \"bus\": \"yes\", \"highway\": \"bus_stop\", \"name\": \"Seade\", \"public_transport\": \"platform\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Centro de Competência em Software Livre",
+        "latitude": -23.5588135,
+        "longitude": -46.7315473,
+        "tags": "{\"name\": \"Centro de Compet\\u00eancia em Software Livre\", \"office\": \"research\", \"short_name\": \"CCSL\", \"website\": \"https://ccsl.ime.usp.br/\"}"
+    },
+    {
+        "nome": "Serviço Especializado em Engenharia de Segurança e Medicina do Trabalho",
+        "latitude": -23.5653177,
+        "longitude": -46.7415768,
+        "tags": "{\"amenity\": \"clinic\", \"healthcare\": \"clinic\", \"name\": \"Servi\\u00e7o Especializado em Engenharia de Seguran\\u00e7a e Medicina do Trabalho\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"short_name\": \"SESMT\"}"
+    },
+    {
+        "nome": "Museu de Arte Contemporânea da Universidade de São Paulo",
+        "latitude": -23.5597692,
+        "longitude": -46.7220744,
+        "tags": "{\"mapillary\": \"298206965215899\", \"name\": \"Museu de Arte Contempor\\u00e2nea da Universidade de S\\u00e3o Paulo\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"short_name\": \"MAC USP\", \"tourism\": \"museum\", \"website\": \"http://www.mac.usp.br/\", \"wikidata\": \"Q2557770\", \"wikimedia_commons\": \"Category:Museu de Arte Contempor\\u00e2nea da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Museu de Arte Contempor\\u00e2nea da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "NeuroMat",
+        "latitude": -23.5587036,
+        "longitude": -46.7320614,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"1171\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"name\": \"NeuroMat\", \"office\": \"research\", \"wikidata\": \"Q18477654\", \"wikimedia_commons\": \"Category:NeuroMat\", \"wikipedia\": \"pt:Centro de Pesquisa, Inova\\u00e7\\u00e3o e Difus\\u00e3o em Neuromatem\\u00e1tica\"}"
+    },
+    {
+        "nome": "Busto",
+        "latitude": -23.5616876,
+        "longitude": -46.720159,
+        "tags": "{\"historic\": \"monument\", \"name\": \"Busto\", \"name:pt\": \"Busto\"}"
+    },
+    {
+        "nome": "Busto de Rubião",
+        "latitude": -23.5623348,
+        "longitude": -46.7184473,
+        "tags": "{\"historic\": \"monument\", \"name\": \"Busto de Rubi\\u00e3o\", \"name:pt\": \"Busto de Rubi\\u00e3o Meira\"}"
+    },
+    {
+        "nome": "Sowè Coffee & Food",
+        "latitude": -23.564559,
+        "longitude": -46.7249913,
+        "tags": "{\"amenity\": \"cafe\", \"name\": \"Sow\\u00e8 Coffee & Food\"}"
+    },
+    {
+        "nome": "Busto Dante",
+        "latitude": -23.5609843,
+        "longitude": -46.7226788,
+        "tags": "{\"name\": \"Busto Dante\", \"tourism\": \"artwork\"}"
+    },
+    {
+        "nome": "Serviço de Graduação - Poli-USP",
+        "latitude": -23.5547821,
+        "longitude": -46.7295462,
+        "tags": "{\"government\": \"education\", \"name\": \"Servi\\u00e7o de Gradua\\u00e7\\u00e3o - Poli-USP\", \"office\": \"government\", \"opening_hours\": \"Mo-Fr 11:00-13:00\", \"url\": \"https://www.poli.usp.br/graduacao/graduacao-semestral/563-equipe-e-contatos.html\"}"
+    },
+    {
+        "nome": "A Construção",
+        "latitude": -23.5590835,
+        "longitude": -46.7254825,
+        "tags": "{\"artist_name\": \"Cacipor\\u00e9 Torres\", \"artwork_subject\": \"Homenagem ao Arquiteto Villanova Artigas\", \"material\": \"metal\", \"name\": \"A Constru\\u00e7\\u00e3o\", \"tourism\": \"artwork\", \"wikidata\": \"Q124005936\", \"wikimedia_commons\": \"Category:A constru\\u00e7\\u00e3o (monument)\"}"
+    },
+    {
+        "nome": "Departamento de Informação e Cultura",
+        "latitude": -23.5581984,
+        "longitude": -46.726708,
+        "tags": "{\"name\": \"Departamento de Informa\\u00e7\\u00e3o e Cultura\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-1500\", \"website\": \"https://www3.eca.usp.br/cbd/agenda\"}"
+    },
+    {
+        "nome": "Departamento de Comunicações e Artes",
+        "latitude": -23.5578813,
+        "longitude": -46.7265256,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:door\": \"213\", \"addr:floor\": \"2\", \"addr:housenumber\": \"443\", \"addr:postcode\": \"05508-020\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"addr:suburb\": \"Butant\\u00e3\", \"email\": \"cca@usp.br\", \"name\": \"Departamento de Comunica\\u00e7\\u00f5es e Artes\", \"opening_hours\": \"Mo-Su 09:00-12:00, 17:00-21:00\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4081\", \"website\": \"https://www3.eca.usp.br/cca\"}"
+    },
+    {
+        "nome": "Departamento de Artes Cênicas",
+        "latitude": -23.5575248,
+        "longitude": -46.7242944,
+        "tags": "{\"email\": \"cac@usp.br\", \"name\": \"Departamento de Artes C\\u00eanicas\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4127\", \"website\": \"https://www3.eca.usp.br/cac\", \"wikidata\": \"Q101114136\"}"
+    },
+    {
+        "nome": "Nascentes do Iquiririm",
+        "latitude": -23.5696342,
+        "longitude": -46.7313865,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"961\", \"addr:postcode\": \"05586-060\", \"addr:street\": \"Rua Corinto\", \"addr:suburb\": \"Vila Indiana\", \"drinking_water\": \"no\", \"name\": \"Nascentes do Iquiririm\", \"natural\": \"spring\", \"opening_hours\": \"24/7\"}"
+    },
+    {
+        "nome": "Papelaria do Mário",
+        "latitude": -23.5601888,
+        "longitude": -46.7295649,
+        "tags": "{\"name\": \"Papelaria do M\\u00e1rio\", \"opening_hours:covid19\": \"closed\", \"payment:cards\": \"yes\", \"payment:cash\": \"yes\", \"payment:coins\": \"yes\", \"shop\": \"stationery\"}"
+    },
+    {
+        "nome": "Avenida Escola Politécnica",
+        "latitude": -23.554505,
+        "longitude": -46.734865,
+        "tags": "{\"bus\": \"yes\", \"description\": \"Ref.: Avenida Kenkiti Simomoto/ Avenida Torres De Oliveira\", \"gtfs_id\": \"400015886\", \"highway\": \"bus_stop\", \"name\": \"Avenida Escola Polit\\u00e9cnica\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"public_transport\": \"platform\", \"route_ref\": \"7725-10\"}"
+    },
+    {
+        "nome": "Centro de Estudos Geográficos \"Filipe Varea Leme\" | CEGE/USP",
+        "latitude": -23.56298,
+        "longitude": -46.723483,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"air_conditioning\": \"no\", \"email\": \"cege2@usp.br\", \"internet_access\": \"yes\", \"internet_access:fee\": \"no\", \"level\": \"0\", \"name\": \"Centro de Estudos Geogr\\u00e1ficos \\\"Filipe Varea Leme\\\" | CEGE/USP\", \"not:name\": \"CEGE_Capistrano_de_Abreu;Centro_de_Estudos_Geogr\\u00e1ficos_Capistrano_de_Abreu\", \"office\": \"association\", \"opening_hours\": \"Mo-Fr 08:00-23:00\", \"opening_hours:covid19\": \"off\", \"website\": \"https://cege.page.link/site\", \"wheelchair\": \"yes\", \"wikipedia\": \"pt:Centro de Estudos Geogr\\u00e1ficos \\\"Filipe Varea Leme\\\" - CEGE/USP\"}"
+    },
+    {
+        "nome": "Estação Meteorológica Automática",
+        "latitude": -23.5633288,
+        "longitude": -46.7224137,
+        "tags": "{\"description\": \"Esta\\u00e7\\u00e3o meteorol\\u00f3gica autom\\u00e1tica da marca Campbell Sci. instalada num canteiro gramado de vinte e cinco metros quadrados em frente ao pr\\u00e9dio de Geografia e Hist\\u00f3ria, da Universidade de S\\u00e3o Paulo. Registra dados de temperatura\", \"man_made\": \"monitoring_station\", \"monitoring:weather\": \"yes\", \"name\": \"Esta\\u00e7\\u00e3o Meteorol\\u00f3gica Autom\\u00e1tica\", \"source\": \"http://lcb.fflch.usp.br/estacao-meteorologica\"}"
+    },
+    {
+        "nome": "Auditório Milton Santos",
+        "latitude": -23.5636079,
+        "longitude": -46.7231585,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"theatre\", \"lit\": \"yes\", \"name\": \"Audit\\u00f3rio Milton Santos\", \"operator\": \"Unviersidade de S\\u00e3o Paulo\", \"theatre:type\": \"amphi\"}"
+    },
+    {
+        "nome": "Auditório Nicolau Sevcenko",
+        "latitude": -23.5636851,
+        "longitude": -46.7230019,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"theatre\", \"lit\": \"yes\", \"name\": \"Audit\\u00f3rio Nicolau Sevcenko\", \"operator\": \"Unviersidade de S\\u00e3o Paulo\", \"theatre:type\": \"amphi\"}"
+    },
+    {
+        "nome": "Anfiteatro da Geografia",
+        "latitude": -23.5631782,
+        "longitude": -46.7231031,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"theatre\", \"lit\": \"yes\", \"name\": \"Anfiteatro da Geografia\", \"operator\": \"Unviersidade de S\\u00e3o Paulo\", \"theatre:type\": \"amphi\"}"
+    },
+    {
+        "nome": "Anfiteatro da História",
+        "latitude": -23.5634329,
+        "longitude": -46.7232659,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"theatre\", \"lit\": \"yes\", \"name\": \"Anfiteatro da Hist\\u00f3ria\", \"operator\": \"Unviersidade de S\\u00e3o Paulo\", \"theatre:type\": \"amphi\"}"
+    },
+    {
+        "nome": "Associação dos Geógrafos Brasileiros - Seção Local São Paulo - AGB São Paulo",
+        "latitude": -23.5628965,
+        "longitude": -46.7236441,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-000\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"air_conditioning\": \"no\", \"baby_feeding\": \"no\", \"description\": \"AGB S\\u00e3o Paulo, uma entidade geogr\\u00e1fica sem fins lucrativos, fundada em 1934, de car\\u00e1ter t\\u00e9cnico, cient\\u00edfico e cultural\", \"email\": \"contato@agbsaopaulo.org.br\", \"level\": \"1\", \"name\": \"Associa\\u00e7\\u00e3o dos Ge\\u00f3grafos Brasileiros - Se\\u00e7\\u00e3o Local S\\u00e3o Paulo - AGB S\\u00e3o Paulo\", \"office\": \"association\", \"opening_hours:url\": \"https://agbsaopaulo.org.br/funcionamento\", \"phone\": \"+551130913758\", \"smoking\": \"no\", \"start_date\": \"1934/09/17\", \"website\": \"https://agbsaopaulo.org.br\", \"wheelchair\": \"limited\", \"wikidata\": \"Q97377265\", \"wikipedia\": \"pt:Associa\\u00e7\\u00e3o dos Ge\\u00f3grafos Brasileiros\"}"
+    },
+    {
+        "nome": "Semana de Geografia - USP",
+        "latitude": -23.563431,
+        "longitude": -46.7233851,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"email\": \"semangeo@usp.br\", \"internet_access:fee\": \"no\", \"level\": \"1\", \"name\": \"Semana de Geografia - USP\", \"opening_hours:covid19\": \"off\", \"phone\": \"+5511931346666\", \"website\": \"https://semanageo.page.link/site\", \"wheelchair\": \"yes\"}"
+    },
+    {
+        "nome": "Lanchonete da Biologia",
+        "latitude": -23.5645641,
+        "longitude": -46.7308858,
+        "tags": "{\"amenity\": \"fast_food\", \"name\": \"Lanchonete da Biologia\", \"source\": \"osm notes\"}"
+    },
+    {
+        "nome": "Avenida da Universidade, 135-259",
+        "latitude": -23.5637893,
+        "longitude": -46.7151233,
+        "tags": "{\"bus\": \"yes\", \"highway\": \"bus_stop\", \"name\": \"Avenida da Universidade, 135-259\", \"network\": \"EMTU\", \"network:short\": \"EMTU\", \"network:wikidata\": \"Q5374439\", \"network:wikipedia\": \"pt:Empresa Metropolitana de Transportes Urbanos de S\\u00e3o Paulo\", \"public_transport\": \"platform\", \"public_transport:version\": \"2\", \"route_ref\": \"280BI1\"}"
+    },
+    {
+        "nome": "Avenida Professor Luciano Gualberto, 462",
+        "latitude": -23.5612397,
+        "longitude": -46.7260198,
+        "tags": "{\"bench\": \"yes\", \"bin\": \"yes\", \"bus\": \"yes\", \"departures_board\": \"no\", \"highway\": \"bus_stop\", \"name\": \"Avenida Professor Luciano Gualberto, 462\", \"network\": \"EMTU\", \"network:short\": \"EMTU\", \"network:wikidata\": \"Q5374439\", \"network:wikipedia\": \"pt:Empresa Metropolitana de Transportes Urbanos de S\\u00e3o Paulo\", \"public_transport\": \"platform\", \"public_transport:version\": \"2\", \"route_ref\": \"280BI1\", \"shelter\": \"yes\"}"
+    },
+    {
+        "nome": "Avenida Professor Luciano Gualberto, 774",
+        "latitude": -23.5600163,
+        "longitude": -46.7285068,
+        "tags": "{\"bus\": \"yes\", \"departures_board\": \"no\", \"highway\": \"bus_stop\", \"name\": \"Avenida Professor Luciano Gualberto, 774\", \"network\": \"EMTU\", \"network:short\": \"EMTU\", \"network:wikidata\": \"Q5374439\", \"network:wikipedia\": \"pt:Empresa Metropolitana de Transportes Urbanos de S\\u00e3o Paulo\", \"public_transport\": \"platform\", \"public_transport:version\": \"2\", \"route_ref\": \"280BI1\"}"
+    },
+    {
+        "nome": "Bandejão Central",
+        "latitude": -23.5598166,
+        "longitude": -46.7226897,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"capacity\": \"39\", \"name\": \"Bandej\\u00e3o Central\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"249\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "FAU",
+        "latitude": -23.5593034,
+        "longitude": -46.7301189,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"capacity\": \"23\", \"name\": \"FAU\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"251\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Bandejão Química",
+        "latitude": -23.5650988,
+        "longitude": -46.724342,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"name\": \"Bandej\\u00e3o Qu\\u00edmica\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"250\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Morro da Universidade",
+        "latitude": -23.570288,
+        "longitude": -46.7339697,
+        "tags": "{\"ele\": \"797\", \"name\": \"Morro da Universidade\", \"natural\": \"peak\"}"
+    },
+    {
+        "nome": "Pedrão",
+        "latitude": -23.553116,
+        "longitude": -46.7287896,
+        "tags": "{\"amenity\": \"restaurant\", \"name\": \"Pedr\\u00e3o\"}"
+    },
+    {
+        "nome": "O Triedro",
+        "latitude": -23.556196,
+        "longitude": -46.7329975,
+        "tags": "{\"amenity\": \"restaurant\", \"name\": \"O Triedro\", \"opening_hours\": \"Mo-Fr 07:00-19:00\"}"
+    },
+    {
+        "nome": "AGJ",
+        "latitude": -23.560651,
+        "longitude": -46.7352578,
+        "tags": "{\"amenity\": \"fast_food\", \"name\": \"AGJ\"}"
+    },
+    {
+        "nome": "Copiadora Politécnica",
+        "latitude": -23.5562452,
+        "longitude": -46.7330307,
+        "tags": "{\"name\": \"Copiadora Polit\\u00e9cnica\", \"shop\": \"copyshop\"}"
+    },
+    {
+        "nome": "Big dog usp",
+        "latitude": -23.5621741,
+        "longitude": -46.7204429,
+        "tags": "{\"amenity\": \"fast_food\", \"diet:vegan\": \"no\", \"diet:vegetarian\": \"yes\", \"name\": \"Big dog usp\", \"opening_hours\": \"Mo-Fr 10:30-19:00\"}"
+    },
+    {
+        "nome": "Dôki Dôki",
+        "latitude": -23.5621662,
+        "longitude": -46.7207005,
+        "tags": "{\"amenity\": \"restaurant\", \"cuisine\": \"japanese\", \"name\": \"D\\u00f4ki D\\u00f4ki\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_3_IPT",
+        "latitude": -23.5572284,
+        "longitude": -46.7347936,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_3_IPT\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_2_IPT",
+        "latitude": -23.5572536,
+        "longitude": -46.7348208,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_2_IPT\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_1_IPT",
+        "latitude": -23.5572775,
+        "longitude": -46.734839,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_1_IPT\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostras_CEPEUSP",
+        "latitude": -23.5616218,
+        "longitude": -46.7168452,
+        "tags": "{\"description\": \"CAPE-1\\t7,56\\tCEPEUSP\\nCAPE-2\\t8,39\\tCEPEUSP\\nCAPE-3\\t7,75\\tCEPEUSP\\nCAPE-4\\t7,85\\tCEPEUSP\\nCAPE-5\\t7,71\\tCEPEUSP\\nCAPE-6\\t7,8\\tCEPEUSP\\nCAPE-7\\t7,57\\tCEPEUSP\\n\\nlocal\\tm\\u00e9dia       p/ local (cm) \\t           N\\u00ba de ind.\\nCEPEUSP\\t               7,8\\t                             7\", \"name\": \"Malvaviscus_Arboreus_Amostras_CEPEUSP\", \"natural\": \"tree\", \"species\": \"Malvaviscus Arboreus\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_1_RadioUsp",
+        "latitude": -23.5590275,
+        "longitude": -46.7371404,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_1_RadioUsp\", \"natural\": \"tree\", \"species\": \"Malvaviscus Arboreus\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_2_RadioUsp",
+        "latitude": -23.559057,
+        "longitude": -46.737137,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_2_RadioUsp\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_3_RadioUsp",
+        "latitude": -23.5589691,
+        "longitude": -46.7368826,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_3_RadioUsp\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_4_RadioUsp",
+        "latitude": -23.5589412,
+        "longitude": -46.7369375,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_4_RadioUsp\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra 1 - 2 - 3_ FEA",
+        "latitude": -23.5592319,
+        "longitude": -46.7286715,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra 1 - 2 - 3_ FEA\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_3-4-5_FAU",
+        "latitude": -23.5599631,
+        "longitude": -46.7295934,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_3-4-5_FAU\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_6_FAU",
+        "latitude": -23.5599808,
+        "longitude": -46.7295527,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_6_FAU\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "Malvaviscus_Arboreus_Amostra_7_FAU",
+        "latitude": -23.5600333,
+        "longitude": -46.7294153,
+        "tags": "{\"name\": \"Malvaviscus_Arboreus_Amostra_7_FAU\", \"natural\": \"tree\"}"
+    },
+    {
+        "nome": "NCN - Núcleo da Consciẽncia Negra",
+        "latitude": -23.5587391,
+        "longitude": -46.7200974,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"140\", \"addr:street\": \"Travessa 8\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"college\", \"contact:facebook\": \"https://www.facebook.com/nucleodeconsciencianegra\", \"contact:instagram\": \"https://www.instagram.com/nucleodeconsciencianegra\", \"contact:phone\": \"(11) 3091-4291\", \"name\": \"NCN - N\\u00facleo da Consci\\u1ebdncia Negra\", \"website\": \"ncn.org.br\"}"
+    },
+    {
+        "nome": "P3",
+        "latitude": -23.5682353,
+        "longitude": -46.7407149,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"name\": \"P3\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"260\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Vila Indiana",
+        "latitude": -23.568541,
+        "longitude": -46.7318266,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"name\": \"Vila Indiana\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"259\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Hospital Universitário",
+        "latitude": -23.5647337,
+        "longitude": -46.7411489,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"2565\", \"addr:postcode\": \"05508-000\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"amenity\": \"hospital\", \"contact:website\": \"http://www.hu.usp.br\", \"emergency\": \"yes\", \"healthcare\": \"hospital\", \"name\": \"Hospital Universit\\u00e1rio\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"ref:CNES\": \"2076926\", \"ref:vatin\": \"BR63025530008512\", \"short_name\": \"HU\", \"wikidata\": \"Q9004924\", \"wikimedia_commons\": \"Category:Hospital Universit\\u00e1rio da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Bandejão Prefeitura",
+        "latitude": -23.5597355,
+        "longitude": -46.7398201,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"capacity\": \"15\", \"name\": \"Bandej\\u00e3o Prefeitura\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"256\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Bandejão Física",
+        "latitude": -23.560573,
+        "longitude": -46.7357839,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"capacity\": \"19\", \"name\": \"Bandej\\u00e3o F\\u00edsica\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"255\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Terminal de Ônibus USP",
+        "latitude": -23.5528309,
+        "longitude": -46.7322244,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"BikeRio\", \"brand:wikidata\": \"Q28724\", \"capacity\": \"15\", \"name\": \"Terminal de \\u00d4nibus USP\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"254\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Pedalusp Biênio",
+        "latitude": -23.556095,
+        "longitude": -46.7322054,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"BikeRio\", \"brand:wikidata\": \"Q28724\", \"name\": \"Pedalusp Bi\\u00eanio\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"253\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Psicologia",
+        "latitude": -23.554471,
+        "longitude": -46.7247819,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Psicologia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "CEPE",
+        "latitude": -23.5620208,
+        "longitude": -46.7175716,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"name\": \"CEPE\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"247\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Portão CPTM",
+        "latitude": -23.5604266,
+        "longitude": -46.7129678,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"brand\": \"Bike Salvador\", \"brand:wikidata\": \"Q20052802\", \"capacity\": \"15\", \"name\": \"Port\\u00e3o CPTM\", \"network\": \"Bike Salvador\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"operator:type\": \"private\", \"ref\": \"246\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Bancos/Reitoria",
+        "latitude": -23.5599272,
+        "longitude": -46.7271062,
+        "tags": "{\"amenity\": \"bicycle_rental\", \"authentication:app\": \"yes\", \"bicycle_rental\": \"docking_station\", \"capacity\": \"23\", \"name\": \"Bancos/Reitoria\", \"network\": \"Bike Ita\\u00fa (Bike Sampa)\", \"network:wikidata\": \"Q97188366\", \"operator\": \"Tembici\", \"ref\": \"243\", \"rental\": \"city_bike\", \"source\": \"network website\", \"website\": \"https://bikeitau.com.br/sao-paulo/\"}"
+    },
+    {
+        "nome": "Letras",
+        "latitude": -23.5619932,
+        "longitude": -46.7244304,
+        "tags": "{\"name\": \"Letras\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Biblioteca Virginie Buff D'Ápice",
+        "latitude": -23.5698372,
+        "longitude": -46.7402248,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"87\", \"addr:postcode\": \"05508-270\", \"addr:street\": \"Avenida Orlando Marques de Paiva\", \"addr:suburb\": \"Cidade Universit\\u00e1ria \\u201cArmando Salles de Oliveira\\u201d\", \"amenity\": \"library\", \"description\": \"Situada dentro da FMVZ//USP, com um dos acervos mais valiosos e completos do Brasil em sua especialidade, tem atuado como centro din\\u00e2mico de informa\\u00e7\\u00e3o, gerando, controlando e divulgando a literatura da \\u00e1rea de Medicina Veterin\\u00e1ria e Zootecnia.\", \"email\": \"bibfmvz@usp.br\", \"internet_access\": \"yes\", \"level\": \"t\\u00e9rreo\", \"name\": \"Biblioteca Virginie Buff D'\\u00c1pice\", \"opening_hours\": \"Mo-Fr 07:30-18:30\", \"operator\": \"Faculdade de Medicina Veterin\\u00e1ria e Zootecnia da Universidade de S\\u00e3o Paulo\", \"operator:type\": \"university\", \"phone\": \"+55 11 3091 7922\", \"start_date\": \"19341219\", \"website\": \"https://biblioteca.fmvz.usp.br/\"}"
+    },
+    {
+        "nome": "Portaria de Pedestres Jaguaré",
+        "latitude": -23.553615,
+        "longitude": -46.733289,
+        "tags": "{\"barrier\": \"gate\", \"entrance\": \"yes\", \"name\": \"Portaria de Pedestres Jaguar\\u00e9\"}"
+    },
+    {
+        "nome": "Da fisica",
+        "latitude": -23.5606755,
+        "longitude": -46.7354503,
+        "tags": "{\"name\": \"Da fisica\", \"shop\": \"books\"}"
+    },
+    {
+        "nome": "Memorial aos Membros da Comunidade USP Vítimas do Regime da Ditadura Militar - 1964/1985",
+        "latitude": -23.5571881,
+        "longitude": -46.7220377,
+        "tags": "{\"historic\": \"memorial\", \"name\": \"Memorial aos Membros da Comunidade USP V\\u00edtimas do Regime da Ditadura Militar - 1964/1985\"}"
+    },
+    {
+        "nome": "Tia Bia",
+        "latitude": -23.5623162,
+        "longitude": -46.7252007,
+        "tags": "{\"amenity\": \"fast_food\", \"cuisine\": \"coffee_shop\", \"name\": \"Tia Bia\"}"
+    },
+    {
+        "nome": "Instituto de Tecnologia e Liderança",
+        "latitude": -23.5558143,
+        "longitude": -46.7339146,
+        "tags": "{\"name\": \"Instituto de Tecnologia e Lideran\\u00e7a\", \"office\": \"research\"}"
+    },
+    {
+        "nome": "Alto da USP",
+        "latitude": -23.570269,
+        "longitude": -46.7339386,
+        "tags": "{\"name\": \"Alto da USP\", \"natural\": \"peak\"}"
+    },
+    {
+        "nome": "USP - Portaria de Pedestres da VIla Indiana",
+        "latitude": -23.5691859,
+        "longitude": -46.7306214,
+        "tags": "{\"entrance\": \"yes\", \"name\": \"USP - Portaria de Pedestres da VIla Indiana\"}"
+    },
+    {
+        "nome": "USP - Portaria de Pedestres do Mercadinho",
+        "latitude": -23.5716369,
+        "longitude": -46.735193,
+        "tags": "{\"entrance\": \"yes\", \"name\": \"USP - Portaria de Pedestres do Mercadinho\"}"
+    },
+    {
+        "nome": "Núcleo de Estudos de Violência",
+        "latitude": -23.5559216,
+        "longitude": -46.733969,
+        "tags": "{\"name\": \"N\\u00facleo de Estudos de Viol\\u00eancia\", \"office\": \"research\", \"short_name\": \"NEV\"}"
+    },
+    {
+        "nome": "USP - Portaria 1",
+        "latitude": -23.5652929,
+        "longitude": -46.7126994,
+        "tags": "{\"entrance\": \"exit\", \"name\": \"USP - Portaria 1\"}"
+    },
+    {
+        "nome": "CINUSP Paulo Emílio",
+        "latitude": -23.5578689,
+        "longitude": -46.7208262,
+        "tags": "{\"addr:housenumber\": \"109\", \"addr:street\": \"Rua do Anfiteatro\", \"amenity\": \"cinema\", \"contact:facebook\": \"cinusp.pauloemilio\", \"name\": \"CINUSP Paulo Em\\u00edlio\", \"opening_hours\": \"Mo-Fr 09:00-21:00\", \"phone\": \"+55 11 3091-3540\", \"website\": \"https://cinusp.webhostusp.sti.usp.br\"}"
+    },
+    {
+        "nome": "Centro Nacional de Pesquisa Científica",
+        "latitude": -23.5599581,
+        "longitude": -46.726253,
+        "tags": "{\"amenity\": \"research_institute\", \"contact:email\": \"liviu-petru.nicu@cnrs.fr;pascal.singer@cnrs.fr\", \"contact:website\": \"https://sao-paulo.office.cnrs.fr/pt-br/\", \"name\": \"Centro Nacional de Pesquisa Cient\\u00edfica\", \"name:fr\": \"Maison du CNRS\"}"
+    },
+    {
+        "nome": "Avenida Professor Orlando Marques de Paiva",
+        "latitude": -23.5693651,
+        "longitude": -46.7412085,
+        "tags": "{\"highway\": \"tertiary\", \"lanes\": \"2\", \"lit\": \"yes\", \"name\": \"Avenida Professor Orlando Marques de Paiva\", \"oneway\": \"yes\", \"postal_code\": \"05508-020\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Avenida Professor Lineu Prestes",
+        "latitude": -23.564032,
+        "longitude": -46.7223961,
+        "tags": "{\"bicycle\": \"designated\", \"cycleway:right\": \"lane\", \"highway\": \"secondary\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Avenida Professor Lineu Prestes\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:both\": \"no\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"source:name\": \"survey\", \"surface\": \"asphalt\", \"wikidata\": \"Q21281898\"}"
+    },
+    {
+        "nome": "Avenida da Universidade",
+        "latitude": -23.5635906,
+        "longitude": -46.7162737,
+        "tags": "{\"bicycle\": \"designated\", \"busway:right\": \"lane\", \"cycleway:left\": \"no\", \"cycleway:right\": \"lane\", \"highway\": \"secondary\", \"lanes\": \"3\", \"lanes:bus\": \"1\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Avenida da Universidade\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:both\": \"no\", \"sidewalk\": \"right\", \"source\": \"Bing;local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Praça Professor Rubião Meira",
+        "latitude": -23.5621955,
+        "longitude": -46.7191883,
+        "tags": "{\"cycleway:est_width\": \"1.5\", \"cycleway:left\": \"no\", \"cycleway:right\": \"lane\", \"highway\": \"secondary\", \"junction\": \"roundabout\", \"lanes\": \"2\", \"lit\": \"yes\", \"name\": \"Pra\\u00e7a Professor Rubi\\u00e3o Meira\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Rua do Matão",
+        "latitude": -23.5672766,
+        "longitude": -46.7303713,
+        "tags": "{\"highway\": \"tertiary\", \"maxspeed\": \"40\", \"name\": \"Rua do Mat\\u00e3o\", \"postal_code\": \"05508-090\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Praça do Oceanográfico",
+        "latitude": -23.5602553,
+        "longitude": -46.7313627,
+        "tags": "{\"cycleway:right\": \"shared_lane\", \"highway\": \"tertiary\", \"junction\": \"roundabout\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Pra\\u00e7a do Oceanogr\\u00e1fico\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Observatório do Campus",
+        "latitude": -23.5594016,
+        "longitude": -46.7353001,
+        "tags": "{\"building\": \"yes\", \"height\": \"11.703\", \"man_made\": \"observatory\", \"name\": \"Observat\\u00f3rio do Campus\"}"
+    },
+    {
+        "nome": "Instituto de Química",
+        "latitude": -23.5645595,
+        "longitude": -46.7259003,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"748\", \"addr:postcode\": \"05508-000\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"amenity\": \"college\", \"contact:phone\": \"+55 11 3091 3839\", \"contact:website\": \"http://www.iq.usp.br\", \"name\": \"Instituto de Qu\\u00edmica\", \"name:en\": \"Institute of Chemistry\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"phone\": \"+55 11 3815-3257\", \"short_name\": \"IQUSP\", \"wikipedia\": \"pt:Instituto de Qu\\u00edmica da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Faculdade de Educação",
+        "latitude": -23.5625761,
+        "longitude": -46.7157326,
+        "tags": "{\"addr:housenumber\": \"308\", \"addr:street\": \"Avenida da Universidade\", \"amenity\": \"college\", \"email\": \"comunic@fe.usp.br\", \"name\": \"Faculdade de Educa\\u00e7\\u00e3o\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"phone\": \"+55 11 3091-3203\", \"website\": \"http://www.fe.usp.br\", \"wikidata\": \"Q10279451\", \"wikimedia_commons\": \"Category:Faculdade de Educa\\u00e7\\u00e3o da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Educa\\u00e7\\u00e3o da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Laboratório de Alta Tensão",
+        "latitude": -23.5581708,
+        "longitude": -46.7330694,
+        "tags": "{\"building\": \"university\", \"height\": \"26.657\", \"loc_name\": \"Caixa-forte do Tio Patinhas\", \"name\": \"Laborat\\u00f3rio de Alta Tens\\u00e3o\"}"
+    },
+    {
+        "nome": "Posto de Informações",
+        "latitude": -23.564205,
+        "longitude": -46.7133481,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"110\", \"addr:state\": \"SP\", \"addr:street\": \"Pra\\u00e7a Professor Reinaldo Porchat de Assis\", \"building\": \"university\", \"check_date\": \"2024-03-01\", \"contact:email\": \"centroinfo@usp.br\", \"contact:phone\": \"+55 11 3091 3121;+55 11 3091 4805\", \"contact:website\": \"http://www.puspc.usp.br/centrodeinformacoes/\", \"height\": \"6.51\", \"information\": \"office\", \"name\": \"Posto de Informa\\u00e7\\u00f5es\", \"tourism\": \"information\"}"
+    },
+    {
+        "nome": "Escola de Educação Física e Esporte",
+        "latitude": -23.5621456,
+        "longitude": -46.713518,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"65\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Avenida Professor Mello Moraes\", \"amenity\": \"college\", \"contact:email\": \"comunicaeefe@usp.br\", \"contact:phone\": \"+55 11 3091 2247\", \"contact:website\": \"http://www.eefe.usp.br/\", \"name\": \"Escola de Educa\\u00e7\\u00e3o F\\u00edsica e Esporte\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"EEFE\", \"wikidata\": \"Q10274603\", \"wikimedia_commons\": \"Category:Escola de Educa\\u00e7\\u00e3o F\\u00edsica e Esporte da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Conjunto das Químicas",
+        "latitude": -23.5647134,
+        "longitude": -46.7255119,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Conjunto das Qu\\u00edmicas\"}"
+    },
+    {
+        "nome": "Faculdade de Odontologia",
+        "latitude": -23.5673029,
+        "longitude": -46.7386268,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"2227\", \"addr:postcode\": \"05508-000\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"amenity\": \"college\", \"contact:facebook\": \"fousp\", \"contact:twitter\": \"fousp\", \"contact:website\": \"http://www.fo.usp.br/\", \"name\": \"Faculdade de Odontologia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"FO\", \"website\": \"www.fo.usp.br\", \"wikidata\": \"Q10279554\", \"wikimedia_commons\": \"Category:Faculdade de Odontologia da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Odontologia da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Instituto de Ciências Biomédicas",
+        "latitude": -23.5676772,
+        "longitude": -46.7330597,
+        "tags": "{\"addr:housenumber\": \"2415\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"amenity\": \"college\", \"name\": \"Instituto de Ci\\u00eancias Biom\\u00e9dicas\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"ICB\", \"website\": \"www.icb.usp.br\", \"wikidata\": \"Q10302782\", \"wikimedia_commons\": \"Category:Instituto de Ci\\u00eancias Biom\\u00e9dicas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Instituto de Ci\\u00eancias Biom\\u00e9dicas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Instituto de Eletrotécnica e Energia",
+        "latitude": -23.5584111,
+        "longitude": -46.7346243,
+        "tags": "{\"addr:housenumber\": \"1289\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"amenity\": \"college\", \"email\": \"contato@iee.usp.br\", \"name\": \"Instituto de Eletrot\\u00e9cnica e Energia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"IEE\", \"website\": \"http://www.iee.usp.br\", \"wikidata\": \"Q10302824\", \"wikipedia\": \"pt:Instituto de Energia e Ambiente da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Instituto de Psicologia",
+        "latitude": -23.5559012,
+        "longitude": -46.724832,
+        "tags": "{\"addr:housenumber\": \"721\", \"addr:street\": \"Avenida Professor Melo Moraes\", \"amenity\": \"college\", \"email\": \"contato_ip@usp.br\", \"name\": \"Instituto de Psicologia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"IP\", \"website\": \"https://www.ip.usp.br/\", \"wikidata\": \"Q10302923\", \"wikimedia_commons\": \"Category:Instituto de Psicologia da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Instituto de Psicologia da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Travessa V",
+        "latitude": -23.5597439,
+        "longitude": -46.732674,
+        "tags": "{\"cycleway:left\": \"no\", \"cycleway:right\": \"shared_lane\", \"cycleway:right:lane\": \"pictogram\", \"highway\": \"unclassified\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Travessa V\", \"oneway\": \"yes\", \"sidewalk\": \"right\", \"sidewalk:right:surface\": \"concrete\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Travessa C",
+        "latitude": -23.5578542,
+        "longitude": -46.7191245,
+        "tags": "{\"cycleway:right\": \"shared_lane\", \"destination\": \"Travessa C\", \"highway\": \"tertiary\", \"maxspeed\": \"40\", \"name\": \"Travessa C\", \"oneway\": \"yes\", \"source\": \"local knowledge\"}"
+    },
+    {
+        "nome": "FFLCH - História e Geografia",
+        "latitude": -23.5632563,
+        "longitude": -46.7232984,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"338\", \"addr:postcode\": \"05508-030\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"addr:suburb\": \"Butant\\u00e3\", \"building\": \"university\", \"height\": \"11.8\", \"isced:level\": \"5-6\", \"name\": \"FFLCH - Hist\\u00f3ria e Geografia\", \"official_name\": \"Edif\\u00edcio Eur\\u00edpedes Sim\\u00f5es de Paula\", \"operator\": \"Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\", \"operator:type\": \"public\", \"website\": \"https://fflch.usp.br\", \"wheelchair\": \"limited\", \"wikidata\": \"Q10279490\", \"wikimedia_commons\": \"Category:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Escola Politécnica - Departamento de Engenharia Química",
+        "latitude": -23.5632677,
+        "longitude": -46.7260018,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Escola Polit\\u00e9cnica - Departamento de Engenharia Qu\\u00edmica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\"}"
+    },
+    {
+        "nome": "Faculdade de Ciências Farmacêuticas",
+        "latitude": -23.5640353,
+        "longitude": -46.7244408,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Faculdade de Ci\\u00eancias Farmac\\u00eauticas\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"wikidata\": \"Q10279363\", \"wikimedia_commons\": \"Category:Faculdade de Ci\\u00eancias Farmac\\u00eauticas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Ci\\u00eancias Farmac\\u00eauticas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Avenida Professor Lúcio Martins Rodrigues",
+        "latitude": -23.554507,
+        "longitude": -46.7254913,
+        "tags": "{\"bicycle\": \"designated\", \"cycleway:est_width\": \"1.5\", \"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"50\", \"name\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"name:etymology:wikidata\": \"Q105703692\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:both\": \"no\", \"sidewalk\": \"right\", \"sidewalk:right:surface\": \"concrete\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Travessa do Politécnico",
+        "latitude": -23.5573316,
+        "longitude": -46.7316152,
+        "tags": "{\"highway\": \"service\", \"lit\": \"yes\", \"name\": \"Travessa do Polit\\u00e9cnico\", \"oneway\": \"yes\", \"surface\": \"paving_stones\"}"
+    },
+    {
+        "nome": "Travessa 2",
+        "latitude": -23.555994,
+        "longitude": -46.732175,
+        "tags": "{\"highway\": \"service\", \"lit\": \"yes\", \"name\": \"Travessa 2\", \"oneway\": \"yes\", \"sidewalk\": \"right\", \"surface\": \"paving_stones\"}"
+    },
+    {
+        "nome": "Travessa 1",
+        "latitude": -23.5536252,
+        "longitude": -46.7313264,
+        "tags": "{\"highway\": \"service\", \"lit\": \"yes\", \"name\": \"Travessa 1\", \"parking:left\": \"street_side\", \"parking:left:orientation\": \"perpendicular\", \"parking:right\": \"lane\", \"parking:right:orientation\": \"parallel\", \"sidewalk\": \"no\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Travessa E",
+        "latitude": -23.5611068,
+        "longitude": -46.7340439,
+        "tags": "{\"highway\": \"unclassified\", \"name\": \"Travessa E\", \"source:highway\": \"schema_br2013\"}"
+    },
+    {
+        "nome": "Travessa 12",
+        "latitude": -23.5626352,
+        "longitude": -46.7269475,
+        "tags": "{\"highway\": \"residential\", \"lanes\": \"2\", \"maxspeed\": \"40\", \"name\": \"Travessa 12\", \"oneway\": \"yes\", \"postal_code\": \"05508-080\", \"sidewalk\": \"both\", \"turn:lanes\": \"left|right\"}"
+    },
+    {
+        "nome": "Prefeitura do Campus da Capital",
+        "latitude": -23.5592429,
+        "longitude": -46.7404114,
+        "tags": "{\"amenity\": \"college\", \"education\": \"college\", \"name\": \"Prefeitura do Campus da Capital\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\"}"
+    },
+    {
+        "nome": "Parque Esporte para Todos",
+        "latitude": -23.5611982,
+        "longitude": -46.737115,
+        "tags": "{\"leisure\": \"park\", \"name\": \"Parque Esporte para Todos\"}"
+    },
+    {
+        "nome": "Travessa R",
+        "latitude": -23.562836,
+        "longitude": -46.7367917,
+        "tags": "{\"highway\": \"unclassified\", \"name\": \"Travessa R\", \"oneway\": \"yes\", \"source\": \"Bing\"}"
+    },
+    {
+        "nome": "Rua Benedito de Sousa",
+        "latitude": -23.5693927,
+        "longitude": -46.7302643,
+        "tags": "{\"highway\": \"residential\", \"lane_markings\": \"no\", \"lit\": \"yes\", \"name\": \"Rua Benedito de Sousa\", \"note\": \"There is a slight spelling difference between GeoSampa data (Souza) and OSM data (Sousa). Needs verification from street sign.\", \"oneway\": \"no\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Anfiteatros do Biênio",
+        "latitude": -23.5562632,
+        "longitude": -46.732438,
+        "tags": "{\"building\": \"university\", \"height\": \"3.75\", \"name\": \"Anfiteatros do Bi\\u00eanio\"}"
+    },
+    {
+        "nome": "Biênio",
+        "latitude": -23.556532,
+        "longitude": -46.7325072,
+        "tags": "{\"addr:housenumber\": \"128\", \"addr:street\": \"Avenida Professor Almeida Prado, Travessa 2\", \"building\": \"university\", \"height\": \"11.83\", \"name\": \"Bi\\u00eanio\"}"
+    },
+    {
+        "nome": "Engenharia de Produção",
+        "latitude": -23.5564905,
+        "longitude": -46.7333751,
+        "tags": "{\"addr:housenumber\": \"128\", \"addr:street\": \"Avenida Professor Almeida Prado, Travessa 2\", \"building\": \"university\", \"name\": \"Engenharia de Produ\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Subestação elétrica USP",
+        "latitude": -23.5517727,
+        "longitude": -46.7318285,
+        "tags": "{\"name\": \"Subesta\\u00e7\\u00e3o el\\u00e9trica USP\", \"old_operator\": \"AES Eletropaulo\", \"operator\": \"Enel Distribui\\u00e7\\u00e3o S\\u00e3o Paulo\", \"operator:wikidata\": \"Q1328247\", \"power\": \"substation\", \"substation\": \"distribution\"}"
+    },
+    {
+        "nome": "Avenida Professor Almeida Prado",
+        "latitude": -23.5596539,
+        "longitude": -46.738591,
+        "tags": "{\"bicycle\": \"designated\", \"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Avenida Professor Almeida Prado\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:left\": \"no\", \"parking:right\": \"lane\", \"parking:right:orientation\": \"parallel\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Praça Professor Alípio Correia Neto",
+        "latitude": -23.5680951,
+        "longitude": -46.7297262,
+        "tags": "{\"cycleway:right\": \"lane\", \"highway\": \"secondary\", \"junction\": \"roundabout\", \"name\": \"Pra\\u00e7a Professor Al\\u00edpio Correia Neto\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Praça Professor Jorge Americano",
+        "latitude": -23.5634816,
+        "longitude": -46.7215257,
+        "tags": "{\"cycleway:right\": \"lane\", \"highway\": \"secondary\", \"junction\": \"roundabout\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"50\", \"name\": \"Pra\\u00e7a Professor Jorge Americano\", \"sidewalk\": \"right\", \"sidewalk:right:surface\": \"concrete\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "FFLCH - Letras",
+        "latitude": -23.5620738,
+        "longitude": -46.7258966,
+        "tags": "{\"building\": \"university\", \"isced:level\": \"5-6\", \"name\": \"FFLCH - Letras\", \"official_name\": \"Edif\\u00edcio Prof. Antonio Candido\", \"operator\": \"Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\", \"operator:type\": \"public\", \"website\": \"https://fflch.usp.br\", \"wheelchair\": \"limited\", \"wikidata\": \"Q10279490\", \"wikimedia_commons\": \"Category:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Rua Aquianés",
+        "latitude": -23.5639654,
+        "longitude": -46.7415266,
+        "tags": "{\"highway\": \"service\", \"name\": \"Rua Aquian\\u00e9s\", \"oneway\": \"no\", \"service\": \"driveway\"}"
+    },
+    {
+        "nome": "Rua Francisco dos Santos",
+        "latitude": -23.5698132,
+        "longitude": -46.7338627,
+        "tags": "{\"highway\": \"unclassified\", \"lane_markings\": \"no\", \"name\": \"Rua Francisco dos Santos\", \"postal_code\": \"05587-050\", \"sidewalk\": \"right\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Rua da Reitoria",
+        "latitude": -23.5582427,
+        "longitude": -46.7249772,
+        "tags": "{\"highway\": \"service\", \"name\": \"Rua da Reitoria\", \"parking:left\": \"no\", \"parking:right\": \"street_side\", \"parking:right:orientation\": \"perpendicular\", \"service\": \"parking_aisle\", \"source:highway\": \"schema_br2013\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Centro de Vivência Estudantil",
+        "latitude": -23.5603579,
+        "longitude": -46.7215104,
+        "tags": "{\"building\": \"university\", \"height\": \"4.74\", \"name\": \"Centro de Viv\\u00eancia Estudantil\"}"
+    },
+    {
+        "nome": "Bloco A1",
+        "latitude": -23.5576976,
+        "longitude": -46.7199494,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.85\", \"name\": \"Bloco A1\"}"
+    },
+    {
+        "nome": "CRUSP Bloco F",
+        "latitude": -23.5595002,
+        "longitude": -46.7210094,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.48\", \"name\": \"CRUSP Bloco F\"}"
+    },
+    {
+        "nome": "CRUSP Bloco A",
+        "latitude": -23.5576727,
+        "longitude": -46.720693,
+        "tags": "{\"addr:housenumber\": \"A\", \"addr:street\": \"Corredor do CRUSP\", \"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.78\", \"name\": \"CRUSP Bloco A\"}"
+    },
+    {
+        "nome": "CRUSP Bloco E",
+        "latitude": -23.5589168,
+        "longitude": -46.7214084,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.51\", \"name\": \"CRUSP Bloco E\"}"
+    },
+    {
+        "nome": "CRUSP Bloco G",
+        "latitude": -23.5595399,
+        "longitude": -46.7217669,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.38\", \"name\": \"CRUSP Bloco G\"}"
+    },
+    {
+        "nome": "CRUSP Bloco B",
+        "latitude": -23.5582576,
+        "longitude": -46.7202925,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.85\", \"name\": \"CRUSP Bloco B\"}"
+    },
+    {
+        "nome": "CRUSP Bloco D",
+        "latitude": -23.5588786,
+        "longitude": -46.7206505,
+        "tags": "{\"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.72\", \"name\": \"CRUSP Bloco D\"}"
+    },
+    {
+        "nome": "CRUSP Bloco C",
+        "latitude": -23.5582947,
+        "longitude": -46.7210511,
+        "tags": "{\"addr:housenumber\": \"C\", \"addr:street\": \"Corredor do CRUSP\", \"building\": \"dormitory\", \"building:levels\": \"7\", \"height\": \"21.83\", \"name\": \"CRUSP Bloco C\"}"
+    },
+    {
+        "nome": "Restaurante Universitário Central",
+        "latitude": -23.5598279,
+        "longitude": -46.7211485,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"check_date\": \"2024-04-12\", \"height\": \"4.74\", \"name\": \"Restaurante Universit\\u00e1rio Central\"}"
+    },
+    {
+        "nome": "Rua da Biblioteca",
+        "latitude": -23.5612713,
+        "longitude": -46.7233659,
+        "tags": "{\"cycleway:both\": \"shared_lane\", \"cycleway:both:lane\": \"pictogram\", \"highway\": \"unclassified\", \"name\": \"Rua da Biblioteca\", \"oneway\": \"yes\", \"parking:left\": \"lane\", \"parking:left:orientation\": \"parallel\", \"parking:right\": \"street_side\", \"parking:right:orientation\": \"perpendicular\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Rua do Anfiteatro",
+        "latitude": -23.5596191,
+        "longitude": -46.7226017,
+        "tags": "{\"cycleway:both\": \"shared_lane\", \"cycleway:both:lane\": \"pictogram\", \"highway\": \"unclassified\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"30\", \"name\": \"Rua do Anfiteatro\", \"oneway\": \"no\", \"parking:both\": \"separate\", \"parking:condition:both\": \"free\", \"postal_code\": \"05508-060\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Corredor do CRUSP",
+        "latitude": -23.5588902,
+        "longitude": -46.7210291,
+        "tags": "{\"bicycle\": \"dismount\", \"covered\": \"yes\", \"highway\": \"footway\", \"horse\": \"private\", \"lit\": \"yes\", \"name\": \"Corredor do CRUSP\", \"surface\": \"paving_stones\", \"width\": \"3\"}"
+    },
+    {
+        "nome": "Bloco 0",
+        "latitude": -23.5651325,
+        "longitude": -46.7265541,
+        "tags": "{\"building\": \"yes\", \"building:levels\": \"2\", \"name\": \"Bloco 0\"}"
+    },
+    {
+        "nome": "LAME (Edifício Anexo)",
+        "latitude": -23.5605772,
+        "longitude": -46.7285945,
+        "tags": "{\"amenity\": \"college\", \"building\": \"yes\", \"height\": \"8.25\", \"internet_access\": \"wlan\", \"internet_access:fee\": \"customers\", \"name\": \"LAME (Edif\\u00edcio Anexo)\"}"
+    },
+    {
+        "nome": "Bloco 1",
+        "latitude": -23.5651631,
+        "longitude": -46.7259497,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 1\"}"
+    },
+    {
+        "nome": "Bloco 10",
+        "latitude": -23.5642998,
+        "longitude": -46.7261628,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 10\"}"
+    },
+    {
+        "nome": "Bloco 11",
+        "latitude": -23.5641096,
+        "longitude": -46.7260486,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 11\"}"
+    },
+    {
+        "nome": "Bloco 12",
+        "latitude": -23.5639032,
+        "longitude": -46.7259298,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 12\"}"
+    },
+    {
+        "nome": "Bloco 13",
+        "latitude": -23.564129,
+        "longitude": -46.7242835,
+        "tags": "{\"building\": \"university\", \"height\": \"9.133\", \"name\": \"Bloco 13\"}"
+    },
+    {
+        "nome": "Departamento de Alimentos e Nutrição Experimental Bloco 14",
+        "latitude": -23.5640153,
+        "longitude": -46.7245185,
+        "tags": "{\"building\": \"university\", \"height\": \"8.963\", \"name\": \"Departamento de Alimentos e Nutri\\u00e7\\u00e3o Experimental Bloco 14\"}"
+    },
+    {
+        "nome": "Departamento de Farmácia Bloco 15",
+        "latitude": -23.5639168,
+        "longitude": -46.724719,
+        "tags": "{\"building\": \"university\", \"height\": \"8.963\", \"name\": \"Departamento de Farm\\u00e1cia Bloco 15\"}"
+    },
+    {
+        "nome": "Departamento de Tecnologia Bioquímico-Farmacêutica Bloco 16",
+        "latitude": -23.5638187,
+        "longitude": -46.7249197,
+        "tags": "{\"building\": \"university\", \"height\": \"9.023\", \"name\": \"Departamento de Tecnologia Bioqu\\u00edmico-Farmac\\u00eautica Bloco 16\"}"
+    },
+    {
+        "nome": "Departamento de Análises Clínicas e Toxicológicas Bloco 17",
+        "latitude": -23.5637024,
+        "longitude": -46.7251549,
+        "tags": "{\"building\": \"university\", \"height\": \"9.343\", \"name\": \"Departamento de An\\u00e1lises Cl\\u00ednicas e Toxicol\\u00f3gicas Bloco 17\"}"
+    },
+    {
+        "nome": "Bloco 18",
+        "latitude": -23.5635891,
+        "longitude": -46.725388,
+        "tags": "{\"building\": \"university\", \"height\": \"9.283\", \"name\": \"Bloco 18\"}"
+    },
+    {
+        "nome": "Bloco 19",
+        "latitude": -23.5633264,
+        "longitude": -46.7259239,
+        "tags": "{\"building\": \"university\", \"height\": \"9.733\", \"name\": \"Bloco 19\"}"
+    },
+    {
+        "nome": "Bloco 2",
+        "latitude": -23.5649498,
+        "longitude": -46.7258219,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 2\"}"
+    },
+    {
+        "nome": "Bloco 20",
+        "latitude": -23.563212,
+        "longitude": -46.7261586,
+        "tags": "{\"building\": \"university\", \"height\": \"9.393\", \"name\": \"Bloco 20\"}"
+    },
+    {
+        "nome": "Bloco 21",
+        "latitude": -23.563082,
+        "longitude": -46.7264261,
+        "tags": "{\"building\": \"university\", \"height\": \"9.433\", \"name\": \"Bloco 21\"}"
+    },
+    {
+        "nome": "Bloco 22",
+        "latitude": -23.5629667,
+        "longitude": -46.7266613,
+        "tags": "{\"building\": \"university\", \"height\": \"9.503\", \"name\": \"Bloco 22\"}"
+    },
+    {
+        "nome": "Bloco 3",
+        "latitude": -23.5647635,
+        "longitude": -46.7257161,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 3\"}"
+    },
+    {
+        "nome": "Bloco 4",
+        "latitude": -23.5645809,
+        "longitude": -46.7256136,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 4\"}"
+    },
+    {
+        "nome": "Bloco 5",
+        "latitude": -23.5643913,
+        "longitude": -46.7255044,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 5\"}"
+    },
+    {
+        "nome": "Bloco 6",
+        "latitude": -23.5641727,
+        "longitude": -46.7253827,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 6\"}"
+    },
+    {
+        "nome": "Bloco 7",
+        "latitude": -23.5648951,
+        "longitude": -46.7265062,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 7\"}"
+    },
+    {
+        "nome": "Bloco 8",
+        "latitude": -23.5646758,
+        "longitude": -46.7263829,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 8\"}"
+    },
+    {
+        "nome": "Bloco 9",
+        "latitude": -23.5644863,
+        "longitude": -46.7262712,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"9.484\", \"name\": \"Bloco 9\"}"
+    },
+    {
+        "nome": "Restaurante Universitário da Química",
+        "latitude": -23.5633979,
+        "longitude": -46.725622,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"check_date\": \"2024-04-03\", \"delivery\": \"no\", \"height\": \"10.533\", \"name\": \"Restaurante Universit\\u00e1rio da Qu\\u00edmica\", \"opening_hours\": \"Mo-Fr 11:00-14:00, 17:30-19:45; Su 17:30-19:45; PH Sa off\", \"opening_hours:covid19\": \"restricted\", \"outdoor_seating\": \"no\", \"smoking\": \"no\", \"takeaway\": \"no\"}"
+    },
+    {
+        "nome": "Prédio da Administração Bloco 13 A",
+        "latitude": -23.5642609,
+        "longitude": -46.7240156,
+        "tags": "{\"building\": \"university\", \"height\": \"7.535\", \"name\": \"Pr\\u00e9dio da Administra\\u00e7\\u00e3o Bloco 13 A\"}"
+    },
+    {
+        "nome": "Bloco 13 B",
+        "latitude": -23.5643751,
+        "longitude": -46.7237808,
+        "tags": "{\"building\": \"university\", \"height\": \"9.485\", \"name\": \"Bloco 13 B\"}"
+    },
+    {
+        "nome": "Tanque de Provas Numérico",
+        "latitude": -23.5551714,
+        "longitude": -46.7291576,
+        "tags": "{\"building\": \"yes\", \"name\": \"Tanque de Provas Num\\u00e9rico\"}"
+    },
+    {
+        "nome": "Reitoria",
+        "latitude": -23.5605356,
+        "longitude": -46.7202889,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Reitoria\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Banco do Brasil",
+        "latitude": -23.5596521,
+        "longitude": -46.7267978,
+        "tags": "{\"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"Banco do Brasil\", \"brand:wikidata\": \"Q610817\", \"brand:wikipedia\": \"en:Banco do Brasil\", \"building\": \"yes\", \"building:levels\": \"2\", \"check_date\": \"2023-11-01\", \"height\": \"5.7\", \"name\": \"Banco do Brasil\", \"operator\": \"Banco do Brasil\"}"
+    },
+    {
+        "nome": "Itaú",
+        "latitude": -23.5597871,
+        "longitude": -46.7274168,
+        "tags": "{\"addr:street\": \"Avenida Professor Luciano Gualberto\", \"amenity\": \"bank\", \"brand\": \"Ita\\u00fa Unibanco\", \"brand:wikidata\": \"Q1424293\", \"brand:wikipedia\": \"pt:Ita\\u00fa Unibanco\", \"building\": \"retail\", \"building:levels\": \"2\", \"check_date\": \"2024-05-08\", \"height\": \"5.7\", \"name\": \"Ita\\u00fa\", \"operator\": \"Ita\\u00fa\", \"phone\": \"+55 11 3814 9770\"}"
+    },
+    {
+        "nome": "Biblioteca do Instituto de Física",
+        "latitude": -23.5607254,
+        "longitude": -46.7348327,
+        "tags": "{\"amenity\": \"library\", \"building\": \"yes\", \"check_date\": \"2023-11-06\", \"height\": \"5.572\", \"name\": \"Biblioteca do Instituto de F\\u00edsica\"}"
+    },
+    {
+        "nome": "Instituto de Astronomia, Geofísica e Ciências Atmosféricas",
+        "latitude": -23.5591774,
+        "longitude": -46.7343913,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"1226\", \"addr:postcode\": \"05508-090\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"college\", \"email\": \"iag@usp.br\", \"internet_access\": \"yes\", \"internet_access:ssid\": \"eduroam\", \"name\": \"Instituto de Astronomia, Geof\\u00edsica e Ci\\u00eancias Atmosf\\u00e9ricas\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"phone\": \"+55 11 30914762\", \"short_name\": \"IAG\", \"website\": \"https://www.iag.usp.br/\", \"wikidata\": \"Q10302758\", \"wikipedia\": \"pt:Instituto de Astronomia, Geof\\u00edsica e Ci\\u00eancias Atmosf\\u00e9ricas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Restaurante universitário Física",
+        "latitude": -23.5606556,
+        "longitude": -46.7356137,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"check_date\": \"2023-11-06\", \"delivery\": \"no\", \"height\": \"5.572\", \"name\": \"Restaurante universit\\u00e1rio F\\u00edsica\", \"opening_hours\": \"Mo-Fr 11:15-14:15, 17:30-19:45; PH Sa-Su off\", \"opening_hours:covid19\": \"closed\", \"outdoor_seating\": \"no\", \"smoking\": \"no\"}"
+    },
+    {
+        "nome": "Vivência estudantil",
+        "latitude": -23.5606733,
+        "longitude": -46.735393,
+        "tags": "{\"building\": \"university\", \"height\": \"5.572\", \"name\": \"Viv\\u00eancia estudantil\"}"
+    },
+    {
+        "nome": "Coordenadoria de Assistência Social",
+        "latitude": -23.558924,
+        "longitude": -46.7220949,
+        "tags": "{\"building\": \"yes\", \"height\": \"3.24\", \"name\": \"Coordenadoria de Assist\\u00eancia Social\"}"
+    },
+    {
+        "nome": "Posto de venda de vales-refeição",
+        "latitude": -23.5592541,
+        "longitude": -46.7215727,
+        "tags": "{\"building\": \"university\", \"height\": \"4.55\", \"name\": \"Posto de venda de vales-refei\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Centro Morais Rêgo",
+        "latitude": -23.5531292,
+        "longitude": -46.731567,
+        "tags": "{\"building\": \"yes\", \"height\": \"6.16\", \"name\": \"Centro Morais R\\u00eago\"}"
+    },
+    {
+        "nome": "Escola de dança",
+        "latitude": -23.5530795,
+        "longitude": -46.731674,
+        "tags": "{\"building\": \"school\", \"height\": \"6.16\", \"name\": \"Escola de dan\\u00e7a\"}"
+    },
+    {
+        "nome": "Centro Moraes Rego",
+        "latitude": -23.5531788,
+        "longitude": -46.7314599,
+        "tags": "{\"building\": \"yes\", \"height\": \"6.16\", \"name\": \"Centro Moraes Rego\"}"
+    },
+    {
+        "nome": "Avenida Professor Antônio Barros Ulhôa Cintra",
+        "latitude": -23.5689462,
+        "longitude": -46.7358867,
+        "tags": "{\"highway\": \"tertiary\", \"lanes\": \"4\", \"lanes:backward\": \"2\", \"lanes:forward\": \"2\", \"maxspeed\": \"50\", \"name\": \"Avenida Professor Ant\\u00f4nio Barros Ulh\\u00f4a Cintra\", \"source\": \"survey\", \"surface\": \"asphalt\", \"turn:lanes:backward\": \"through|through\", \"turn:lanes:forward\": \"through|through\", \"width\": \"14\"}"
+    },
+    {
+        "nome": "Rua Gabriel Silvestre Teixeira de Carvalho",
+        "latitude": -23.5699247,
+        "longitude": -46.7373264,
+        "tags": "{\"highway\": \"unclassified\", \"name\": \"Rua Gabriel Silvestre Teixeira de Carvalho\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Instituto de Ciências Biomédicas IV",
+        "latitude": -23.5679485,
+        "longitude": -46.7338474,
+        "tags": "{\"addr:housenumber\": \"1730\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"yes\", \"building:colour\": \"#3D9970\", \"height\": \"12\", \"name\": \"Instituto de Ci\\u00eancias Biom\\u00e9dicas IV\", \"short_name\": \"ICB IV\"}"
+    },
+    {
+        "nome": "Bloco Didático",
+        "latitude": -23.5674347,
+        "longitude": -46.7312773,
+        "tags": "{\"building\": \"yes\", \"height\": \"7.873\", \"name\": \"Bloco Did\\u00e1tico\"}"
+    },
+    {
+        "nome": "Instituto de Ciências Biomédicas II",
+        "latitude": -23.5677038,
+        "longitude": -46.7314299,
+        "tags": "{\"addr:housenumber\": \"1374\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"yes\", \"height\": \"13.0\", \"name\": \"Instituto de Ci\\u00eancias Biom\\u00e9dicas II\", \"short_name\": \"ICB II\"}"
+    },
+    {
+        "nome": "Praça 5",
+        "latitude": -23.5683885,
+        "longitude": -46.7401445,
+        "tags": "{\"highway\": \"tertiary\", \"junction\": \"roundabout\", \"name\": \"Pra\\u00e7a 5\", \"postal_code\": \"05340-000\", \"surface\": \"paved\"}"
+    },
+    {
+        "nome": "Instituto de Ciências Biomédicas I",
+        "latitude": -23.5673804,
+        "longitude": -46.7331257,
+        "tags": "{\"addr:housenumber\": \"1524\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"yes\", \"height\": \"7.1\", \"name\": \"Instituto de Ci\\u00eancias Biom\\u00e9dicas I\", \"short_name\": \"ICB I\"}"
+    },
+    {
+        "nome": "Centro de Práticas Esportivas da Universidade de São Paulo",
+        "latitude": -23.5599131,
+        "longitude": -46.7169969,
+        "tags": "{\"access\": \"private\", \"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"61\", \"addr:postcode\": \"05508-110\", \"addr:street\": \"Pra\\u00e7a Professor Rubi\\u00e3o Meira\", \"addr:suburb\": \"Butant\\u00e3\", \"alt_name\": \"Centro de Pr\\u00e1ticas Esportivas\", \"contact:email\": \"cepeusp@usp.br\", \"contact:website\": \"www.cepe.usp.br\", \"leisure\": \"sports_centre\", \"name\": \"Centro de Pr\\u00e1ticas Esportivas da Universidade de S\\u00e3o Paulo\", \"short_name\": \"CEPEUSP\", \"sport\": \"multi\", \"wikidata\": \"Q18484823\", \"wikimedia_commons\": \"Category:Centro de Pr\\u00e1ticas Esportivas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Centro de Pr\\u00e1ticas Esportivas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Restaurante da ECA",
+        "latitude": -23.5581696,
+        "longitude": -46.7263055,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"height\": \"4.73\", \"name\": \"Restaurante da ECA\"}"
+    },
+    {
+        "nome": "Cinema, Rádio e TV",
+        "latitude": -23.5578451,
+        "longitude": -46.7252444,
+        "tags": "{\"alt_name\": \"Cinema, R\\u00e1dio e TV\", \"amenity\": \"college\", \"building\": \"university\", \"email\": \"ctr-eca@usp.br\", \"height\": \"10.55\", \"name\": \"Cinema, R\\u00e1dio e TV\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4332\", \"website\": \"https://www3.eca.usp.br/ctr\"}"
+    },
+    {
+        "nome": "FEA 6",
+        "latitude": -23.5580917,
+        "longitude": -46.7282464,
+        "tags": "{\"building\": \"university\", \"height\": \"5.18\", \"name\": \"FEA 6\"}"
+    },
+    {
+        "nome": "Biblioteca FEA 4",
+        "latitude": -23.5580268,
+        "longitude": -46.7288742,
+        "tags": "{\"amenity\": \"library\", \"building\": \"yes\", \"check_date\": \"2024-04-09\", \"contact:email\": \"bibfea.atend@usp.br\", \"contact:phone\": \"+55 11 3091-5998\", \"contact:website\": \"https://www.fea.usp.br/biblioteca\", \"height\": \"3.6\", \"name\": \"Biblioteca FEA 4\", \"opening_hours\": \"Mo-Fr 07:30-22:00\"}"
+    },
+    {
+        "nome": "Centro Didático",
+        "latitude": -23.5649391,
+        "longitude": -46.730236,
+        "tags": "{\"building\": \"university\", \"building:colour\": \"#DDDDDD\", \"building:levels\": \"3\", \"height\": \"14\", \"name\": \"Centro Did\\u00e1tico\", \"roof:shape\": \"flat\"}"
+    },
+    {
+        "nome": "Teatro Laboratório",
+        "latitude": -23.5579421,
+        "longitude": -46.7242317,
+        "tags": "{\"amenity\": \"theatre\", \"building\": \"yes\", \"height\": \"8.18\", \"name\": \"Teatro Laborat\\u00f3rio\"}"
+    },
+    {
+        "nome": "FEA 3",
+        "latitude": -23.5582449,
+        "longitude": -46.7283264,
+        "tags": "{\"building\": \"university\", \"height\": \"12.68\", \"name\": \"FEA 3\"}"
+    },
+    {
+        "nome": "FEA 2",
+        "latitude": -23.5584488,
+        "longitude": -46.7284551,
+        "tags": "{\"building\": \"university\", \"height\": \"12.37\", \"name\": \"FEA 2\"}"
+    },
+    {
+        "nome": "FEA 5",
+        "latitude": -23.5578358,
+        "longitude": -46.7292789,
+        "tags": "{\"building\": \"university\", \"height\": \"19.51\", \"name\": \"FEA 5\"}"
+    },
+    {
+        "nome": "Edifício André Dreyfus",
+        "latitude": -23.5659483,
+        "longitude": -46.7304245,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"277\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"building\": \"university\", \"building:colour\": \"#FFDC00\", \"height\": \"13\", \"name\": \"Edif\\u00edcio Andr\\u00e9 Dreyfus\", \"note\": \"Botanic, Genetics and Evolutive Biology departments of the Biosciences Institute of the University of S\\u00e3o Paulo\", \"roof:shape\": \"flat\"}"
+    },
+    {
+        "nome": "Ernest Marcus",
+        "latitude": -23.5644102,
+        "longitude": -46.7299554,
+        "tags": "{\"addr:street\": \"Travessa 14\", \"building\": \"university\", \"building:colour\": \"#FFDC00\", \"height\": \"15\", \"name\": \"Ernest Marcus\", \"roof:levels\": \"1\", \"roof:shape\": \"flat\"}"
+    },
+    {
+        "nome": "Faculdade de Arquitetura e Urbanismo",
+        "latitude": -23.5605053,
+        "longitude": -46.7292614,
+        "tags": "{\"addr:street\": \"Rua do Lago\", \"amenity\": \"college\", \"name\": \"Faculdade de Arquitetura e Urbanismo\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"FAU\", \"wikidata\": \"Q5424512\", \"wikimedia_commons\": \"Category:Faculdade de Arquitetura e Urbanismo da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Arquitetura e Urbanismo da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Canteiro Experimental",
+        "latitude": -23.5609268,
+        "longitude": -46.728003,
+        "tags": "{\"building\": \"university\", \"height\": \"5\", \"name\": \"Canteiro Experimental\"}"
+    },
+    {
+        "nome": "Casa de Cultura Japonesa",
+        "latitude": -23.5634068,
+        "longitude": -46.720214,
+        "tags": "{\"addr:housenumber\": \"159\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"university\", \"height\": \"13.5\", \"name\": \"Casa de Cultura Japonesa\"}"
+    },
+    {
+        "nome": "Restaurante universitário COCESP",
+        "latitude": -23.5589756,
+        "longitude": -46.7397132,
+        "tags": "{\"alt_name\": \"Restaurante universit\\u00e1rio Prefeitura\", \"amenity\": \"restaurant\", \"building\": \"yes\", \"height\": \"8.837\", \"name\": \"Restaurante universit\\u00e1rio COCESP\", \"opening_hours:covid19\": \"closed\"}"
+    },
+    {
+        "nome": "Música",
+        "latitude": -23.5572493,
+        "longitude": -46.7246102,
+        "tags": "{\"amenity\": \"music_school\", \"building\": \"yes\", \"email\": \"cmu.eca@usp.br\", \"name\": \"M\\u00fasica\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4137\", \"website\": \"https://www3.eca.usp.br/cmu\"}"
+    },
+    {
+        "nome": "Bloco C",
+        "latitude": -23.5617055,
+        "longitude": -46.7343904,
+        "tags": "{\"building\": \"yes\", \"name\": \"Bloco C\"}"
+    },
+    {
+        "nome": "Bloco D",
+        "latitude": -23.5566989,
+        "longitude": -46.7256063,
+        "tags": "{\"building\": \"university\", \"height\": \"9.84\", \"name\": \"Bloco D\"}"
+    },
+    {
+        "nome": "Creche dos funcionários",
+        "latitude": -23.5593052,
+        "longitude": -46.7390262,
+        "tags": "{\"amenity\": \"kindergarten\", \"building\": \"yes\", \"education\": \"kindergarten\", \"height\": \"7.057\", \"name\": \"Creche dos funcion\\u00e1rios\"}"
+    },
+    {
+        "nome": "Bloco F",
+        "latitude": -23.5619459,
+        "longitude": -46.7345023,
+        "tags": "{\"building\": \"yes\", \"name\": \"Bloco F\"}"
+    },
+    {
+        "nome": "Bloco E",
+        "latitude": -23.5567615,
+        "longitude": -46.7248633,
+        "tags": "{\"building\": \"yes\", \"height\": \"4.89\", \"name\": \"Bloco E\"}"
+    },
+    {
+        "nome": "Bloco G",
+        "latitude": -23.5564417,
+        "longitude": -46.7244167,
+        "tags": "{\"building\": \"yes\", \"name\": \"Bloco G\"}"
+    },
+    {
+        "nome": "Artes Plásticas",
+        "latitude": -23.5571611,
+        "longitude": -46.7250713,
+        "tags": "{\"amenity\": \"college\", \"building\": \"yes\", \"email\": \"eca.cap@usp.br\", \"name\": \"Artes Pl\\u00e1sticas\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4084\", \"website\": \"https://www3.eca.usp.br/cap\"}"
+    },
+    {
+        "nome": "Artes Cênicas e Escola de Arte Dramática",
+        "latitude": -23.5575457,
+        "longitude": -46.7241305,
+        "tags": "{\"amenity\": \"college\", \"building\": \"yes\", \"email\": \"ead@usp.br\", \"height\": \"5.28\", \"name\": \"Artes C\\u00eanicas e Escola de Arte Dram\\u00e1tica\", \"opening_hours\": \"Mo-Fr 14:00-23:00\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55-11-3091-4389\", \"website\": \"https://www3.eca.usp.br/ead/\", \"wikidata\": \"Q10274573\", \"wikimedia_commons\": \"Category:Escola de Arte Dram\\u00e1tica da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Escola de Arte Dram\\u00e1tica da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Travessa 8",
+        "latitude": -23.5585571,
+        "longitude": -46.7198225,
+        "tags": "{\"highway\": \"service\", \"name\": \"Travessa 8\", \"oneway\": \"yes\", \"service\": \"parking_aisle\"}"
+    },
+    {
+        "nome": "Faculdade de Fonoaudiologia, Fisioterapia e Terapia Ocupacional",
+        "latitude": -23.5675276,
+        "longitude": -46.7405889,
+        "tags": "{\"building\": \"university\", \"name\": \"Faculdade de Fonoaudiologia, Fisioterapia e Terapia Ocupacional\"}"
+    },
+    {
+        "nome": "Rua Cipotânia",
+        "latitude": -23.5679831,
+        "longitude": -46.7403798,
+        "tags": "{\"highway\": \"service\", \"name\": \"Rua Cipot\\u00e2nia\", \"oneway\": \"yes\"}"
+    },
+    {
+        "nome": "Bloco A",
+        "latitude": -23.555829,
+        "longitude": -46.7242172,
+        "tags": "{\"building\": \"yes\", \"height\": \"7.65\", \"name\": \"Bloco A\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Bloco B",
+        "latitude": -23.5554433,
+        "longitude": -46.7249009,
+        "tags": "{\"building\": \"university\", \"name\": \"Bloco B\"}"
+    },
+    {
+        "nome": "Centro de Ensino em Computação",
+        "latitude": -23.5595979,
+        "longitude": -46.7322293,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"2\", \"height\": \"8.857\", \"name\": \"Centro de Ensino em Computa\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Instituto de Matemática e Estatística",
+        "latitude": -23.559137,
+        "longitude": -46.7316847,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"1010\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"addr:suburb\": \"Cidade Universit\\u00e1ria\", \"alt_name\": \"IME\", \"amenity\": \"college\", \"name\": \"Instituto de Matem\\u00e1tica e Estat\\u00edstica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"wikidata\": \"Q10302895\", \"wikimedia_commons\": \"Category:Instituto de Matem\\u00e1tica e Estat\\u00edstica da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Instituto de Matem\\u00e1tica e Estat\\u00edstica da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Bolsão do IAG",
+        "latitude": -23.558909,
+        "longitude": -46.7330386,
+        "tags": "{\"access\": \"yes\", \"addr:city\": \"S\\u00e3o Paulo\", \"addr:street\": \"Travessa \\\"V\\\"\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"parking\", \"capacity\": \"133\", \"fee\": \"no\", \"name\": \"Bols\\u00e3o do IAG\", \"park_ride\": \"no\", \"parking\": \"surface\", \"supervised\": \"yes\", \"surface\": \"sett\"}"
+    },
+    {
+        "nome": "Praça Ramos de Azevedo",
+        "latitude": -23.5570568,
+        "longitude": -46.7346778,
+        "tags": "{\"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"junction\": \"roundabout\", \"lanes\": \"2\", \"maxspeed\": \"40\", \"name\": \"Pra\\u00e7a Ramos de Azevedo\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"sidewalk\": \"right\", \"source\": \"local knowledge\", \"surface\": \"asphalt\", \"turn:lanes\": \"through;right|right\"}"
+    },
+    {
+        "nome": "Instituto de Geociências",
+        "latitude": -23.5618247,
+        "longitude": -46.7271758,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Instituto de Geoci\\u00eancias\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"wikidata\": \"Q10302867\", \"wikipedia\": \"pt:Instituto de Geoci\\u00eancias da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "SHRIMP",
+        "latitude": -23.5627218,
+        "longitude": -46.7274466,
+        "tags": "{\"building\": \"university\", \"name\": \"SHRIMP\"}"
+    },
+    {
+        "nome": "Avenida Professor Ernesto de Morais Leme",
+        "latitude": -23.5618575,
+        "longitude": -46.7422219,
+        "tags": "{\"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"lanes\": \"2\", \"maxspeed\": \"40\", \"name\": \"Avenida Professor Ernesto de Morais Leme\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:left\": \"no\", \"parking:right\": \"lane\", \"parking:right:orientation\": \"parallel\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Avenida Professor Luciano Gualberto",
+        "latitude": -23.5575129,
+        "longitude": -46.7334592,
+        "tags": "{\"cycleway:right\": \"lane\", \"destination:street\": \"Avenida Professor Luciano Gualberto\", \"highway\": \"tertiary\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Avenida Professor Luciano Gualberto\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:left\": \"no\", \"parking:right\": \"street_side\", \"parking:right:orientation\": \"parallel\", \"postal_code\": \"05508-010\", \"sidewalk:left\": \"no\", \"sidewalk:right\": \"separate\", \"sidewalk:right:surface\": \"concrete\", \"source\": \"local knowledge\", \"source:name\": \"survey\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Avenida Professor Melo Moraes",
+        "latitude": -23.5603853,
+        "longitude": -46.7132005,
+        "tags": "{\"bicycle\": \"designated\", \"cycleway:est_width\": \"1.5\", \"cycleway:right\": \"lane\", \"highway\": \"tertiary\", \"lanes\": \"3\", \"lit\": \"yes\", \"maxspeed\": \"40\", \"name\": \"Avenida Professor Melo Moraes\", \"note\": \"Alternate spelling \\\"Mello\\\" (IBGE) v. \\\"Melo\\\" (OSM)\", \"oneway\": \"yes\", \"oneway:bicycle\": \"yes\", \"parking:both\": \"no\", \"postal_code\": \"05508-030\", \"sidewalk\": \"right\", \"sidewalk:right:surface\": \"concrete\", \"source\": \"Bing;local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Biblioteca da Escola de Comunicações e Artes",
+        "latitude": -23.5582841,
+        "longitude": -46.7267548,
+        "tags": "{\"alt_name\": \"Biblioteca da ECA\", \"amenity\": \"library\", \"building\": \"yes\", \"contact:email\": \"ecabiblioteca@usp.br\", \"contact:facebook\": \"https://pt-br.facebook.com/ecabiblioteca\", \"contact:phone\": \"+55 11 3091-4071\", \"contact:twitter\": \"https://twitter.com/bibliotecadaeca/\", \"height\": \"11.53\", \"name\": \"Biblioteca da Escola de Comunica\\u00e7\\u00f5es e Artes\", \"opening_hours\": \"Mo-Fr 08:00-22:00\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"+55 11 3091-4481\", \"website\": \"https://www3.eca.usp.br/biblioteca\", \"wikidata\": \"Q96483076\", \"wikipedia\": \"pt:Biblioteca da ECA\"}"
+    },
+    {
+        "nome": "Instituto de Física",
+        "latitude": -23.5610906,
+        "longitude": -46.7344949,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Instituto de F\\u00edsica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"IFUSP\", \"wikidata\": \"Q10302857\", \"wikimedia_commons\": \"Category:Instituto de F\\u00edsica da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Associação dos Engenheiros Politécnicos",
+        "latitude": -23.5556727,
+        "longitude": -46.7301334,
+        "tags": "{\"addr:country\": \"BR\", \"addr:housenumber\": \"380\", \"addr:street\": \"Avenida Professor Luciano Gualberto Travessa 3\", \"building\": \"university\", \"building:levels\": \"2\", \"contact:email\": \"aep@politecnicos.org.br\", \"contact:phone\": \"+55 11 3091-5554\", \"inscription\": \"Edif\\u00edcio Engenheiro Olavo Egydio Setubal\", \"name\": \"Associa\\u00e7\\u00e3o dos Engenheiros Polit\\u00e9cnicos\", \"phone\": \"+55 11 3032-7719\", \"short_name\": \"AEP\", \"website\": \"https://politecnicos.org.br/\"}"
+    },
+    {
+        "nome": "Superintendência de Tecnologia da Informação",
+        "latitude": -23.5573831,
+        "longitude": -46.7321425,
+        "tags": "{\"addr:city\": \"Sao Paulo\", \"addr:housenumber\": \"71\", \"addr:postcode\": \"05508-010\", \"addr:street\": \"Travessa do Polit\\u00e9cnico\", \"alt_name\": \"STI\", \"building\": \"university\", \"building:levels\": \"2\", \"name\": \"Superintend\\u00eancia de Tecnologia da Informa\\u00e7\\u00e3o\", \"phone\": \"+55 11 3091-6328\", \"short_name\": \"STI\", \"website\": \"https://www.sti.usp.br/\"}"
+    },
+    {
+        "nome": "Engenharia Civil e Ambiental",
+        "latitude": -23.5546529,
+        "longitude": -46.7318492,
+        "tags": "{\"addr:housenumber\": \"83\", \"addr:street\": \"Avenida Professor Almeida Prado\", \"alt_name\": \"Edif\\u00edcio Paula Souza\", \"building\": \"university\", \"building:levels\": \"2\", \"height\": \"8.5\", \"name\": \"Engenharia Civil e Ambiental\"}"
+    },
+    {
+        "nome": "Engenharia Elétrica",
+        "latitude": -23.5571935,
+        "longitude": -46.730233,
+        "tags": "{\"addr:housenumber\": \"158\", \"addr:street\": \"Avenida Professor Luciano Gualberto, Travessa 3\", \"building\": \"university\", \"name\": \"Engenharia El\\u00e9trica\"}"
+    },
+    {
+        "nome": "Engenharia Metalúrgica e de Materiais",
+        "latitude": -23.5524383,
+        "longitude": -46.7311302,
+        "tags": "{\"addr:housenumber\": \"2463\", \"addr:street\": \"Avenida Professor Melo Moraes\", \"building\": \"university\", \"building:levels\": \"2\", \"height\": \"8.98\", \"name\": \"Engenharia Metal\\u00fargica e de Materiais\"}"
+    },
+    {
+        "nome": "CEE (Poli-USP)",
+        "latitude": -23.557324,
+        "longitude": -46.7293294,
+        "tags": "{\"building\": \"yes\", \"height\": \"5.06\", \"name\": \"CEE (Poli-USP)\"}"
+    },
+    {
+        "nome": "Centro de Técnicas em Construção Civil",
+        "latitude": -23.5539832,
+        "longitude": -46.731003,
+        "tags": "{\"building\": \"university\", \"height\": \"5.85\", \"name\": \"Centro de T\\u00e9cnicas em Constru\\u00e7\\u00e3o Civil\", \"short_name\": \"CTCC\"}"
+    },
+    {
+        "nome": "Centro Cultural Camargo Guarnieri",
+        "latitude": -23.5579466,
+        "longitude": -46.7209206,
+        "tags": "{\"addr:housenumber\": \"109\", \"addr:street\": \"Rua do Anfiteatro\", \"alt_name\": \"Anfiteatro Camargo Guarnieri\", \"amenity\": \"theatre\", \"building\": \"civic\", \"height\": \"10.67\", \"name\": \"Centro Cultural Camargo Guarnieri\"}"
+    },
+    {
+        "nome": "Escola Politécnica",
+        "latitude": -23.5549831,
+        "longitude": -46.7297362,
+        "tags": "{\"amenity\": \"college\", \"name\": \"Escola Polit\\u00e9cnica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"EP\", \"wikidata\": \"Q2600751\", \"wikimedia_commons\": \"Category:Escola Polit\\u00e9cnica da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Escola Polit\\u00e9cnica da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Faculdade de Filosofia, Letras e Ciências Humanas",
+        "latitude": -23.5627318,
+        "longitude": -46.7242016,
+        "tags": "{\"addr:housenumber\": \"717\", \"addr:street\": \"Rua do Lago\", \"amenity\": \"college\", \"isced:level\": \"5-6\", \"name\": \"Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"FFLCH\", \"wheelchair\": \"limited\", \"wikidata\": \"Q10279490\", \"wikimedia_commons\": \"Category:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Terminal de Ônibus da Cidade Universitária",
+        "latitude": -23.5524836,
+        "longitude": -46.7320825,
+        "tags": "{\"amenity\": \"bus_station\", \"bus\": \"yes\", \"name\": \"Terminal de \\u00d4nibus da Cidade Universit\\u00e1ria\", \"public_transport\": \"station\"}"
+    },
+    {
+        "nome": "Edifício Vilanova Artigas",
+        "latitude": -23.5601711,
+        "longitude": -46.7298904,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"876\", \"addr:postcode\": \"05508-080\", \"addr:street\": \"Rua do Lago\", \"addr:suburb\": \"Cidade Universit\\u00e1ria\", \"architect\": \"Jo\\u00e3o Vilanova Artigas\", \"building\": \"university\", \"building:colour\": \"#AAAAAA\", \"building:levels\": \"8\", \"building:levels:underground\": \"2\", \"building:material\": \"concrete\", \"height\": \"16\", \"layer\": \"-1\", \"name\": \"Edif\\u00edcio Vilanova Artigas\", \"roof:shape\": \"flat\"}"
+    },
+    {
+        "nome": "Faculdade de Medicina Veterinária e Zootecnia",
+        "latitude": -23.5699701,
+        "longitude": -46.7395079,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"87\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Avenida Professor Doutor Orlando Marques de Paiva\", \"amenity\": \"college\", \"contact:website\": \"http://www.fmvz.usp.br/\", \"name\": \"Faculdade de Medicina Veterin\\u00e1ria e Zootecnia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"FMVZ\", \"wikidata\": \"Q18477151\", \"wikimedia_commons\": \"Category:Faculdade de Medicina Veterin\\u00e1ria e Zootecnia da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Faculdade de Medicina Veterin\\u00e1ria e Zootecnia da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "16º Batalhão da Polícia Militar",
+        "latitude": -23.5606141,
+        "longitude": -46.7455513,
+        "tags": "{\"amenity\": \"police\", \"barrier\": \"wall\", \"landuse\": \"military\", \"military\": \"police\", \"name\": \"16\\u00ba Batalh\\u00e3o da Pol\\u00edcia Militar\", \"operator\": \"Pol\\u00edcia Militar do Estado de S\\u00e3o Paulo\", \"operator:short\": \"PMESP\", \"operator:wikidata\": \"Q10351025\"}"
+    },
+    {
+        "nome": "Administração da Faculdade de Filosofia, Letras e Ciências Humanas",
+        "latitude": -23.5615496,
+        "longitude": -46.7292512,
+        "tags": "{\"addr:housenumber\": \"717\", \"addr:street\": \"Rua do Lago\", \"building\": \"yes\", \"height\": \"6.7\", \"name\": \"Administra\\u00e7\\u00e3o da Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\"}"
+    },
+    {
+        "nome": "Biotério",
+        "latitude": -23.5656436,
+        "longitude": -46.726566,
+        "tags": "{\"addr:housenumber\": \"822\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"university\", \"height\": \"3.0\", \"name\": \"Biot\\u00e9rio\"}"
+    },
+    {
+        "nome": "Sweden's",
+        "latitude": -23.5571911,
+        "longitude": -46.7287955,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"retail\", \"check_date\": \"2023-12-06\", \"name\": \"Sweden's\"}"
+    },
+    {
+        "nome": "Velódromo",
+        "latitude": -23.5601585,
+        "longitude": -46.7153773,
+        "tags": "{\"leisure\": \"stadium\", \"name\": \"Vel\\u00f3dromo\", \"sport\": \"cycling\"}"
+    },
+    {
+        "nome": "Canal Tejo",
+        "latitude": -23.5543681,
+        "longitude": -46.7294726,
+        "tags": "{\"layer\": \"-1\", \"name\": \"Canal Tejo\", \"waterway\": \"stream\", \"width\": \"2\"}"
+    },
+    {
+        "nome": "Estádio Armando de Salles Oliveira",
+        "latitude": -23.5591612,
+        "longitude": -46.7185868,
+        "tags": "{\"leisure\": \"stadium\", \"name\": \"Est\\u00e1dio Armando de Salles Oliveira\", \"sport\": \"soccer\", \"wikidata\": \"Q5402171\", \"wikipedia\": \"pt:Est\\u00e1dio Armando de Salles Oliveira\"}"
+    },
+    {
+        "nome": "Edifício Prof. Aylthon Brandão Joly",
+        "latitude": -23.5660386,
+        "longitude": -46.7311575,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:street\": \"Travessa 13\", \"building\": \"university\", \"description\": \"\\\"Sobre as Ondas\\\"\", \"name\": \"Edif\\u00edcio Prof. Aylthon Brand\\u00e3o Joly\"}"
+    },
+    {
+        "nome": "Bloco 28",
+        "latitude": -23.5551701,
+        "longitude": -46.7284595,
+        "tags": "{\"addr:housename\": \"Travessa 4, Bloco 28\", \"addr:housenumber\": \"257\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"building\": \"yes\", \"height\": \"4.76\", \"name\": \"Bloco 28\"}"
+    },
+    {
+        "nome": "Conjunto Residencial da USP",
+        "latitude": -23.5589254,
+        "longitude": -46.7210628,
+        "tags": "{\"landuse\": \"residential\", \"name\": \"Conjunto Residencial da USP\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"short_name\": \"CRUSP\", \"wikidata\": \"Q9851368\", \"wikimedia_commons\": \"Category:Conjunto Residencial da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Conjunto Residencial da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Rio Pirajuçara",
+        "latitude": -23.5600138,
+        "longitude": -46.7133927,
+        "tags": "{\"boat\": \"no\", \"intermittent\": \"yes\", \"name\": \"Rio Piraju\\u00e7ara\", \"waterway\": \"river\"}"
+    },
+    {
+        "nome": "Edifício Adriano Marchini",
+        "latitude": -23.5543025,
+        "longitude": -46.7334272,
+        "tags": "{\"addr:housenumber\": \"1\", \"building\": \"yes\", \"height\": \"19.03\", \"name\": \"Edif\\u00edcio Adriano Marchini\"}"
+    },
+    {
+        "nome": "Tejo",
+        "latitude": -23.5527498,
+        "longitude": -46.7327611,
+        "tags": "{\"layer\": \"-1\", \"name\": \"Tejo\", \"tunnel\": \"culvert\", \"waterway\": \"stream\"}"
+    },
+    {
+        "nome": "Tokamak",
+        "latitude": -23.5610281,
+        "longitude": -46.7347773,
+        "tags": "{\"building\": \"yes\", \"height\": \"14.452\", \"name\": \"Tokamak\"}"
+    },
+    {
+        "nome": "Praça Rubião Meira",
+        "latitude": -23.5621807,
+        "longitude": -46.7187404,
+        "tags": "{\"leisure\": \"park\", \"name\": \"Pra\\u00e7a Rubi\\u00e3o Meira\"}"
+    },
+    {
+        "nome": "CIETEC",
+        "latitude": -23.5649682,
+        "longitude": -46.7351087,
+        "tags": "{\"building\": \"yes\", \"height\": \"11.764\", \"name\": \"CIETEC\", \"wikidata\": \"Q29213872\"}"
+    },
+    {
+        "nome": "36",
+        "latitude": -23.5570492,
+        "longitude": -46.736104,
+        "tags": "{\"building\": \"yes\", \"height\": \"16.08\", \"name\": \"36\", \"source\": \"Bing\"}"
+    },
+    {
+        "nome": "Escola de Aplicação da Faculdade de Educação da USP",
+        "latitude": -23.5620726,
+        "longitude": -46.7150485,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"220\", \"addr:postcode\": \"05508-040\", \"addr:street\": \"Avenida da Universidade\", \"building\": \"school\", \"name\": \"Escola de Aplica\\u00e7\\u00e3o da Faculdade de Educa\\u00e7\\u00e3o da USP\", \"phone\": \"+55 11 3091-3503;+55 11 3091-3596\", \"website\": \"http://www.ea.fe.usp.br/\"}"
+    },
+    {
+        "nome": "Instituto de Relações Internacionais",
+        "latitude": -23.55621,
+        "longitude": -46.7287317,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:postcode\": \"05508-020\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues travessas 4 e 5\", \"building\": \"university\", \"building:levels\": \"3\", \"layer\": \"1\", \"name\": \"Instituto de Rela\\u00e7\\u00f5es Internacionais\", \"website\": \"https://www.iri.usp.br/\"}"
+    },
+    {
+        "nome": "Relógio Solar",
+        "latitude": -23.5612584,
+        "longitude": -46.7203848,
+        "tags": "{\"amenity\": \"clock\", \"name\": \"Rel\\u00f3gio Solar\", \"tourism\": \"attraction\"}"
+    },
+    {
+        "nome": "Rua da Praça do Relógio Solar",
+        "latitude": -23.5607706,
+        "longitude": -46.7216507,
+        "tags": "{\"cycleway\": \"shared_lane\", \"highway\": \"unclassified\", \"lanes\": \"2\", \"maxspeed\": \"30\", \"name\": \"Rua da Pra\\u00e7a do Rel\\u00f3gio Solar\", \"oneway\": \"no\", \"parking:both\": \"separate\", \"source\": \"local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Quadras cobertas",
+        "latitude": -23.5615963,
+        "longitude": -46.7151432,
+        "tags": "{\"building\": \"yes\", \"height\": \"12.344\", \"leisure\": \"sports_hall\", \"name\": \"Quadras cobertas\"}"
+    },
+    {
+        "nome": "Biblioteca Brasiliana Guita e José Mindlin",
+        "latitude": -23.5621803,
+        "longitude": -46.7222877,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:postcode\": \"05508-065\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Rua da Biblioteca\", \"amenity\": \"library\", \"building\": \"university\", \"contact:email\": \"bbm@usp.br\", \"contact:facebook\": \"bibliotecabrasilianamindlinusp\", \"contact:twitter\": \"https://www.twitter.com/bbmusp/\", \"contact:website\": \"http://www.bbm.usp.br/\", \"name\": \"Biblioteca Brasiliana Guita e Jos\\u00e9 Mindlin\", \"wikidata\": \"Q18500412\", \"wikimedia_commons\": \"Category:Biblioteca Brasiliana Guita e Jos\\u00e9 Mindlin\", \"wikipedia\": \"pt:Biblioteca Brasiliana Guita e Jos\\u00e9 Mindlin\"}"
+    },
+    {
+        "nome": "Laboratório de Mecânica Offshore",
+        "latitude": -23.5555231,
+        "longitude": -46.7293557,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"434\", \"addr:postcode\": \"05508-020\", \"addr:state\": \"SP\", \"addr:street\": \"Travessa 4\", \"building\": \"yes\", \"name\": \"Laborat\\u00f3rio de Mec\\u00e2nica Offshore\", \"short_name\": \"LMO\"}"
+    },
+    {
+        "nome": "Núcleo de Pesquisas em Redes Elétricas Inteligentes",
+        "latitude": -23.5558277,
+        "longitude": -46.7294948,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"380\", \"addr:postcode\": \"05508-020\", \"addr:state\": \"SP\", \"addr:street\": \"Travessa 4\", \"building\": \"university\", \"building:levels\": \"4\", \"name\": \"N\\u00facleo de Pesquisas em Redes El\\u00e9tricas Inteligentes\", \"short_name\": \"NAPREI-USP\"}"
+    },
+    {
+        "nome": "Avenida Afrânio Peixoto",
+        "latitude": -23.5650849,
+        "longitude": -46.7126038,
+        "tags": "{\"busway\": \"lane\", \"cycleway:est_width\": \"1.5\", \"cycleway:left\": \"no\", \"cycleway:right\": \"lane\", \"cycleway:right:oneway\": \"no\", \"highway\": \"secondary\", \"lanes\": \"2\", \"lit\": \"yes\", \"maxspeed\": \"50\", \"name\": \"Avenida Afr\\u00e2nio Peixoto\", \"name:etymology:wikidata\": \"Q4690359\", \"oneway\": \"yes\", \"oneway:bicycle\": \"no\", \"parking:both\": \"no\", \"sidewalk\": \"right\", \"source\": \"Bing;local knowledge\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Pelletron",
+        "latitude": -23.5615143,
+        "longitude": -46.7349672,
+        "tags": "{\"building\": \"yes\", \"building:levels\": \"8\", \"height\": \"33.913\", \"name\": \"Pelletron\"}"
+    },
+    {
+        "nome": "Sociedade Brasileira de Física",
+        "latitude": -23.561953,
+        "longitude": -46.7347419,
+        "tags": "{\"building\": \"yes\", \"height\": \"9.063\", \"name\": \"Sociedade Brasileira de F\\u00edsica\", \"wikidata\": \"Q4958771\", \"wikipedia\": \"pt:Sociedade Brasileira de F\\u00edsica\"}"
+    },
+    {
+        "nome": "Edifício Basílio Jafet",
+        "latitude": -23.5612669,
+        "longitude": -46.7359053,
+        "tags": "{\"building\": \"university\", \"height\": \"11.122\", \"name\": \"Edif\\u00edcio Bas\\u00edlio Jafet\"}"
+    },
+    {
+        "nome": "Dosimetria",
+        "latitude": -23.5620805,
+        "longitude": -46.7353681,
+        "tags": "{\"building\": \"yes\", \"name\": \"Dosimetria\"}"
+    },
+    {
+        "nome": "Laboratório de Física Experimental",
+        "latitude": -23.5620503,
+        "longitude": -46.7356781,
+        "tags": "{\"building\": \"yes\", \"height\": \"3.933\", \"name\": \"Laborat\\u00f3rio de F\\u00edsica Experimental\"}"
+    },
+    {
+        "nome": "Acelerador Linear",
+        "latitude": -23.5616283,
+        "longitude": -46.7362135,
+        "tags": "{\"building\": \"yes\", \"height\": \"10.832\", \"name\": \"Acelerador Linear\"}"
+    },
+    {
+        "nome": "Edifício Mário Schemberg",
+        "latitude": -23.562031,
+        "longitude": -46.7339061,
+        "tags": "{\"building\": \"yes\", \"name\": \"Edif\\u00edcio M\\u00e1rio Schemberg\"}"
+    },
+    {
+        "nome": "Manutenção",
+        "latitude": -23.5621243,
+        "longitude": -46.7350304,
+        "tags": "{\"building\": \"yes\", \"name\": \"Manuten\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Microtron",
+        "latitude": -23.5614947,
+        "longitude": -46.7363704,
+        "tags": "{\"building\": \"yes\", \"height\": \"10.832\", \"name\": \"Microtron\"}"
+    },
+    {
+        "nome": "Edifício Alessandro Volta",
+        "latitude": -23.5620009,
+        "longitude": -46.7342179,
+        "tags": "{\"building\": \"yes\", \"name\": \"Edif\\u00edcio Alessandro Volta\"}"
+    },
+    {
+        "nome": "59",
+        "latitude": -23.5582437,
+        "longitude": -46.7406701,
+        "tags": "{\"building\": \"yes\", \"height\": \"9.508\", \"name\": \"59\"}"
+    },
+    {
+        "nome": "11",
+        "latitude": -23.5559907,
+        "longitude": -46.734721,
+        "tags": "{\"addr:housenumber\": \"11\", \"building\": \"yes\", \"height\": \"8.28\", \"name\": \"11\"}"
+    },
+    {
+        "nome": "50",
+        "latitude": -23.5578587,
+        "longitude": -46.7377968,
+        "tags": "{\"addr:housenumber\": \"50\", \"building\": \"yes\", \"name\": \"50\"}"
+    },
+    {
+        "nome": "Auditório",
+        "latitude": -23.5563448,
+        "longitude": -46.7270037,
+        "tags": "{\"building:part\": \"yes\", \"name\": \"Audit\\u00f3rio\"}"
+    },
+    {
+        "nome": "Bolsão 18 - Geografia e Historia",
+        "latitude": -23.5628007,
+        "longitude": -46.7240624,
+        "tags": "{\"access\": \"yes\", \"amenity\": \"parking\", \"capacity\": \"182\", \"capacity:disabled\": \"11\", \"fee\": \"no\", \"name\": \"Bols\\u00e3o 18 - Geografia e Historia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"parking\": \"surface\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Caixa Econômica Federal",
+        "latitude": -23.5598729,
+        "longitude": -46.727255,
+        "tags": "{\"amenity\": \"bank\", \"brand\": \"Caixa Econ\\u00f4mica Federal\", \"brand:wikidata\": \"Q835283\", \"brand:wikipedia\": \"pt:Caixa Econ\\u00f4mica Federal\", \"building\": \"retail\", \"check_date\": \"2023-11-01\", \"name\": \"Caixa Econ\\u00f4mica Federal\", \"operator\": \"Caixa Econ\\u00f4mica Federal\"}"
+    },
+    {
+        "nome": "Posto da Guarda Universitária",
+        "latitude": -23.5605367,
+        "longitude": -46.7229396,
+        "tags": "{\"amenity\": \"police\", \"building\": \"yes\", \"check_date\": \"2025-07-10\", \"height\": \"3.39\", \"inscription\": \"Base 1\", \"name\": \"Posto da Guarda Universit\\u00e1ria\"}"
+    },
+    {
+        "nome": "Clínica Odontológica",
+        "latitude": -23.5677029,
+        "longitude": -46.7396242,
+        "tags": "{\"amenity\": \"clinic\", \"contact:email\": \"apoiopacientefo@usp.br\", \"contact:phone\": \"+55 11 3091 7418\", \"contact:website\": \"http://www.fo.usp.br/?page_id=1966\", \"healthcare\": \"clinic\", \"name\": \"Cl\\u00ednica Odontol\\u00f3gica\", \"opening_hours\": \"Mo-Fr 07:00-23:00; Sa 07:00-12:00\", \"opening_hours:url\": \"http://www.fo.usp.br/?page_id=1968\"}"
+    },
+    {
+        "nome": "Acesso ao estacionamento de viaturas",
+        "latitude": -23.5652643,
+        "longitude": -46.7135013,
+        "tags": "{\"highway\": \"service\", \"lit\": \"no\", \"name\": \"Acesso ao estacionamento de viaturas\", \"oneway\": \"no\", \"service\": \"driveway\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Travessa 4",
+        "latitude": -23.5564291,
+        "longitude": -46.7295996,
+        "tags": "{\"highway\": \"service\", \"name\": \"Travessa 4\", \"parking:both\": \"no\", \"surface\": \"concrete\"}"
+    },
+    {
+        "nome": "Travessa 13",
+        "latitude": -23.5670887,
+        "longitude": -46.7306423,
+        "tags": "{\"highway\": \"unclassified\", \"name\": \"Travessa 13\", \"parking:both\": \"street_side\", \"parking:both:orientation\": \"perpendicular\", \"source:highway\": \"schema_br2013\"}"
+    },
+    {
+        "nome": "Bradesco",
+        "latitude": -23.5601302,
+        "longitude": -46.7267295,
+        "tags": "{\"addr:street\": \"Avenida Professor Luciano Gualberto\", \"amenity\": \"bank\", \"branch\": \"Ag\\u00eancia Prime\", \"brand\": \"Bradesco\", \"brand:wikidata\": \"Q806181\", \"building\": \"retail\", \"building:levels\": \"2\", \"height\": \"5.7\", \"name\": \"Bradesco\", \"opening_hours\": \"Mo-Fr 10:00-16:00\", \"operator\": \"Bradesco\"}"
+    },
+    {
+        "nome": "Portaria 3",
+        "latitude": -23.5692307,
+        "longitude": -46.7411051,
+        "tags": "{\"building\": \"yes\", \"contact:phone\": \"+55 11 3091 5074\", \"name\": \"Portaria 3\", \"opening_hours:url\": \"http://www.puspc.usp.br/?page_id=143\", \"website\": \"http://www.puspc.usp.br/?page_id=143\"}"
+    },
+    {
+        "nome": "Universidade de São Paulo (Portaria 1)",
+        "latitude": -23.5652217,
+        "longitude": -46.7125748,
+        "tags": "{\"building\": \"guardhouse\", \"contact:phone\": \"+55 11 3091 5074\", \"height\": \"3.82\", \"name\": \"Universidade de S\\u00e3o Paulo (Portaria 1)\", \"opening_hours:url\": \"http://www.puspc.usp.br/?page_id=143\", \"website\": \"http://www.puspc.usp.br/?page_id=143\"}"
+    },
+    {
+        "nome": "Marellas",
+        "latitude": -23.5649481,
+        "longitude": -46.7414754,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"building:levels\": \"2\", \"height\": \"4.993\", \"name\": \"Marellas\"}"
+    },
+    {
+        "nome": "Portaria 1 do Hospital Universitário",
+        "latitude": -23.5641178,
+        "longitude": -46.7410473,
+        "tags": "{\"building\": \"yes\", \"name\": \"Portaria 1 do Hospital Universit\\u00e1rio\"}"
+    },
+    {
+        "nome": "Praça da Prefeitura",
+        "latitude": -23.5594327,
+        "longitude": -46.7383987,
+        "tags": "{\"leisure\": \"park\", \"name\": \"Pra\\u00e7a da Prefeitura\"}"
+    },
+    {
+        "nome": "Praça Professor Reinaldo Porchat de Assis",
+        "latitude": -23.5649597,
+        "longitude": -46.713067,
+        "tags": "{\"leisure\": \"park\", \"name\": \"Pra\\u00e7a Professor Reinaldo Porchat de Assis\"}"
+    },
+    {
+        "nome": "Recepção do Hospital Veterinário",
+        "latitude": -23.5693456,
+        "longitude": -46.7401548,
+        "tags": "{\"building\": \"yes\", \"height\": \"5.28\", \"name\": \"Recep\\u00e7\\u00e3o do Hospital Veterin\\u00e1rio\"}"
+    },
+    {
+        "nome": "Travessa 14",
+        "latitude": -23.5648192,
+        "longitude": -46.7291833,
+        "tags": "{\"highway\": \"unclassified\", \"name\": \"Travessa 14\", \"oneway\": \"yes\"}"
+    },
+    {
+        "nome": "Edifício Felix K. Rawitscher \"Minas Gerais\"",
+        "latitude": -23.5663969,
+        "longitude": -46.7299462,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housename\": \"Edif\\u00edcio Felix Rawtscher\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"alt_name\": \"Minas Gerais\", \"building\": \"university\", \"building:levels\": \"2\", \"contact:phone\": \"+55 11 3091-7534\", \"height\": \"3.113\", \"name\": \"Edif\\u00edcio Felix K. Rawitscher \\\"Minas Gerais\\\"\"}"
+    },
+    {
+        "nome": "Centro de Pesquisa sobre o Genoma Humano e Células-Tronco",
+        "latitude": -23.5668526,
+        "longitude": -46.7306633,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"106\", \"addr:postcode\": \"05508-090\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"building\": \"university\", \"contact:fax\": \"+55 11 3091-0852\", \"contact:phone\": \"+55 11 3091-7966 ; +55 11 3091-0878\", \"contact:website\": \"http://genoma.ib.usp.br/\", \"height\": \"9.723\", \"name\": \"Centro de Pesquisa sobre o Genoma Humano e C\\u00e9lulas-Tronco\", \"office\": \"research\"}"
+    },
+    {
+        "nome": "Centro Acadêmico Bio-USP",
+        "latitude": -23.5645968,
+        "longitude": -46.7308503,
+        "tags": "{\"amenity\": \"community_centre\", \"building\": \"yes\", \"height\": \"5.798\", \"name\": \"Centro Acad\\u00eamico Bio-USP\"}"
+    },
+    {
+        "nome": "Laboratório de Abelhas",
+        "latitude": -23.5648107,
+        "longitude": -46.7311122,
+        "tags": "{\"building\": \"yes\", \"check_date\": \"2024-11-22\", \"height\": \"5.978\", \"name\": \"Laborat\\u00f3rio de Abelhas\", \"office\": \"research\"}"
+    },
+    {
+        "nome": "Auditório Geral da Zoologia",
+        "latitude": -23.5644426,
+        "longitude": -46.7300069,
+        "tags": "{\"building\": \"university\", \"building:levels\": \"1\", \"height\": \"5.893\", \"name\": \"Audit\\u00f3rio Geral da Zoologia\"}"
+    },
+    {
+        "nome": "Auditório geral da botânica",
+        "latitude": -23.5659275,
+        "longitude": -46.7305786,
+        "tags": "{\"building\": \"university\", \"height\": \"6.143\", \"name\": \"Audit\\u00f3rio geral da bot\\u00e2nica\"}"
+    },
+    {
+        "nome": "Atelier de Escultura",
+        "latitude": -23.5593413,
+        "longitude": -46.7424531,
+        "tags": "{\"addr:housenumber\": \"1560\", \"addr:street\": \"Avenida Professor Almeida Prado\", \"building\": \"university\", \"email\": \"atelierfau@usp.br\", \"height\": \"5.45\", \"name\": \"Atelier de Escultura\", \"opening_hours\": \"Mo-Fr 08:00-18:00\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"phone\": \"+55 11 3091-45 64\", \"website\": \"https://www.fau.usp.br/apoio/atelier-de-escultura/\"}"
+    },
+    {
+        "nome": "62",
+        "latitude": -23.5575078,
+        "longitude": -46.7408716,
+        "tags": "{\"building\": \"yes\", \"height\": \"14.408\", \"name\": \"62\"}"
+    },
+    {
+        "nome": "Travessa 11",
+        "latitude": -23.5634931,
+        "longitude": -46.7142094,
+        "tags": "{\"highway\": \"service\", \"name\": \"Travessa 11\"}"
+    },
+    {
+        "nome": "31",
+        "latitude": -23.5569872,
+        "longitude": -46.7356599,
+        "tags": "{\"building\": \"yes\", \"height\": \"12.74\", \"name\": \"31\"}"
+    },
+    {
+        "nome": "Portaria IPT",
+        "latitude": -23.5567631,
+        "longitude": -46.7346487,
+        "tags": "{\"addr:street\": \"Pra\\u00e7a Ramos de Azevedo\", \"building\": \"yes\", \"height\": \"3.06\", \"name\": \"Portaria IPT\"}"
+    },
+    {
+        "nome": "CIETEC - Vagão da Inovação",
+        "latitude": -23.5645746,
+        "longitude": -46.7347872,
+        "tags": "{\"building\": \"yes\", \"height\": \"3.849\", \"name\": \"CIETEC - Vag\\u00e3o da Inova\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Relógio da USP",
+        "latitude": -23.5595667,
+        "longitude": -46.7241121,
+        "tags": "{\"artist_name\": \"Elisabeth Nobiling\", \"height\": \"45\", \"name\": \"Rel\\u00f3gio da USP\", \"start_date\": \"1973\", \"tourism\": \"artwork\", \"website\": \"https://www.jornaldocampus.usp.br/index.php/2009/09/mais-que-um-relogio/\"}"
+    },
+    {
+        "nome": "Biblioteca do Conjunto das Químicas",
+        "latitude": -23.5664049,
+        "longitude": -46.7274634,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"950\", \"addr:postcode\": \"05513-900\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"university\", \"building:levels\": \"3\", \"height\": \"14.88\", \"name\": \"Biblioteca do Conjunto das Qu\\u00edmicas\", \"phone\": \"+55 11 3091-3824\", \"website\": \"https://www.bcq.usp.br/\"}"
+    },
+    {
+        "nome": "Das Químicas",
+        "latitude": -23.5663049,
+        "longitude": -46.7272555,
+        "tags": "{\"amenity\": \"library\", \"name\": \"Das Qu\\u00edmicas\"}"
+    },
+    {
+        "nome": "Bloco da Administração",
+        "latitude": -23.559063,
+        "longitude": -46.7336481,
+        "tags": "{\"alt_name\": \"Instituto de Astronomia, Geof\\u00edsica e Ci\\u00eancias Atmosf\\u00e9ricas da Universidade de S\\u00e3o Paulo\", \"building\": \"school\", \"building:levels\": \"3\", \"height\": \"14.507\", \"name\": \"Bloco da Administra\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Instituto Oceanográfico",
+        "latitude": -23.5613085,
+        "longitude": -46.7320865,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"191\", \"addr:postcode\": \"05508-120\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Pra\\u00e7a do Oceoan\\u00f3grafo\", \"amenity\": \"college\", \"contact:facebook\": \"http://www.facebook.com/IOUSP\", \"contact:phone\": \"+55 11 3091-6501;+55 11 3091-6502;+55 11 3815-8935\", \"contact:website\": \"http://www.io.usp.br/\", \"contact:youtube\": \"http://www.youtube.com/oceanograficousp\", \"name\": \"Instituto Oceanogr\\u00e1fico\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"IO\", \"wikidata\": \"Q7076221\", \"wikimedia_commons\": \"Category:Instituto Oceanogr\\u00e1fico da Universidade de S\\u00e3o Paulo\", \"wikipedia\": \"pt:Instituto Oceanogr\\u00e1fico da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Creche Maria de Nazaré",
+        "latitude": -23.5729634,
+        "longitude": -46.7372391,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"2530\", \"addr:postcode\": \"05340-000\", \"addr:state\": \"S\\u00e3o Paulo\", \"addr:street\": \"Avenida Corifeu de Azevedo Marques\", \"amenity\": \"kindergarten\", \"barrier\": \"wall\", \"contact:email\": \"faleconosco@crechemariadenazare.org.br\", \"contact:facebook\": \"https://www.facebook.com/CrecheMariaDeNazare\", \"contact:phone\": \"+55 11 3735-7462\", \"contact:website\": \"http://crechemariadenazare.org.br/\", \"name\": \"Creche Maria de Nazar\\u00e9\"}"
+    },
+    {
+        "nome": "Bolsão 19 - Sociais e Letras",
+        "latitude": -23.5629357,
+        "longitude": -46.7255693,
+        "tags": "{\"access\": \"yes\", \"amenity\": \"parking\", \"capacity\": \"212\", \"capacity:disabled\": \"17\", \"fee\": \"no\", \"name\": \"Bols\\u00e3o 19 - Sociais e Letras\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"parking\": \"surface\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Guarita",
+        "latitude": -23.5673119,
+        "longitude": -46.7401435,
+        "tags": "{\"building\": \"yes\", \"name\": \"Guarita\"}"
+    },
+    {
+        "nome": "Restaurante do Viveiro",
+        "latitude": -23.5623972,
+        "longitude": -46.7319569,
+        "tags": "{\"amenity\": \"restaurant\", \"building\": \"yes\", \"name\": \"Restaurante do Viveiro\"}"
+    },
+    {
+        "nome": "Conselho Universitario",
+        "latitude": -23.5587042,
+        "longitude": -46.7260848,
+        "tags": "{\"alt_name\": \"Conselho Universit\\u00e1rio da Universidade de Sao Paulo\", \"building\": \"yes\", \"height\": \"6\", \"name\": \"Conselho Universitario\", \"note\": \"Altura estimada\", \"short_name\": \"CO\"}"
+    },
+    {
+        "nome": "Bloco K",
+        "latitude": -23.5607835,
+        "longitude": -46.7224849,
+        "tags": "{\"building\": \"university\", \"height\": \"23.02\", \"name\": \"Bloco K\"}"
+    },
+    {
+        "nome": "Bloco L",
+        "latitude": -23.5613671,
+        "longitude": -46.7220859,
+        "tags": "{\"building\": \"university\", \"height\": \"22.96\", \"name\": \"Bloco L\"}"
+    },
+    {
+        "nome": "Vestiários",
+        "latitude": -23.5610785,
+        "longitude": -46.7176592,
+        "tags": "{\"building\": \"sports_centre\", \"height\": \"3.46\", \"name\": \"Vesti\\u00e1rios\"}"
+    },
+    {
+        "nome": "Portaria 1",
+        "latitude": -23.5636609,
+        "longitude": -46.71276,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Portaria 1\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Psicologia Experimental",
+        "latitude": -23.5584986,
+        "longitude": -46.7278819,
+        "tags": "{\"building\": \"university\", \"height\": \"4.9\", \"name\": \"Psicologia Experimental\"}"
+    },
+    {
+        "nome": "Inova USP",
+        "latitude": -23.557469,
+        "longitude": -46.727704,
+        "tags": "{\"addr:housenumber\": \"370\", \"addr:street\": \"Avenida Professor L\\u00facio Martins Rodrigues\", \"building\": \"university\", \"name\": \"Inova USP\", \"website\": \"http://inova.usp.br/\"}"
+    },
+    {
+        "nome": "Auditório Basílio Jafet",
+        "latitude": -23.5608874,
+        "longitude": -46.735963,
+        "tags": "{\"building\": \"yes\", \"height\": \"11.122\", \"name\": \"Audit\\u00f3rio Bas\\u00edlio Jafet\"}"
+    },
+    {
+        "nome": "Auditório Abraão de Moraes",
+        "latitude": -23.5607934,
+        "longitude": -46.7350273,
+        "tags": "{\"building\": \"university\", \"height\": \"5.572\", \"name\": \"Audit\\u00f3rio Abra\\u00e3o de Moraes\"}"
+    },
+    {
+        "nome": "Sala de estudos",
+        "latitude": -23.5606997,
+        "longitude": -46.7351724,
+        "tags": "{\"building\": \"university\", \"height\": \"5.572\", \"name\": \"Sala de estudos\"}"
+    },
+    {
+        "nome": "Sindicato dos Trabalhadores da USP",
+        "latitude": -23.5580061,
+        "longitude": -46.7262143,
+        "tags": "{\"addr:country\": \"BR\", \"addr:housenumber\": \"374\", \"addr:postcode\": \"05508-010\", \"addr:street\": \"Rua da Reitoria\", \"alt_name\": \"Sede Fernando Legaspe (Fernand\\u00e3o)\", \"building\": \"yes\", \"contact:email\": \"sintusp@sintusp.org.br\", \"contact:phone\": \"+55 11 3091-4380;+55 11 3091-4381\", \"contact:website\": \"http://www.sintusp.org.br/\", \"height\": \"4.73\", \"name\": \"Sindicato dos Trabalhadores da USP\", \"office\": \"ngo\"}"
+    },
+    {
+        "nome": "Hospital Veterinário",
+        "latitude": -23.5693929,
+        "longitude": -46.7397101,
+        "tags": "{\"addr:housenumber\": \"87\", \"addr:street\": \"Avenida Professor Orlando Marques de Paiva\", \"amenity\": \"veterinary\", \"name\": \"Hospital Veterin\\u00e1rio\", \"opening_hours\": \"Mo-Tu 08:00-13:00; Th-Fr 8:00-13:00; We 9:00-13:00; PH off\", \"operator\": \"Faculdade de Medicina Veterin\\u00e1ria e Zootecnia da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Sala Café Pós",
+        "latitude": -23.5595626,
+        "longitude": -46.733881,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"Sala Caf\\u00e9 P\\u00f3s\", \"ref\": \"301\", \"room\": \"common\"}"
+    },
+    {
+        "nome": "Sala do Café",
+        "latitude": -23.5593838,
+        "longitude": -46.7334719,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"Sala do Caf\\u00e9\", \"ref\": \"337\", \"room\": \"common\"}"
+    },
+    {
+        "nome": "LabHidro",
+        "latitude": -23.5593888,
+        "longitude": -46.7334215,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"LabHidro\", \"ref\": \"338\", \"room\": \"laboratory\"}"
+    },
+    {
+        "nome": "LabMicro",
+        "latitude": -23.5593938,
+        "longitude": -46.7333718,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"LabMicro\", \"ref\": \"339\", \"room\": \"laboratory\"}"
+    },
+    {
+        "nome": "Xerox",
+        "latitude": -23.5593749,
+        "longitude": -46.7335611,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"Xerox\", \"ref\": \"336\", \"room\": \"copier\"}"
+    },
+    {
+        "nome": "Secretaria",
+        "latitude": -23.559297,
+        "longitude": -46.7334733,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"Secretaria\", \"ref\": \"341\", \"room\": \"administration\"}"
+    },
+    {
+        "nome": "Informática - DCA",
+        "latitude": -23.5593071,
+        "longitude": -46.7333721,
+        "tags": "{\"indoor\": \"room\", \"level\": \"1\", \"name\": \"Inform\\u00e1tica - DCA\", \"ref\": \"340\", \"room\": \"workshop\", \"workshop\": \"computer\"}"
+    },
+    {
+        "nome": "Trilha de caminhada",
+        "latitude": -23.5598003,
+        "longitude": -46.7174429,
+        "tags": "{\"bicycle\": \"no\", \"foot\": \"yes\", \"highway\": \"footway\", \"horse\": \"no\", \"lit\": \"yes\", \"motor_vehicle\": \"no\", \"name\": \"Trilha de caminhada\", \"surface\": \"paving_stones\"}"
+    },
+    {
+        "nome": "Trilha para caminhada",
+        "latitude": -23.5594684,
+        "longitude": -46.717848,
+        "tags": "{\"highway\": \"footway\", \"lit\": \"yes\", \"name\": \"Trilha para caminhada\", \"surface\": \"unpaved\"}"
+    },
+    {
+        "nome": "Pista da Raia",
+        "latitude": -23.5545743,
+        "longitude": -46.7227146,
+        "tags": "{\"highway\": \"footway\", \"name\": \"Pista da Raia\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Trilha para o Lago",
+        "latitude": -23.5623251,
+        "longitude": -46.7283433,
+        "tags": "{\"access\": \"private\", \"bicycle\": \"no\", \"foot\": \"private\", \"highway\": \"footway\", \"horse\": \"no\", \"motor_vehicle\": \"no\", \"name\": \"Trilha para o Lago\", \"sac_scale\": \"hiking\", \"surface\": \"wood\", \"trail_visibility\": \"bad\"}"
+    },
+    {
+        "nome": "Trilha pra o fundo do Lago",
+        "latitude": -23.563006,
+        "longitude": -46.7282967,
+        "tags": "{\"access\": \"private\", \"bicycle\": \"no\", \"highway\": \"footway\", \"horse\": \"no\", \"motor_vehicle\": \"no\", \"name\": \"Trilha pra o fundo do Lago\", \"sac_scale\": \"hiking\", \"surface\": \"wood\", \"trail_visibility\": \"horrible\"}"
+    },
+    {
+        "nome": "Mesoescala",
+        "latitude": -23.5593671,
+        "longitude": -46.7336384,
+        "tags": "{\"indoor\": \"room\", \"level\": \"-1\", \"name\": \"Mesoescala\", \"ref\": \"113\", \"room\": \"laboratory\"}"
+    },
+    {
+        "nome": "STORMT",
+        "latitude": -23.5593619,
+        "longitude": -46.7336914,
+        "tags": "{\"indoor\": \"room\", \"level\": \"-1\", \"name\": \"STORMT\", \"ref\": \"112\", \"room\": \"laboratory\"}"
+    },
+    {
+        "nome": "Seção Gráfica",
+        "latitude": -23.5593562,
+        "longitude": -46.7337512,
+        "tags": "{\"indoor\": \"room\", \"level\": \"-1\", \"name\": \"Se\\u00e7\\u00e3o Gr\\u00e1fica\", \"ref\": \"111\", \"room\": \"technical\"}"
+    },
+    {
+        "nome": "Lanchonete do IAG",
+        "latitude": -23.5594608,
+        "longitude": -46.7339612,
+        "tags": "{\"disused:amenity\": \"cafe\", \"indoor\": \"room\", \"level\": \"-1\", \"name\": \"Lanchonete do IAG\", \"room\": \"cafeteria\"}"
+    },
+    {
+        "nome": "Segurança",
+        "latitude": -23.5590956,
+        "longitude": -46.733907,
+        "tags": "{\"indoor\": \"room\", \"level\": \"-1\", \"name\": \"Seguran\\u00e7a\", \"room\": \"service\"}"
+    },
+    {
+        "nome": "Biblioteca IAG-USP",
+        "latitude": -23.5590673,
+        "longitude": -46.7336014,
+        "tags": "{\"amenity\": \"library\", \"indoor\": \"room\", \"internet_access\": \"terminal\", \"internet_access:fee\": \"no\", \"internet_access:ssid\": \"eduroam\", \"level\": \"-1\", \"name\": \"Biblioteca IAG-USP\", \"opening_hours\": \"Mo-Fr 08:00-19:20\", \"operator\": \"IAG-USP\", \"room\": \"library\", \"wikidata\": \"Q86242281\", \"wikimedia_commons\": \"Category:Wiki Movement Brasil's initiative with Libraries of University of S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Rádio e TV USP",
+        "latitude": -23.5589677,
+        "longitude": -46.7367689,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"1578\", \"addr:postcode\": \"05508-090\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"studio\", \"name\": \"R\\u00e1dio e TV USP\", \"phone\": \"+55 11 3091-4425\", \"studio\": \"television_and_radio\", \"website\": \"https://jornal.usp.br/radio/\"}"
+    },
+    {
+        "nome": "Monumento a Ramos de Azevedo",
+        "latitude": -23.5570288,
+        "longitude": -46.734246,
+        "tags": "{\"access\": \"yes\", \"historic\": \"monument\", \"name\": \"Monumento a Ramos de Azevedo\", \"wikidata\": \"Q10332148\", \"wikimedia_commons\": \"Category:Monumento a Ramos de Azevedo\", \"wikipedia\": \"pt:Monumento a Ramos de Azevedo\"}"
+    },
+    {
+        "nome": "Rua Engenheiro Teixeira Soares",
+        "latitude": -23.5632971,
+        "longitude": -46.7126234,
+        "tags": "{\"destination\": \"Cidade Universit\\u00e1ria\", \"hgv\": \"no\", \"highway\": \"residential\", \"lanes\": \"1\", \"lit\": \"yes\", \"name\": \"Rua Engenheiro Teixeira Soares\", \"oneway\": \"yes\", \"sidewalk\": \"no\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Centro de Pesquisa e Desenvolvimento",
+        "latitude": -23.5632423,
+        "longitude": -46.727492,
+        "tags": "{\"addr:street\": \"Rua do Lago\", \"building\": \"yes\", \"building:levels\": \"4\", \"name\": \"Centro de Pesquisa e Desenvolvimento\"}"
+    },
+    {
+        "nome": "Lanchonete do IME",
+        "latitude": -23.5594159,
+        "longitude": -46.7317898,
+        "tags": "{\"addr:housenumber\": \"1010\", \"addr:street\": \"Rua do Mat\\u00e3o\", \"amenity\": \"cafe\", \"changing_table\": \"no\", \"diet:vegan\": \"no\", \"diet:vegetarian\": \"yes\", \"indoor\": \"room\", \"level\": \"0\", \"name\": \"Lanchonete do IME\", \"opening_hours\": \"Mo-Fr 08:00-20:00;\", \"room\": \"cafeteria\", \"takeaway\": \"yes\", \"toilets\": \"no\", \"wheelchair\": \"limited\"}"
+    },
+    {
+        "nome": "Departamento de Fisioterapia, Fonoaudiologia e Terapia Ocupacional",
+        "latitude": -23.5670723,
+        "longitude": -46.7410675,
+        "tags": "{\"addr:housenumber\": \"51\", \"addr:postcode\": \"01246-903\", \"addr:street\": \"Rua Cipot\\u00e2nia\", \"amenity\": \"college\", \"contact:email\": \"fofito@usp.br\", \"contact:facebook\": \"FMUSPOficial\", \"contact:instagram\": \"fmusp_oficial\", \"contact:linkedin\": \"https://www.linkedin.com/school/fmuspoficial/\", \"contact:twitter\": \"FMUSPoficial\", \"contact:youtube\": \"https://www.youtube.com/channel/UCmiLXu0Pn3noQGpO2Pvdxuw\", \"education\": \"college\", \"name\": \"Departamento de Fisioterapia, Fonoaudiologia e Terapia Ocupacional\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"phone\": \"+55 11 3091-7459\", \"short_name\": \"FOFITO\", \"website\": \"https://www.fm.usp.br/fofito/portal/\"}"
+    },
+    {
+        "nome": "Sala Marta Rossetti Batista",
+        "latitude": -23.558511,
+        "longitude": -46.7203883,
+        "tags": "{\"addr:city\": \"S\\u00e3o Paulo\", \"addr:country\": \"BR\", \"addr:housenumber\": \"140\", \"addr:place\": \"N\\u00facleo da Consci\\u00eancia Negra\", \"addr:state\": \"SP\", \"addr:street\": \"Travessa 8\", \"area\": \"yes\", \"indoor\": \"room\", \"level\": \"0\", \"location\": \"indoor\", \"name\": \"Sala Marta Rossetti Batista\"}"
+    },
+    {
+        "nome": "Espaço Verde",
+        "latitude": -23.56234,
+        "longitude": -46.7249595,
+        "tags": "{\"addr:housename\": \"FFLCH - Filosofia e Sociais\", \"addr:housenumber\": \"315\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"addr:unit\": \"Espa\\u00e7o Verde\", \"amenity\": \"community_centre\", \"community:for\": \"student\", \"indoor\": \"room\", \"level\": \"1\", \"name\": \"Espa\\u00e7o Verde\", \"room\": \"hall\"}"
+    },
+    {
+        "nome": "Praça de Convívio do Biênio",
+        "latitude": -23.5560901,
+        "longitude": -46.7323677,
+        "tags": "{\"name\": \"Pra\\u00e7a de Conv\\u00edvio do Bi\\u00eanio\", \"place\": \"square\", \"start_date\": \"2024-04-03\"}"
+    },
+    {
+        "nome": "Travessa 3",
+        "latitude": -23.5543026,
+        "longitude": -46.7297908,
+        "tags": "{\"highway\": \"service\", \"name\": \"Travessa 3\", \"parking:both\": \"no\", \"surface\": \"asphalt\"}"
+    },
+    {
+        "nome": "Pizza da Aplicação",
+        "latitude": -23.5624762,
+        "longitude": -46.7145904,
+        "tags": "{\"leisure\": \"park\", \"name\": \"Pizza da Aplica\\u00e7\\u00e3o\"}"
+    },
+    {
+        "nome": "Rio Iquiririm",
+        "latitude": -23.5696636,
+        "longitude": -46.7314179,
+        "tags": "{\"name\": \"Rio Iquiririm\", \"waterway\": \"stream\", \"width\": \"0.2\"}"
+    },
+    {
+        "nome": "Lago da Nascente do Iquiririm",
+        "latitude": -23.5696897,
+        "longitude": -46.7315294,
+        "tags": "{\"name\": \"Lago da Nascente do Iquiririm\", \"natural\": \"water\", \"water\": \"pond\"}"
+    },
+    {
+        "nome": "Centro de Convivência",
+        "latitude": -23.5643133,
+        "longitude": -46.7232437,
+        "tags": "{\"amenity\": \"community_centre\", \"building\": \"yes\", \"name\": \"Centro de Conviv\\u00eancia\"}"
+    },
+    {
+        "nome": "Centro de Convivência Araucárias",
+        "latitude": -23.557205,
+        "longitude": -46.7225165,
+        "tags": "{\"amenity\": \"community_centre\", \"building\": \"yes\", \"name\": \"Centro de Conviv\\u00eancia Arauc\\u00e1rias\", \"operator\": \"Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Fitotério do IB-USP",
+        "latitude": -23.5658108,
+        "longitude": -46.7314959,
+        "tags": "{\"garden:type\": \"botanical\", \"leisure\": \"garden\", \"name\": \"Fitot\\u00e9rio do IB-USP\", \"operator\": \"Herb\\u00e1rio SPF\", \"operator:type\": \"government\"}"
+    },
+    {
+        "nome": "Agrofloresta Taiobas do Matão",
+        "latitude": -23.5654434,
+        "longitude": -46.7320858,
+        "tags": "{\"landuse\": \"allotments\", \"name\": \"Agrofloresta Taiobas do Mat\\u00e3o\"}"
+    },
+    {
+        "nome": "Crista da USP",
+        "latitude": -23.570185,
+        "longitude": -46.7335875,
+        "tags": "{\"name\": \"Crista da USP\", \"natural\": \"ridge\"}"
+    },
+    {
+        "nome": "Riacho Doce",
+        "latitude": -23.5678581,
+        "longitude": -46.7422427,
+        "tags": "{\"layer\": \"-1\", \"name\": \"Riacho Doce\", \"tunnel\": \"culvert\", \"waterway\": \"stream\"}"
+    },
+    {
+        "nome": "Administração - Escola Poitécnica",
+        "latitude": -23.5552565,
+        "longitude": -46.7296946,
+        "tags": "{\"addr:housenumber\": \"380\", \"addr:street\": \"Avenida Professor Luciano Gualberto, Travessa 3\", \"building\": \"university\", \"building:levels\": \"2\", \"name\": \"Administra\\u00e7\\u00e3o - Escola Poit\\u00e9cnica\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Engenharia de Minas e Petróleo",
+        "latitude": -23.5531748,
+        "longitude": -46.7306579,
+        "tags": "{\"addr:housenumber\": \"2373\", \"addr:street\": \"Avenida Professor Melo Moraes\", \"building\": \"university\", \"building:levels\": \"2\", \"height\": \"8.62\", \"name\": \"Engenharia de Minas e Petr\\u00f3leo\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Engenharia Mecânica, Mecatrônica e Naval",
+        "latitude": -23.5534889,
+        "longitude": -46.7291759,
+        "tags": "{\"addr:housenumber\": \"2231\", \"addr:street\": \"Avenida Professor Melo Moraes\", \"building\": \"university\", \"height\": \"7.7\", \"name\": \"Engenharia Mec\\u00e2nica, Mecatr\\u00f4nica e Naval\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Edifício Central",
+        "latitude": -23.5602762,
+        "longitude": -46.7349145,
+        "tags": "{\"alt_name\": \"Instituto de F\\u00edsica da Universidade de S\\u00e3o Paulo\", \"building\": \"university\", \"name\": \"Edif\\u00edcio Central\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "8012-10 Cidade Universitária",
+        "latitude": -23.564364,
+        "longitude": -46.7253355,
+        "tags": "{\"colour\": \"#D9680C\", \"description\": \"Circular 1\", \"from\": \"Metr\\u00f4 Butant\\u00e3\", \"name\": \"8012-10 Cidade Universit\\u00e1ria\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"Via\\u00e7\\u00e3o Gato Preto Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"8012-10\", \"route\": \"bus\", \"to\": \"Cidade Universit\\u00e1ria\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "8012-10 Metrô Butantã",
+        "latitude": -23.5617997,
+        "longitude": -46.724315,
+        "tags": "{\"colour\": \"#D9680C\", \"description\": \"Circular 1\", \"from\": \"Cidade Universit\\u00e1ria\", \"name\": \"8012-10 Metr\\u00f4 Butant\\u00e3\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"Via\\u00e7\\u00e3o Gato Preto Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"8012-10\", \"route\": \"bus\", \"to\": \"Metr\\u00f4 Butant\\u00e3\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Poli - Metalurgia",
+        "latitude": -23.5527688,
+        "longitude": -46.7318492,
+        "tags": "{\"name\": \"Poli - Metalurgia\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Terminal de ônibus",
+        "latitude": -23.5524836,
+        "longitude": -46.7320825,
+        "tags": "{\"name\": \"Terminal de \\u00f4nibus\", \"operator\": \"SPTrans\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "8022-10 Metrô Butantã",
+        "latitude": -23.5657006,
+        "longitude": -46.7255759,
+        "tags": "{\"colour\": \"#D9680C\", \"description\": \"Circular 2\", \"from\": \"Cidade Universit\\u00e1ria\", \"name\": \"8022-10 Metr\\u00f4 Butant\\u00e3\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"Via\\u00e7\\u00e3o Gato Preto Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"8022-10\", \"route\": \"bus\", \"to\": \"Metr\\u00f4 Butant\\u00e3\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "8022-10 Cidade Universitária",
+        "latitude": -23.5615535,
+        "longitude": -46.7240302,
+        "tags": "{\"colour\": \"#D9680C\", \"description\": \"Circular 2\", \"from\": \"Metr\\u00f4 Butant\\u00e3\", \"name\": \"8022-10 Cidade Universit\\u00e1ria\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"operator\": \"Via\\u00e7\\u00e3o Gato Preto Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"8022-10\", \"route\": \"bus\", \"to\": \"Cidade Universit\\u00e1ria\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "177H-10 Butantã-USP",
+        "latitude": -23.5327111,
+        "longitude": -46.6782034,
+        "tags": "{\"colour\": \"#00629f\", \"from\": \"Metr\\u00f4 Santana\", \"name\": \"177H-10 Butant\\u00e3-USP\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"network:wikipedia\": \"pt:S\\u00e3o Paulo Transporte\", \"operator\": \"Samba\\u00edba Transportes Urbanos Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"177H-10\", \"route\": \"bus\", \"source\": \"http://www.sptrans.com.br\", \"to\": \"Butant\\u00e3-USP\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Brasiliana",
+        "latitude": -23.5623784,
+        "longitude": -46.7230622,
+        "tags": "{\"name\": \"Brasiliana\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Faculdade de Arquitetura e Urbanismo II",
+        "latitude": -23.5593153,
+        "longitude": -46.7298871,
+        "tags": "{\"alt_name\": \"FAU II\", \"name\": \"Faculdade de Arquitetura e Urbanismo II\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Faculdade de Economia Administracao e Contabilidade",
+        "latitude": -23.5589878,
+        "longitude": -46.7298294,
+        "tags": "{\"alt_name\": \"FEA\", \"name\": \"Faculdade de Economia Administracao e Contabilidade\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Geociências",
+        "latitude": -23.5606389,
+        "longitude": -46.7271988,
+        "tags": "{\"name\": \"Geoci\\u00eancias\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Instituto de Energia e Ambiente",
+        "latitude": -23.557944,
+        "longitude": -46.7326605,
+        "tags": "{\"alt_name\": \"IEE\", \"name\": \"Instituto de Energia e Ambiente\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Poli Biênio",
+        "latitude": -23.5578546,
+        "longitude": -46.732324,
+        "tags": "{\"name\": \"Poli Bi\\u00eanio\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Poli - Mecânica",
+        "latitude": -23.5526994,
+        "longitude": -46.7289802,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Poli - Mec\\u00e2nica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "CPTM I",
+        "latitude": -23.5604005,
+        "longitude": -46.7131541,
+        "tags": "{\"bus\": \"yes\", \"name\": \"CPTM I\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "CPTM II",
+        "latitude": -23.560685,
+        "longitude": -46.7133889,
+        "tags": "{\"bus\": \"yes\", \"name\": \"CPTM II\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "CRUSP",
+        "latitude": -23.5573292,
+        "longitude": -46.7199603,
+        "tags": "{\"bus\": \"yes\", \"name\": \"CRUSP\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Educação Física",
+        "latitude": -23.5642075,
+        "longitude": -46.7130121,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Educa\\u00e7\\u00e3o F\\u00edsica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Paço das Artes",
+        "latitude": -23.5635936,
+        "longitude": -46.7163636,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Pa\\u00e7o das Artes\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Poli Civil",
+        "latitude": -23.5557263,
+        "longitude": -46.73354,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Poli Civil\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Biociências",
+        "latitude": -23.5661339,
+        "longitude": -46.7301836,
+        "tags": "{\"bus\": \"yes\", \"name\": \"Bioci\\u00eancias\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Física",
+        "latitude": -23.5596751,
+        "longitude": -46.7348339,
+        "tags": "{\"bus\": \"yes\", \"name\": \"F\\u00edsica\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"public_transport\": \"stop_area\", \"type\": \"public_transport\"}"
+    },
+    {
+        "nome": "Rio Pequeno",
+        "latitude": -23.5686007,
+        "longitude": -46.7589045,
+        "tags": "{\"IBGE:GEOCODIGO\": \"355030867\", \"admin_level\": \"9\", \"boundary\": \"administrative\", \"name\": \"Rio Pequeno\", \"source\": \"IBGE\", \"type\": \"boundary\", \"wikidata\": \"Q7335301\"}"
+    },
+    {
+        "nome": "Butantã",
+        "latitude": -23.56911,
+        "longitude": -46.7290141,
+        "tags": "{\"IBGE:GEOCODIGO\": \"355030812\", \"admin_level\": \"9\", \"boundary\": \"administrative\", \"name\": \"Butant\\u00e3\", \"source\": \"IBGE\", \"type\": \"boundary\", \"wikidata\": \"Q5002363\"}"
+    },
+    {
+        "nome": "177H-10 Metrô Santana",
+        "latitude": -23.5363952,
+        "longitude": -46.6791417,
+        "tags": "{\"colour\": \"#00629f\", \"from\": \"Butant\\u00e3-USP\", \"name\": \"177H-10 Metr\\u00f4 Santana\", \"network\": \"SPTrans\", \"network:wikidata\": \"Q7392689\", \"network:wikipedia\": \"pt:S\\u00e3o Paulo Transporte\", \"operator\": \"Samba\\u00edba Transportes Urbanos Ltda.\", \"public_transport:version\": \"2\", \"ref\": \"177H-10\", \"route\": \"bus\", \"source\": \"http://www.sptrans.com.br\", \"to\": \"Metr\\u00f4 Santana\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Centro Tecnológico da Marinha",
+        "latitude": -23.5640567,
+        "longitude": -46.7394536,
+        "tags": "{\"landuse\": \"military\", \"military_service\": \"navy\", \"name\": \"Centro Tecnol\\u00f3gico da Marinha\", \"short_name\": \"CTMSP\", \"type\": \"multipolygon\", \"wikidata\": \"Q18484082\", \"wikipedia\": \"pt:Centro Tecnol\\u00f3gico da Marinha em S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Bloco 17 - Administrativo",
+        "latitude": -23.5701374,
+        "longitude": -46.7400932,
+        "tags": "{\"building\": \"yes\", \"building:levels\": \"2\", \"height\": \"9.02\", \"name\": \"Bloco 17 - Administrativo\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Diretoria e Administração do Instituto de Biociências",
+        "latitude": -23.5634181,
+        "longitude": -46.7299485,
+        "tags": "{\"building\": \"university\", \"height\": \"3.733\", \"name\": \"Diretoria e Administra\\u00e7\\u00e3o do Instituto de Bioci\\u00eancias\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "FFLCH - Sociais e Filosofia",
+        "latitude": -23.5626362,
+        "longitude": -46.7249365,
+        "tags": "{\"addr:housenumber\": \"315\", \"addr:street\": \"Avenida Professor Luciano Gualberto\", \"building\": \"university\", \"height\": \"9.493\", \"isced:level\": \"5-6\", \"loc_name\": \"Pr\\u00e9dio do Meio\", \"max_level\": \"2\", \"min_level\": \"0\", \"name\": \"FFLCH - Sociais e Filosofia\", \"official_name\": \"Edif\\u00edcio de Filosofia e Ci\\u00eancias Sociais\", \"operator\": \"Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas\", \"operator:type\": \"public\", \"type\": \"multipolygon\", \"website\": \"https://fflch.usp.br\", \"wheelchair\": \"limited\", \"wikidata\": \"Q10279490\", \"wikipedia\": \"pt:Faculdade de Filosofia, Letras e Ci\\u00eancias Humanas da Universidade de S\\u00e3o Paulo\"}"
+    },
+    {
+        "nome": "Colméia",
+        "latitude": -23.558587,
+        "longitude": -46.7204046,
+        "tags": "{\"building\": \"university\", \"name\": \"Colm\\u00e9ia\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Poli - Ed. Semi-Industrial",
+        "latitude": -23.5637715,
+        "longitude": -46.726647,
+        "tags": "{\"amenity\": \"college\", \"building\": \"yes\", \"height\": \"19.893\", \"name\": \"Poli - Ed. Semi-Industrial\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Blocos A-G e P",
+        "latitude": -23.5594187,
+        "longitude": -46.734302,
+        "tags": "{\"alt_name\": \"Instituto de Astronomia, Geof\\u00edsica e Ci\\u00eancias Atmosf\\u00e9ricas\", \"building\": \"university\", \"building:levels\": \"4\", \"building:repeat_on\": \"0;1\", \"contact:email\": \"iag@usp.br\", \"contact:website\": \"https://www.iag.usp.br/\", \"height\": \"11.703\", \"name\": \"Blocos A-G e P\", \"short_name\": \"IAG\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Biomedicas 3",
+        "latitude": -23.5655862,
+        "longitude": -46.7396899,
+        "tags": "{\"addr:housenumber\": \"2415\", \"addr:street\": \"Avenida Professor Lineu Prestes\", \"building\": \"yes\", \"height\": \"10.218\", \"name\": \"Biomedicas 3\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Centro Tecnológico de Hidráulica",
+        "latitude": -23.5540983,
+        "longitude": -46.7276557,
+        "tags": "{\"building\": \"university\", \"height\": \"4.98\", \"name\": \"Centro Tecnol\\u00f3gico de Hidr\\u00e1ulica\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "\"Cirquinho\"",
+        "latitude": -23.5570333,
+        "longitude": -46.7328628,
+        "tags": "{\"building\": \"university\", \"name\": \"\\\"Cirquinho\\\"\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Administração Central",
+        "latitude": -23.5612529,
+        "longitude": -46.7223728,
+        "tags": "{\"building\": \"university\", \"height\": \"3.94\", \"name\": \"Administra\\u00e7\\u00e3o Central\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Pista de Atletismo",
+        "latitude": -23.5598646,
+        "longitude": -46.7164862,
+        "tags": "{\"leisure\": \"track\", \"name\": \"Pista de Atletismo\", \"sport\": \"running\", \"surface\": \"tartan\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "FEA 1",
+        "latitude": -23.5587386,
+        "longitude": -46.7290223,
+        "tags": "{\"building\": \"university\", \"height\": \"8.18\", \"name\": \"FEA 1\", \"type\": \"multipolygon\"}"
+    },
+    {
+        "nome": "Jornalismo e Editoração",
+        "latitude": -23.5573845,
+        "longitude": -46.7261794,
+        "tags": "{\"amenity\": \"college\", \"building\": \"yes\", \"email\": \"cje@usp.br\", \"height\": \"6.05\", \"name\": \"Jornalismo e Editora\\u00e7\\u00e3o\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"phone\": \"(11) 3091-4112\", \"type\": \"multipolygon\", \"website\": \"https://www3.eca.usp.br/cje\"}"
+    },
+    {
+        "nome": "Relações Públicas, Propaganda e Turismo",
+        "latitude": -23.5576135,
+        "longitude": -46.7257109,
+        "tags": "{\"alt_name\": \"Rela\\u00e7\\u00f5es P\\u00fablicas, Propaganda e Turismo\", \"amenity\": \"college\", \"building\": \"yes\", \"email\": \"ecacrp@usp.br\", \"height\": \"5.84\", \"name\": \"Rela\\u00e7\\u00f5es P\\u00fablicas, Propaganda e Turismo\", \"operator\": \"Escola de Comunica\\u00e7\\u00f5es e Artes da USP\", \"operator:type\": \"government\", \"phone\": \"(11) 3091-4122\", \"type\": \"multipolygon\", \"website\": \"https://www3.eca.usp.br/crp\"}"
+    },
+    {
+        "nome": "Rota Ciclovia USP 1",
+        "latitude": -23.5612011,
+        "longitude": -46.7231489,
+        "tags": "{\"name\": \"Rota Ciclovia USP 1\", \"network\": \"lcn\", \"route\": \"bicycle\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Ciclovia USP 1 retorno",
+        "latitude": -23.5610704,
+        "longitude": -46.7235986,
+        "tags": "{\"name\": \"Ciclovia USP 1 retorno\", \"network\": \"lcn\", \"route\": \"bicycle\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Ciclovia Raia Olímpica",
+        "latitude": -23.557722,
+        "longitude": -46.7226029,
+        "tags": "{\"name\": \"Ciclovia Raia Ol\\u00edmpica\", \"network\": \"lcn\", \"route\": \"bicycle\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "280BI1 São Paulo (Cidade Universitaria)",
+        "latitude": -23.6248777,
+        "longitude": -46.641357,
+        "tags": "{\"charge\": \"11.50 BRL\", \"distance\": \"31.602\", \"duration\": \"3:00\", \"fee\": \"yes\", \"from\": \"S\\u00e3o Bernardo do Campo (Terminal Pa\\u00e7o - S\\u00e3o Bernardo)\", \"name\": \"280BI1 S\\u00e3o Paulo (Cidade Universitaria)\", \"network\": \"EMTU\", \"network:short\": \"EMTU\", \"network:wikidata\": \"Q5374439\", \"network:wikipedia\": \"pt:Empresa Metropolitana de Transportes Urbanos de S\\u00e3o Paulo\", \"opening_hours\": \"Mo-Fr 05:40-17:00; Sa OFF; Su OFF; PH OFF\", \"operator\": \"Anhanguera (Cons\\u00f3rcio Anhanguera)\", \"public_transport:version\": \"2\", \"ref\": \"280BI1\", \"route\": \"bus\", \"source\": \"https://www.emtu.sp.gov.br/sistemas/linha/resultado_imp.htm?numlinha=37862; https://www.emtu.sp.gov.br\", \"to\": \"S\\u00e3o Paulo (Cidade Universitaria)\", \"type\": \"route\", \"via\": \"Diadema\"}"
+    },
+    {
+        "nome": "280BI1 São Bernardo do Campo (Terminal Paço - São Bernardo)",
+        "latitude": -23.6251181,
+        "longitude": -46.642588,
+        "tags": "{\"charge\": \"11.50 BRL\", \"distance\": \"33.548\", \"duration\": \"3:00\", \"fee\": \"yes\", \"from\": \"S\\u00e3o Paulo (Cidade Universitaria)\", \"name\": \"280BI1 S\\u00e3o Bernardo do Campo (Terminal Pa\\u00e7o - S\\u00e3o Bernardo)\", \"network\": \"EMTU\", \"network:short\": \"EMTU\", \"network:wikidata\": \"Q5374439\", \"network:wikipedia\": \"pt:Empresa Metropolitana de Transportes Urbanos de S\\u00e3o Paulo\", \"opening_hours\": \"Mo-Fr 12:15-18:15; Sa OFF; Su OFF; PH OFF\", \"operator\": \"Anhanguera (Cons\\u00f3rcio Anhanguera)\", \"public_transport:version\": \"2\", \"ref\": \"280BI1\", \"route\": \"bus\", \"source\": \"https://www.emtu.sp.gov.br/sistemas/linha/resultado_imp.htm?numlinha=37862; https://www.emtu.sp.gov.br\", \"to\": \"S\\u00e3o Bernardo do Campo (Terminal Pa\\u00e7o - S\\u00e3o Bernardo)\", \"type\": \"route\", \"via\": \"Diadema\"}"
+    },
+    {
+        "nome": "Ciclovia Raia Olímpica Retorno",
+        "latitude": -23.557828,
+        "longitude": -46.7227054,
+        "tags": "{\"name\": \"Ciclovia Raia Ol\\u00edmpica Retorno\", \"network\": \"lcn\", \"route\": \"bicycle\", \"type\": \"route\"}"
+    },
+    {
+        "nome": "Universidade de São Paulo - Cidade Universitária Armando de Salles Oliveira",
+        "latitude": -23.5611072,
+        "longitude": -46.7282797,
+        "tags": "{\"access\": \"yes\", \"access:conditional\": \"private @ (Mo-Su 21:00-06:00); private @ (Sa 14:00-00:00); private @ (Su)\", \"alt_name\": \"Universidade de S\\u00e3o Paulo - Campus Oeste\", \"amenity\": \"university\", \"education\": \"university\", \"landuse\": \"education\", \"loc_name\": \"Cidade Universit\\u00e1ria\", \"name\": \"Universidade de S\\u00e3o Paulo - Cidade Universit\\u00e1ria Armando de Salles Oliveira\", \"name:en\": \"University of S\\u00e3o Paulo\", \"operator\": \"Universidade de S\\u00e3o Paulo\", \"operator:type\": \"public\", \"operator:wikidata\": \"Q835960\", \"short_name\": \"USP\", \"source\": \"Bing\", \"type\": \"multipolygon\", \"website\": \"http://www.usp.br\"}"
+    },
+    {
+        "nome": "Instituto de Pesquisas Tecnológicas",
+        "latitude": -23.5564514,
+        "longitude": -46.7377733,
+        "tags": "{\"access\": \"private\", \"addr:city\": \"S\\u00e3o Paulo\", \"addr:housenumber\": \"532\", \"addr:postcode\": \"05508-901\", \"addr:street\": \"Avenida Professor Almeida Prado\", \"addr:suburb\": \"Butant\\u00e3\", \"amenity\": \"research_institute\", \"name\": \"Instituto de Pesquisas Tecnol\\u00f3gicas\", \"operator:type\": \"government\", \"short_name\": \"IPT\", \"type\": \"multipolygon\", \"website\": \"https://www.ipt.br/\", \"wikidata\": \"Q4201763\", \"wikimedia_commons\": \"Category:Institute for Technological Research\", \"wikipedia\": \"pt:Instituto de Pesquisas Tecnol\\u00f3gicas\"}"
+    }
+]
