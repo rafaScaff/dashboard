@@ -287,7 +287,6 @@ const Maquininha = () => {
                     ];
                 
                 let macroText = null;
-                let macroPathUsed = null;
                 for (const path of macroPaths) {
                     try {
                         const response = await fetch(path);
@@ -295,7 +294,6 @@ const Maquininha = () => {
                             const text = await response.text();
                             if (text && text.trim().length > 0) {
                                 macroText = text;
-                                macroPathUsed = path;
                                 console.log('map_macro.csv carregado de:', path);
                                 break;
                             }
@@ -332,7 +330,6 @@ const Maquininha = () => {
                     ];
                 
                 let subMacroText = null;
-                let subMacroPathUsed = null;
                 for (const path of subMacroPaths) {
                     try {
                         const response = await fetch(path);
@@ -340,7 +337,6 @@ const Maquininha = () => {
                             const text = await response.text();
                             if (text && text.trim().length > 0) {
                                 subMacroText = text;
-                                subMacroPathUsed = path;
                                 console.log('map_submacro.csv carregado de:', path);
                                 break;
                             }
