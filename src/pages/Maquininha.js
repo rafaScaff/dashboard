@@ -202,6 +202,7 @@ const Maquininha = () => {
     const [selectedMacro, setSelectedMacro] = useState('');
     const [selectedSubMacro, setSelectedSubMacro] = useState('');
     const [hasImageFilter, setHasImageFilter] = useState(false);
+    const [hasNameFilter, setHasNameFilter] = useState(false);
     const [macros, setMacros] = useState([]);
     const [subMacros, setSubMacros] = useState([]);
 
@@ -422,6 +423,13 @@ const Maquininha = () => {
             if (hasImageFilter) {
                 const imageKey = getImageKey(item);
                 if (!imageKey) {
+                    return false;
+                }
+            }
+            
+            // Filtro de possui nome
+            if (hasNameFilter) {
+                if (!item.name || item.name.trim() === '') {
                     return false;
                 }
             }
@@ -719,7 +727,18 @@ const Maquininha = () => {
                                 label="Possui imagem"
                             />
                             
-                            {(selectedMacro || selectedSubMacro || hasImageFilter) && (
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={hasNameFilter}
+                                        onChange={(e) => setHasNameFilter(e.target.checked)}
+                                        color="primary"
+                                    />
+                                }
+                                label="Apenas com nome"
+                            />
+                            
+                            {(selectedMacro || selectedSubMacro || hasImageFilter || hasNameFilter) && (
                                 <Button
                                     variant="text"
                                     size="small"
@@ -727,6 +746,7 @@ const Maquininha = () => {
                                         setSelectedMacro('');
                                         setSelectedSubMacro('');
                                         setHasImageFilter(false);
+                                        setHasNameFilter(false);
                                     }}
                                     sx={{ ml: 'auto' }}
                                 >
