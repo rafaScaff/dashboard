@@ -470,11 +470,14 @@ const Maquininha = () => {
 
     // Determinar quais pontos exibir no mapa
     // Só mostrar pontos quando houver uma busca ativa (resultados de busca)
+    // Aplica filtros e depois limita a 100 resultados
+    const LIMIT = 100;
     const pointsToDisplay = searchResults.length > 0 
-        ? applyAdvancedFilters(searchResults, true) // Requer coordenadas para o mapa
+        ? applyAdvancedFilters(searchResults, true).slice(0, LIMIT) // Requer coordenadas para o mapa, limita a 100
         : []; // Não renderizar nenhum ponto inicialmente
 
     // Search function - busca tanto por nome quanto por descrição
+    // Não aplica limite aqui - o limite será aplicado depois dos filtros
     const handleSearch = () => {
         if (!searchQuery.trim()) {
             setSearchResults([]);
@@ -483,9 +486,8 @@ const Maquininha = () => {
     
         const searchStr = searchQuery.toLowerCase().trim();
         const results = [];
-        const LIMIT = 100; // Definimos o limite aqui
     
-        // Usamos um loop for comum para poder interromper a execução (break)
+        // Busca todos os resultados que correspondem à pesquisa
         for (let i = 0; i < consolidado.length; i++) {
             const item = consolidado[i];
             
@@ -499,11 +501,6 @@ const Maquininha = () => {
     
             if (nameMatch || descriptionMatch) {
                 results.push(item);
-            }
-    
-            // Se chegarmos no limite, paramos de procurar imediatamente
-            if (results.length === LIMIT) {
-                break; 
             }
         }
     
@@ -760,10 +757,14 @@ const Maquininha = () => {
                     // Aplica filtros avançados aos resultados (dropdown não exige coordenadas)
                     const filteredResults = applyAdvancedFilters(searchResults, false);
                     
-                    if (filteredResults.length === 0) return null;
+                    // Aplica limite de 100 resultados DEPOIS dos filtros
+                    const LIMIT = 100;
+                    const limitedResults = filteredResults.slice(0, LIMIT);
+                    
+                    if (limitedResults.length === 0) return null;
                     
                     // Ordena os resultados: alfabético por nome, "Sem nome" no final
-                    const sortedResults = [...filteredResults].sort((a, b) => {
+                    const sortedResults = [...limitedResults].sort((a, b) => {
                         const nameA = a.name || 'Sem nome';
                         const nameB = b.name || 'Sem nome';
                         
