@@ -438,6 +438,36 @@ const Maquininha = () => {
         });
     };
 
+    // Função para extrair contexto ao redor do match na descrição
+    const getDescriptionContext = (description, searchTerm) => {
+        if (!description || !searchTerm) return '';
+        
+        const descLower = description.toLowerCase();
+        const searchLower = searchTerm.toLowerCase();
+        const matchIndex = descLower.indexOf(searchLower);
+        
+        if (matchIndex === -1) return '';
+        
+        const contextBefore = 15;
+        const contextAfter = 15;
+        
+        const start = Math.max(0, matchIndex - contextBefore);
+        const end = Math.min(description.length, matchIndex + searchTerm.length + contextAfter);
+        
+        const beforeText = start > 0 ? '...' : '';
+        const afterText = end < description.length ? '...' : '';
+        
+        const context = description.substring(start, end);
+        const matchStart = matchIndex - start;
+        const matchEnd = matchStart + searchTerm.length;
+        
+        return {
+            before: beforeText + context.substring(0, matchStart),
+            match: context.substring(matchStart, matchEnd),
+            after: context.substring(matchEnd) + afterText
+        };
+    };
+
     // Determinar quais pontos exibir no mapa
     // Só mostrar pontos quando houver uma busca ativa (resultados de busca)
     const pointsToDisplay = searchResults.length > 0 
@@ -807,7 +837,29 @@ const Maquininha = () => {
                                     >
                                         <LocationOnIcon sx={{ mr: 1, color: result.image_key ? 'yellow' : 'blue' }} />
                                         <ListItemText
-                                            primary={result.name || 'Sem nome'}
+                                            primary={
+                                                result.name 
+                                                    ? result.name 
+                                                    : (() => {
+                                                        if (!result.description || !searchQuery.trim()) {
+                                                            return 'Sem nome';
+                                                        }
+                                                        
+                                                        const context = getDescriptionContext(result.description, searchQuery.trim());
+                                                        
+                                                        if (!context || !context.match) {
+                                                            return 'Sem nome';
+                                                        }
+                                                        
+                                                        return (
+                                                            <span>
+                                                                Sem nome - {context.before}
+                                                                <strong>{context.match}</strong>
+                                                                {context.after}
+                                                            </span>
+                                                        );
+                                                    })()
+                                            }
                                         />
                                     </ListItem>
                                     {index < sortedResults.length - 1 && <Divider />}
