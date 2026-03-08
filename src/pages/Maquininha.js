@@ -406,22 +406,33 @@ const Maquininha = () => {
             setSearchResults([]);
             return;
         }
+    
         const searchStr = searchQuery.toLowerCase().trim();
-        const results = consolidado.filter(item => {
-            // Buscar no nome (se existir)
+        const results = [];
+        const LIMIT = 100; // Definimos o limite aqui
+    
+        // Usamos um loop for comum para poder interromper a execução (break)
+        for (let i = 0; i < consolidado.length; i++) {
+            const item = consolidado[i];
+            
             const nameMatch = item.name 
-                ? item.name.toLowerCase().includes(searchStr)
+                ? item.name.toLowerCase().includes(searchStr) 
                 : false;
-            
-            // Buscar na descrição (se existir)
+                
             const descriptionMatch = item.description 
-                ? item.description.toLowerCase().includes(searchStr)
+                ? item.description.toLowerCase().includes(searchStr) 
                 : false;
-            
-            // Retornar true se encontrar em qualquer um dos campos
-            return nameMatch || descriptionMatch;
-        });
-
+    
+            if (nameMatch || descriptionMatch) {
+                results.push(item);
+            }
+    
+            // Se chegarmos no limite, paramos de procurar imediatamente
+            if (results.length === LIMIT) {
+                break; 
+            }
+        }
+    
         setSearchResults(results);
     };
 
