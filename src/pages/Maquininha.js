@@ -35,7 +35,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
-import consolidado from '../data/consolidado.json';
+// consolidado.json é carregado dinamicamente após autenticação para não expor no bundle
 import { getValidatedJWT } from '../utils/jwtValidator';
 import CryptoJS from 'crypto-js';
 
@@ -207,23 +207,42 @@ const Maquininha = () => {
     const [macros, setMacros] = useState([]);
     const [subMacros, setSubMacros] = useState([]);
     const [showResultsList, setShowResultsList] = useState(false);
+    const [consolidado, setConsolidado] = useState([]);
 
-    // Verificar JWT ao carregar
+    // Verificar JWT ao carregar e buscar dados
     useEffect(() => {
-        const checkJWT = async () => {
+        const checkJWTAndLoadData = async () => {
             setIsValidating(true);
             const result = await getValidatedJWT();
             
             if (!result.valid) {
-                // JWT inválido ou não encontrado, mostra popup
-                setShowAccessDeniedDialog(true);
-            } else {
-                setIsValidating(false);
+                // JWT inválido ou não encontrado, redireciona para login
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('token');
+                localStorage.removeItem('username');
+                navigate('/login');
+                return;
             }
+
+            // JWT válido, carrega os dados dinamicamente
+            try {
+                const basePath = process.env.PUBLIC_URL || '';
+                const response = await fetch(`${basePath}/data/consolidado.json`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setConsolidado(data);
+                } else {
+                    console.error('Erro ao carregar consolidado.json:', response.status);
+                }
+            } catch (error) {
+                console.error('Erro ao carregar consolidado.json:', error);
+            }
+            
+            setIsValidating(false);
         };
 
-        checkJWT();
-    }, []);
+        checkJWTAndLoadData();
+    }, [navigate]);
 
     // Carregar macros e submacros dos CSVs
     useEffect(() => {

@@ -98,7 +98,7 @@ function App() {
             </ProtectedRoute>
           } 
         />
-        <Route path="/maquininha" element={<Maquininha />} />
+        <Route path="/maquininha" element={<ProtectedRoute><Maquininha /></ProtectedRoute>} />
       </Routes>
     </Router>
   );
