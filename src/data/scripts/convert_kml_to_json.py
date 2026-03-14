@@ -182,8 +182,8 @@ def kml_to_json(kml_file_path, json_file_path):
 
 if __name__ == "__main__":
     # Caminhos dos arquivos
-    kml_file = "Portas.kml"
-    json_file = "portas.json"
+    kml_file = "src/data/scripts/Portas_novo.kml"
+    json_file = "portas_novo.json"
     
     print(f"🔄 Convertendo {kml_file} para {json_file}...")
     kml_to_json(kml_file, json_file)

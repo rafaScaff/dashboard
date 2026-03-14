@@ -91,7 +91,7 @@ def main():
             if 'image_key' not in entry:
                 entry['image_key'] = generate_image_key(image_url)
                 entries_updated += 1
-            entries_with_images.append(entry)
+                entries_with_images.append(entry)
     
     print(f"✅ {entries_updated} entradas atualizadas com image_key")
     print(f"🖼️  {len(entries_with_images)} entradas com imageUrl encontradas")
@@ -112,6 +112,14 @@ def main():
     if not entries_with_images:
         print("⚠️  Nenhuma imagem para baixar!")
         return
+    
+    # Salva as novas image_keys em um arquivo separado
+    if entries_with_images:
+        novas_imagens_file = script_dir / 'novas_imagens.json'
+        novas_keys = [entry['image_key'] for entry in entries_with_images]
+        with open(novas_imagens_file, 'w', encoding='utf-8') as f:
+            json.dump(novas_keys, f, ensure_ascii=False, indent=2)
+        print(f"📝 {len(novas_keys)} novas image_keys salvas em: {novas_imagens_file}")
     
     # Estatísticas
     success_count = 0
