@@ -35,9 +35,19 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
-// consolidado.json é carregado dinamicamente após autenticação para não expor no bundle
-import { getValidatedJWT } from '../utils/jwtValidator';
 import CryptoJS from 'crypto-js';
+
+// consolidado.json é carregado dinamicamente após autenticação para não expor no bundle
+function isTokenValid(token) {
+    if (!token) return false;
+    try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const now = Math.floor(Date.now() / 1000);
+        return !payload.exp || payload.exp > now;
+    } catch {
+        return false;
+    }
+}
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -213,10 +223,9 @@ const Maquininha = () => {
     useEffect(() => {
         const checkJWTAndLoadData = async () => {
             setIsValidating(true);
-            const result = await getValidatedJWT();
-            
-            if (!result.valid) {
-                // JWT inválido ou não encontrado, redireciona para login
+            const token = localStorage.getItem('token');
+
+            if (!isTokenValid(token)) {
                 localStorage.removeItem('isLoggedIn');
                 localStorage.removeItem('token');
                 localStorage.removeItem('username');

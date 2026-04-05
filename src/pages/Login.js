@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import LoadingSpinner from '../utils/LoadingSpinner';
+import { setJWT } from '../utils/jwtValidator';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -50,9 +51,12 @@ function Login() {
 
       const data = await response.json();
       localStorage.setItem('token', data.token);
+      setJWT(data.token);
       localStorage.setItem('username', username);
       localStorage.setItem('isLoggedIn', 'true');
-      navigate('/play');
+      if (data.is_admin) localStorage.setItem('is_admin', 'true');
+      else localStorage.removeItem('is_admin');
+      navigate(data.is_admin ? '/admin' : '/play');
     } catch (err) {
       setError(err.message || 'Ocorreu um erro ao tentar fazer login');
     } finally {
