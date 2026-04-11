@@ -3,7 +3,7 @@ import { Snackbar, Alert } from '@mui/material';
 import LoadingSpinner from '../utils/LoadingSpinner';
 import { useNavigate } from 'react-router-dom';
 
-const SendButton = ({ macro, micro }) => {
+const SendButton = ({ macro, micro, hasMicro, onSolved }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -26,31 +26,32 @@ const SendButton = ({ macro, micro }) => {
   }, [timeoutActive, timeLeft]);
 
   const handleSubmit = async () => {
-    if (!macro || !micro) {
-      alert('Por favor, selecione um macro e um micro antes de enviar.');
+    if (!macro) {
+      alert('Por favor, selecione um macro antes de enviar.');
       return;
     }
     try {
       setIsLoading(true);
-      console.log(JSON.stringify({
-        macro,
-        micro
-      }))
+      const payload = micro ? { macro, micro } : { macro };
       const response = await fetch(`${process.env.REACT_APP_API_URL}/caca_api/daily_pista/guess`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `${localStorage.getItem('token')}`
         },
-        body: JSON.stringify({
-          macro,
-          micro
-        })
+        body: JSON.stringify(payload)
       });
 
       if (response.status === 403) {
         localStorage.clear();
         navigate('/login');
+        return;
+      }
+
+      if (response.status === 409) {
+        setSnackbarOpen(true);
+        setSnackbarMessage('Você já acertou o caça de hoje!');
+        setSnackbarSeverity('info');
         return;
       }
 
@@ -61,14 +62,16 @@ const SendButton = ({ macro, micro }) => {
       const data = await response.json();
       console.log('Resposta:', data);
       
-      setSnackbarOpen(true);
-      setSnackbarMessage(data.guess_result ? "Parabéns! Você acertou!" : "Tente novamente!");
-      setSnackbarSeverity(data.guess_result ? "success" : "error");
-      
-      if (!data.guess_result) {
-        setTimeoutActive(true);
-        setTimeLeft(TIMEOUT_DURATION);
+      if (data.guess_result) {
+        onSolved();
+        return;
       }
+
+      setSnackbarOpen(true);
+      setSnackbarMessage("Tente novamente!");
+      setSnackbarSeverity("error");
+      setTimeoutActive(true);
+      setTimeLeft(TIMEOUT_DURATION);
       
     } catch (error) {
       console.error('Erro:', error);

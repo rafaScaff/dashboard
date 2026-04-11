@@ -17,6 +17,8 @@ function PlayPage() {
   const [macro, setMacro] = useState('');
   const [micro, setMicro] = useState('');
   const [pistaContent, setPistaContent] = useState('');
+  const [hasMicro, setHasMicro] = useState(true);
+  const [alreadySolved, setAlreadySolved] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -37,6 +39,8 @@ function PlayPage() {
 
         const data = await response.json();
         setPistaContent(data.content);
+        setHasMicro(data.has_micro);
+        setAlreadySolved(data.already_solved);
       } catch (error) {
         console.error('Error fetching pista:', error);
       } finally {
@@ -69,16 +73,27 @@ function PlayPage() {
           )}
         </div>
 
-        <Dropdown 
-          macro={macro}
-          setMacro={setMacro}
-          micro={micro}
-          setMicro={setMicro}
-        />
-        <SendButton
-          macro={macro}
-          micro={micro}
-        />
+        {alreadySolved ? (
+          <p style={{ color: 'black', fontFamily: "'Winky Sans', Arial, sans-serif", fontSize: '1.4rem', marginTop: '20px', textAlign: 'center' }}>
+            Você já acertou a pista de hoje, volte novamente amanhã
+          </p>
+        ) : (
+          <>
+            <Dropdown
+              macro={macro}
+              setMacro={setMacro}
+              micro={micro}
+              setMicro={setMicro}
+              hasMicro={hasMicro}
+            />
+            <SendButton
+              macro={macro}
+              micro={micro}
+              hasMicro={hasMicro}
+              onSolved={() => setAlreadySolved(true)}
+            />
+          </>
+        )}
         <button
           onClick={() => { localStorage.clear(); navigate('/login'); }}
           title="Logout"
