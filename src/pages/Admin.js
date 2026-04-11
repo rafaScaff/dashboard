@@ -442,6 +442,75 @@ function DailySchedule({ refresh }) {
   );
 }
 
+// ── Time Machine (local builds only) ────────────────────────
+function TimeMachine() {
+  const [currentTime, setCurrentTime] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
+  const [msg, setMsg] = useState('');
+
+  const fetchCurrentTime = async () => {
+    try {
+      const res = await fetch(`${API}/caca_api/admin/time-machine`, { headers: authHeaders() });
+      if (res.ok) {
+        const data = await res.json();
+        setCurrentTime(data.current_time);
+      }
+    } catch (_) {}
+  };
+
+  useEffect(() => { fetchCurrentTime(); }, []);
+
+  const handleSet = async e => {
+    e.preventDefault();
+    if (!selectedDate) return;
+    const res = await fetch(`${API}/caca_api/admin/time-machine`, {
+      method: 'POST',
+      headers: authHeaders(true),
+      body: JSON.stringify({ datetime: selectedDate })
+    });
+    const data = await res.json();
+    setCurrentTime(data.current_time);
+    setMsg(`Tempo definido para: ${data.current_time}`);
+  };
+
+  const handleReset = async () => {
+    const res = await fetch(`${API}/caca_api/admin/time-machine`, {
+      method: 'POST',
+      headers: authHeaders(true),
+      body: JSON.stringify({ datetime: null })
+    });
+    const data = await res.json();
+    setCurrentTime(data.current_time);
+    setMsg('Tempo restaurado para o real.');
+  };
+
+  return (
+    <div>
+      <p style={{ marginBottom: 12 }}>
+        <strong>Tempo atual do servidor:</strong> {currentTime || '...'}
+      </p>
+      <form onSubmit={handleSet} style={{ display: 'flex', gap: 8, alignItems: 'flex-end', flexWrap: 'wrap' }}>
+        <div>
+          <label style={{ display: 'block', marginBottom: 4, fontWeight: 500 }}>Definir data/hora</label>
+          <input
+            type="datetime-local"
+            value={selectedDate}
+            onChange={e => setSelectedDate(e.target.value)}
+            style={{ padding: '8px 10px', borderRadius: 4, border: '1px solid #ccc' }}
+          />
+        </div>
+        <button type="submit" style={{ padding: '8px 16px', background: '#6f42c1', color: '#fff', border: 'none', borderRadius: 4, cursor: 'pointer' }}>
+          Definir
+        </button>
+        <button type="button" onClick={handleReset} style={{ padding: '8px 16px', background: '#6c757d', color: '#fff', border: 'none', borderRadius: 4, cursor: 'pointer' }}>
+          Resetar
+        </button>
+      </form>
+      <Feedback msg={msg} />
+    </div>
+  );
+}
+
 // ── Main Admin Page ─────────────────────────────────────────
 function Admin() {
   const navigate = useNavigate();
@@ -496,6 +565,12 @@ function Admin() {
         <Section title="Usuários">
           <Users />
         </Section>
+
+        {process.env.REACT_APP_LOCAL_BUILD === 'true' && (
+          <Section title="🕐 Time Machine (local only)">
+            <TimeMachine />
+          </Section>
+        )}
       </div>
     </div>
   );
