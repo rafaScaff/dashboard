@@ -5,16 +5,40 @@
   align-items: center;
   min-height: 100vh;
   background-color: yellow;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 70px;
+}
+
+.login-logo {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .login-box {
   background-color: white;
   padding: 2rem;
+  padding-top: 5rem;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 400px;
   border: 2px solid black;
+  box-sizing: border-box;
 }
 
 .login-box h2 {

@@ -387,6 +387,11 @@ function PistasList({ onScheduled }) {
 function DailySchedule({ refresh }) {
   const [schedule, setSchedule] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [allPistas, setAllPistas] = useState([]);
+  const [editingKey, setEditingKey] = useState(null);
+  const [editPistaKey, setEditPistaKey] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [msg, setMsg] = useState('');
 
   const fetchSchedule = async () => {
     setLoading(true);
@@ -398,7 +403,46 @@ function DailySchedule({ refresh }) {
     }
   };
 
+  const fetchPistas = async () => {
+    try {
+      const res = await fetch(`${API}/caca_api/admin/pista`, { headers: authHeaders() });
+      if (res.ok) setAllPistas(await res.json());
+    } catch (_) {}
+  };
+
   useEffect(() => { fetchSchedule(); }, [refresh]);
+  useEffect(() => { fetchPistas(); }, []);
+
+  const startEdit = (dp) => {
+    setEditingKey(dp.daily_pista_key);
+    setEditPistaKey(dp.pista?.pista_key || '');
+    setMsg('');
+  };
+
+  const cancelEdit = () => {
+    setEditingKey(null);
+    setEditPistaKey('');
+  };
+
+  const saveEdit = async (daily_pista_key) => {
+    setSaving(true);
+    setMsg('');
+    try {
+      const res = await fetch(`${API}/caca_api/admin/daily_pista/${daily_pista_key}`, {
+        method: 'PUT',
+        headers: authHeaders(true),
+        body: JSON.stringify({ pista_key: editPistaKey }),
+      });
+      if (!res.ok) throw new Error((await res.json()).description || 'Erro ao salvar');
+      setEditingKey(null);
+      setEditPistaKey('');
+      await fetchSchedule();
+    } catch (err) {
+      setMsg(err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   if (loading) return <LoadingSpinner />;
   if (!schedule.length) return <p style={{ color: '#888' }}>Nenhuma pista agendada.</p>;
@@ -406,39 +450,101 @@ function DailySchedule({ refresh }) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
+  const selectStyle = { padding: '4px 8px', borderRadius: 4, border: '1px solid #ccc', maxWidth: 220, width: '100%' };
+
   return (
-    <div style={{ overflowX: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr style={{ background: '#f5f5f5' }}>
-            <th style={th}>Data</th>
-            <th style={th}>Status</th>
-            <th style={th}>Conteúdo</th>
-            <th style={th}>Micro</th>
-            <th style={th}>Macro</th>
-          </tr>
-        </thead>
-        <tbody>
-          {schedule.map(dp => {
-            const date = new Date(dp.start_date);
-            date.setHours(0, 0, 0, 0);
-            const isPast = date < today;
-            const isToday = date.getTime() === today.getTime();
-            const status = isToday ? '📅 Hoje' : isPast ? 'Passado' : 'Futuro';
-            const rowBg = isToday ? '#fffbe6' : 'transparent';
-            return (
-              <tr key={dp.daily_pista_key} style={{ borderBottom: '1px solid #eee', background: rowBg }}>
-                <td style={td}>{new Date(dp.start_date).toLocaleDateString('pt-BR')}</td>
-                <td style={{ ...td, color: isToday ? '#b8860b' : isPast ? '#aaa' : '#28a745', fontWeight: isToday ? 700 : 400 }}>{status}</td>
-                <td style={{ ...td, maxWidth: 220, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={dp.pista?.content}>{dp.pista?.content}</td>
-                <td style={td}>{dp.pista?.micro_enum || '—'}</td>
-                <td style={td}>{dp.pista?.macro_enum || '—'}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <Feedback msg={msg} />
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr style={{ background: '#f5f5f5' }}>
+              <th style={th}>Data</th>
+              <th style={th}>Status</th>
+              <th style={th}>Conteúdo</th>
+              <th style={th}>Micro</th>
+              <th style={th}>Macro</th>
+              <th style={th}>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {schedule.map(dp => {
+              const date = new Date(dp.start_date);
+              date.setHours(0, 0, 0, 0);
+              const isPast = date < today;
+              const isToday = date.getTime() === today.getTime();
+              const status = isToday ? '📅 Hoje' : isPast ? 'Passado' : 'Futuro';
+              const rowBg = isToday ? '#fffbe6' : 'transparent';
+              const isEditing = editingKey === dp.daily_pista_key;
+              const selectedPista = allPistas.find(p => p.pista_key === editPistaKey);
+
+              return (
+                <tr key={dp.daily_pista_key} style={{ borderBottom: '1px solid #eee', background: rowBg }}>
+                  <td style={td}>{new Date(dp.start_date).toLocaleDateString('pt-BR')}</td>
+                  <td style={{ ...td, color: isToday ? '#b8860b' : isPast ? '#aaa' : '#28a745', fontWeight: isToday ? 700 : 400 }}>{status}</td>
+                  {isEditing ? (
+                    <>
+                      <td style={td} colSpan={3}>
+                        <select
+                          value={editPistaKey}
+                          onChange={e => setEditPistaKey(e.target.value)}
+                          style={selectStyle}
+                        >
+                          <option value="">— selecionar pista —</option>
+                          {allPistas.map(p => (
+                            <option key={p.pista_key} value={p.pista_key}>
+                              {p.content.length > 60 ? p.content.slice(0, 60) + '…' : p.content}
+                              {p.micro_enum ? ` [${p.micro_enum}]` : p.macro_enum ? ` [${p.macro_enum}]` : ''}
+                            </option>
+                          ))}
+                        </select>
+                        {selectedPista && (
+                          <div style={{ fontSize: '0.8rem', color: '#666', marginTop: 2 }}>
+                            Micro: {selectedPista.micro_enum || '—'} · Macro: {selectedPista.macro_enum || '—'}
+                          </div>
+                        )}
+                      </td>
+                      <td style={td}>
+                        <div style={{ display: 'flex', gap: 6 }}>
+                          <button
+                            onClick={() => saveEdit(dp.daily_pista_key)}
+                            disabled={saving || !editPistaKey}
+                            style={{ padding: '4px 10px', background: '#28a745', color: '#fff', border: 'none', borderRadius: 4, cursor: 'pointer' }}
+                          >
+                            {saving ? '...' : 'Salvar'}
+                          </button>
+                          <button
+                            onClick={cancelEdit}
+                            disabled={saving}
+                            style={{ padding: '4px 10px', background: '#6c757d', color: '#fff', border: 'none', borderRadius: 4, cursor: 'pointer' }}
+                          >
+                            Cancelar
+                          </button>
+                        </div>
+                      </td>
+                    </>
+                  ) : (
+                    <>
+                      <td style={{ ...td, maxWidth: 220, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={dp.pista?.content}>{dp.pista?.content}</td>
+                      <td style={td}>{dp.pista?.micro_enum || '—'}</td>
+                      <td style={td}>{dp.pista?.macro_enum || '—'}</td>
+                      <td style={td}>
+                        <button
+                          onClick={() => startEdit(dp)}
+                          style={{ padding: '4px 10px', background: '#007bff', color: '#fff', border: 'none', borderRadius: 4, cursor: 'pointer' }}
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </>
+                  )}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 

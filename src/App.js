@@ -4,7 +4,7 @@ import Dropdown from './modules/dropdowns';
 import SendButton from './modules/sendButton';
 import Pista from './modules/pista';
 import { useState, useEffect } from 'react';
-import treasureChest from './images/treasure-chest.png';
+import cecacinhalogo from './images/cecacinhalogo.png';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Maquininha from './pages/Maquininha';
@@ -90,6 +90,7 @@ function PlayPage() {
   const [macro, setMacro] = useState('');
   const [micro, setMicro] = useState('');
   const [pistaContent, setPistaContent] = useState('');
+  const [pistaDate, setPistaDate] = useState('');
   const [hasMicro, setHasMicro] = useState(true);
   const [alreadySolved, setAlreadySolved] = useState(false);
   const [rankingRefresh, setRankingRefresh] = useState(0);
@@ -115,6 +116,13 @@ function PlayPage() {
         setPistaContent(data.content);
         setHasMicro(data.has_micro);
         setAlreadySolved(data.already_solved);
+        if (data.start_date) {
+          const d = new Date(data.start_date);
+          const dd = String(d.getUTCDate()).padStart(2, '0');
+          const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+          const yyyy = d.getUTCFullYear();
+          setPistaDate(`${dd}/${mm}/${yyyy}`);
+        }
       } catch (error) {
         console.error('Error fetching pista:', error);
       } finally {
@@ -131,64 +139,63 @@ function PlayPage() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header" style={{backgroundColor: 'yellow', position: 'relative'}}>
-        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', padding: '20px' }}>
-          <img
-            src={treasureChest}
-            alt="Treasure Chest"
-            style={{ maxWidth: '100%', height: 'auto', maxHeight: '300px' }}
-          />
-        </div>
-        <div>
-          <h1 style={{color: 'black', fontFamily: "Winky Sans", fontSize: '3rem'}}>CAÇA DIÁRIO</h1>
-          {isLoading ? (
-            <LoadingSpinner />
-          ) : (
-            <Pista
-              type="string"
-              content={pistaContent}
-            />
-          )}
-        </div>
+    <div className="play-page">
 
-        {alreadySolved ? (
-          <p style={{ color: 'black', fontFamily: "'Winky Sans', Arial, sans-serif", fontSize: '1.4rem', marginTop: '20px', textAlign: 'center' }}>
-            Você já acertou a pista de hoje, volte novamente amanhã
-          </p>
-        ) : (
-          <>
-            <Dropdown
-              macro={macro}
-              setMacro={setMacro}
-              micro={micro}
-              setMicro={setMicro}
-              hasMicro={hasMicro}
-            />
-            <SendButton
-              macro={macro}
-              micro={micro}
-              hasMicro={hasMicro}
-              onSolved={handleSolved}
-            />
-          </>
+      <div className="play-top-left">
+        {pistaDate && (
+          <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#333', fontFamily: 'Arial, sans-serif' }}>
+            Pista do dia {pistaDate}
+          </span>
         )}
-
-        <Ranking refreshTrigger={rankingRefresh} />
-
         <button
           onClick={() => { localStorage.clear(); navigate('/login'); }}
           title="Logout"
-          style={{ position: 'absolute', top: 12, right: 16, background: 'transparent', border: 'none', cursor: 'pointer', opacity: 0.5, padding: 4, display: 'flex', alignItems: 'center', gap: 4, color: '#333', fontSize: '0.75rem' }}
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 4, display: 'flex', alignItems: 'center', gap: 6, color: '#000', fontSize: '0.95rem', fontWeight: 600 }}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
             <polyline points="16 17 21 12 16 7"/>
             <line x1="21" y1="12" x2="9" y2="12"/>
           </svg>
           Sair
         </button>
-      </header>
+      </div>
+
+      <div className="play-wrapper">
+        <img src={cecacinhalogo} alt="Cecacinha" className="play-logo" />
+        <div className="play-card">
+          <h1 style={{ color: 'black', fontFamily: 'Winky Sans', fontSize: '2.4rem', marginBottom: '0.5rem' }}>CAÇA DIÁRIO</h1>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <Pista type="string" content={pistaContent} />
+          )}
+          {alreadySolved ? (
+            <p style={{ color: 'black', fontFamily: "'Winky Sans', Arial, sans-serif", fontSize: '1.2rem', marginTop: '20px' }}>
+              Você já acertou a pista de hoje, volte novamente amanhã
+            </p>
+          ) : (
+            <>
+              <Dropdown
+                macro={macro}
+                setMacro={setMacro}
+                micro={micro}
+                setMicro={setMicro}
+                hasMicro={hasMicro}
+              />
+              <SendButton
+                macro={macro}
+                micro={micro}
+                hasMicro={hasMicro}
+                onSolved={handleSolved}
+              />
+            </>
+          )}
+        </div>
+      </div>
+
+      <Ranking refreshTrigger={rankingRefresh} />
+
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import LoadingSpinner from '../utils/LoadingSpinner';
 import { setJWT } from '../utils/jwtValidator';
+import cecacinhalogo from '../images/cecacinhalogo.png';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -69,8 +70,11 @@ function Login() {
   };
 
   return (
-    <div className="login-container" style={{ padding: '10px 20px' }}>
-      <div className="login-box" style={{ margin: '40px auto', maxWidth: '400px', width: '100%', boxSizing: 'border-box' }}>
+    <div className="login-container">
+      <div className="login-wrapper">
+        <img src={cecacinhalogo} alt="Cecacinha" className="login-logo" />
+        <div className="login-box">
+          <h2>CAÇA DIÁRIO</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group" >
             <label htmlFor="username">Username</label>
@@ -114,6 +118,7 @@ function Login() {
           <button onClick={handleRegister} className="register-button" disabled={isLoading}>
             Registrar
           </button>
+        </div>
         </div>
       </div>
     </div>

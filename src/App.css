@@ -60,3 +60,58 @@ html, body, #root {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* ── Play Page ───────────────────────────────────────────── */
+.play-page {
+  min-height: 100vh;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.play-top-left {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.play-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 90px;
+}
+
+.play-logo {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.play-card {
+  background: white;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  padding-top: 5rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
